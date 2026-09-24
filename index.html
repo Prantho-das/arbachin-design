@@ -1,30 +1,51 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>আরবাচীন | Arbachin — Luxury Handcrafted Sarees & Ensembles</title>
   <meta name="description" content="Discover Arbachin's exquisite handcrafted sarees and bespoke three-piece ensembles. Royal Banarasi silk, Katan silk, and haute couture craftsmanship." />
   
-  <!-- Tailwind CSS v4 CDN -->
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <!-- Tailwind CSS v3 CDN with Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#1a3c2a',
+            'brand-dark': '#0f2419',
+            'brand-light': '#2a5e40',
+            accent: '#c9a84c',
+            'accent-hover': '#dbb95d',
+            cream: '#f4efe6',
+            'bg-dark': '#0d1712',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
   
-  <!-- Custom Luxury Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-[#f8f6f0] text-[#2e3832] selection:bg-[#c9a84c] selection:text-[#0f1a14]">
+<body class="bg-[#fcfbfa] text-[#1e2922] selection:bg-[#c9a84c] selection:text-[#0d1712]">
 
   <!-- Top Announcement Bar -->
-  <div class="bg-[#1a3c2a] text-[#f0ebe1] text-xs py-2 px-4 border-b border-[#c9a84c]/30">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <div class="hidden sm:flex items-center gap-4 text-[11px] tracking-wider uppercase font-cinzel text-[#c9a84c]">
+  <div class="announcement-bar">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1">
+      <div class="hidden md:flex items-center gap-3 font-cinzel text-[#c9a84c] text-[11px] tracking-wider uppercase">
         <span>✦ Heritage Craftsmanship</span>
-        <span>✦ Pure Silk Certified</span>
+        <span>✦ 100% Pure Silk Certified</span>
       </div>
-      <div class="w-full sm:w-auto text-center font-medium tracking-wide">
+      <div class="font-medium tracking-wide text-center">
         Complimentary Insured Nationwide Delivery on Orders Over ৳5,000
       </div>
-      <div class="hidden md:flex items-center gap-4 text-xs">
+      <div class="hidden sm:flex items-center gap-3 text-xs">
         <a href="tel:+8801700000000" class="hover:text-[#c9a84c] transition-colors">+880 1700-000000</a>
         <span class="text-[#c9a84c]">|</span>
         <a href="category.html" class="hover:text-[#c9a84c] transition-colors">Bespoke Concierge</a>
@@ -33,44 +54,39 @@
   </div>
 
   <!-- Main Navigation Header -->
-  <header id="main-header" class="fixed top-0 inset-x-0 z-40 transition-all duration-300 glass-nav-transparent">
+  <header id="main-header" class="fixed top-0 inset-x-0 z-40 transition-all duration-300 header-transparent">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20 sm:h-24">
         
         <!-- Mobile Menu Trigger -->
-        <button id="mobile-menu-btn" class="lg:hidden p-2 text-[#f0ebe1] hover:text-[#c9a84c] transition-colors" aria-label="Open Navigation">
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-[#f4efe6] hover:text-[#c9a84c] transition-colors">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
 
-        <!-- Left Nav Links (Desktop) -->
-        <nav class="hidden lg:flex items-center gap-8 text-xs font-medium tracking-[0.2em] uppercase">
-          <a href="index.html" class="nav-link text-[#f0ebe1] hover:text-[#c9a84c] transition-colors border-b-2 border-[#c9a84c] pb-1">Home</a>
-          <a href="category.html?cat=sarees" class="nav-link text-[#f0ebe1] hover:text-[#c9a84c] transition-colors pb-1">Sarees</a>
-          <a href="category.html?cat=three-piece" class="nav-link text-[#f0ebe1] hover:text-[#c9a84c] transition-colors pb-1">Three Piece</a>
-          <a href="#heritage-story" class="nav-link text-[#f0ebe1] hover:text-[#c9a84c] transition-colors pb-1">Our Heritage</a>
+        <!-- Left Nav Links -->
+        <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold tracking-[0.2em] uppercase font-cinzel">
+          <a href="index.html" class="nav-item text-[#f4efe6] hover:text-[#c9a84c] transition-colors border-b-2 border-[#c9a84c] pb-1">Home</a>
+          <a href="category.html?cat=sarees" class="nav-item text-[#f4efe6] hover:text-[#c9a84c] transition-colors pb-1">Royal Sarees</a>
+          <a href="category.html?cat=three-piece" class="nav-item text-[#f4efe6] hover:text-[#c9a84c] transition-colors pb-1">Three Piece</a>
+          <a href="#heritage-story" class="nav-item text-[#f4efe6] hover:text-[#c9a84c] transition-colors pb-1">Our Heritage</a>
         </nav>
 
-        <!-- Centered Luxury Logo -->
+        <!-- Centered Logo -->
         <div class="flex-shrink-0 flex items-center justify-center">
-          <a href="index.html" class="flex items-center gap-3 group">
-            <img src="assets/image/logo.png" alt="Arbachin Logo" class="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+          <a href="index.html" class="block">
+            <img src="assets/image/logo.png" alt="Arbachin Logo" class="h-12 sm:h-14 w-auto object-contain drop-shadow" />
           </a>
         </div>
 
         <!-- Right Action Icons -->
-        <div class="flex items-center gap-4 sm:gap-6">
-          <button onclick="arbachinApp.openSearchModal()" class="text-[#f0ebe1] hover:text-[#c9a84c] transition-colors p-2" title="Search Creations">
+        <div class="flex items-center gap-3 sm:gap-5">
+          <button onclick="arbachinApp.openSearchModal()" class="nav-icon-btn text-[#f4efe6] hover:text-[#c9a84c] transition-colors p-2" title="Search">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
           </button>
 
-          <button onclick="window.location.href='category.html'" class="relative text-[#f0ebe1] hover:text-[#c9a84c] transition-colors p-2" title="Wishlist">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-            <span class="wishlist-count-badge absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#c9a84c] text-[#0f1a14] text-[10px] font-bold items-center justify-center hidden">0</span>
-          </button>
-
-          <button onclick="arbachinApp.openCartDrawer()" class="relative text-[#f0ebe1] hover:text-[#c9a84c] transition-colors p-2" title="Shopping Bag">
+          <button onclick="arbachinApp.openCartDrawer()" class="nav-icon-btn relative text-[#f4efe6] hover:text-[#c9a84c] transition-colors p-2" title="Shopping Bag">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-            <span class="cart-count-badge absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#c9a84c] text-[#0f1a14] text-[10px] font-bold items-center justify-center hidden">0</span>
+            <span class="cart-count-badge absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#c9a84c] text-[#0d1712] text-[10px] font-bold items-center justify-center hidden">0</span>
           </button>
         </div>
 
@@ -78,145 +94,134 @@
     </div>
   </header>
 
-  <!-- Mobile Navigation Drawer -->
-  <div id="mobile-menu-overlay" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300"></div>
-  <div id="mobile-menu-drawer" class="fixed inset-y-0 left-0 z-50 w-80 max-w-full bg-[#0f1a14] text-[#f0ebe1] border-r border-[#c9a84c]/30 transform -translate-x-full transition-transform duration-300 ease-in-out p-6 flex flex-col justify-between">
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:50;transition:opacity 0.3s ease;opacity:0;"></div>
+  <div id="mobile-menu-drawer" style="position:fixed;top:0;bottom:0;left:0;width:300px;background:#0d1712;color:#f4efe6;border-right:1px solid #c9a84c;z-index:50;transform:translateX(-100%);transition:transform 0.3s ease;padding:24px;display:flex;flex-direction:column;justify-content:space-between;">
     <div>
-      <div class="flex items-center justify-between pb-6 border-b border-[#24382c]">
-        <img src="assets/image/logo.png" alt="Arbachin" class="h-10 w-auto" />
-        <button id="mobile-menu-close" class="text-[#c9a84c] hover:text-white p-2">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:16px;border-bottom:1px solid #1a3c2a;">
+        <img src="assets/image/logo.png" alt="Arbachin" style="height:38px;width:auto;" />
+        <button id="mobile-menu-close" style="background:none;border:none;color:#c9a84c;font-size:24px;cursor:pointer;">&times;</button>
       </div>
-
-      <nav class="mt-8 space-y-6 text-sm uppercase tracking-[0.2em] font-cinzel">
-        <a href="index.html" class="block text-[#c9a84c] font-semibold py-2">Home</a>
-        <a href="category.html?cat=sarees" class="block text-[#ede8df] hover:text-[#c9a84c] transition-colors py-2">Royal Sarees</a>
-        <a href="category.html?cat=three-piece" class="block text-[#ede8df] hover:text-[#c9a84c] transition-colors py-2">Three Piece Ensembles</a>
-        <a href="category.html" class="block text-[#ede8df] hover:text-[#c9a84c] transition-colors py-2">All Creations</a>
-        <a href="#heritage-story" onclick="arbachinApp.closeMobileMenu()" class="block text-[#ede8df] hover:text-[#c9a84c] transition-colors py-2">Heritage Story</a>
+      <nav style="margin-top:32px;display:flex;flex-direction:column;gap:18px;font-family:'Cinzel',serif;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;">
+        <a href="index.html" style="color:#c9a84c;text-decoration:none;">Home</a>
+        <a href="category.html?cat=sarees" style="color:#f4efe6;text-decoration:none;">Royal Sarees</a>
+        <a href="category.html?cat=three-piece" style="color:#f4efe6;text-decoration:none;">Three Piece Ensembles</a>
+        <a href="category.html" style="color:#f4efe6;text-decoration:none;">All Creations</a>
+        <a href="#heritage-story" onclick="arbachinApp.closeMobileNav()" style="color:#f4efe6;text-decoration:none;">Heritage Story</a>
       </nav>
     </div>
-
-    <div class="pt-6 border-t border-[#24382c] space-y-3 text-xs text-[#98a39c]">
-      <p class="font-cinzel text-[#c9a84c]">Concierge Support</p>
-      <p>Phone: +880 1700-000000</p>
-      <p>Email: concierge@arbachin.com</p>
+    <div style="font-size:11px;color:#98a39c;border-top:1px solid #1a3c2a;padding-top:16px;">
+      <p style="color:#c9a84c;font-family:'Cinzel',serif;font-weight:bold;">Concierge Support</p>
+      <p style="margin-top:4px;">Hotline: +880 1700-000000</p>
+      <p>concierge@arbachin.com</p>
     </div>
   </div>
 
   <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0f1a14] pt-20">
-    <!-- Cinematic Background Image with Ken Burns -->
-    <div class="absolute inset-0 z-0">
-      <img src="assets/image/saree_1.jpg" alt="Arbachin Heritage Saree" class="w-full h-full object-cover object-center animate-kenburns opacity-40 scale-105" />
-      <div class="absolute inset-0 bg-gradient-to-t from-[#0f1a14] via-[#0f1a14]/60 to-black/70"></div>
-    </div>
+  <section class="hero-wrapper">
+    <img src="assets/image/saree_1.jpg" alt="Hero Saree" class="hero-bg-img" />
+    <div class="hero-gradient"></div>
 
-    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-[#c9a84c]/50 bg-[#0f2419]/80 backdrop-blur-md mb-6">
-        <span class="w-2 h-2 rounded-full bg-[#c9a84c] animate-pulse"></span>
-        <span class="text-xs uppercase tracking-[0.25em] text-[#c9a84c] font-cinzel font-medium">The Autumn/Festive Haute Couture</span>
+    <div class="relative z-10 max-w-4xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 border border-[#c9a84c]/60 bg-[#0f2419]/90 backdrop-blur-md mb-6">
+        <span class="w-2 h-2 rounded-full bg-[#c9a84c]"></span>
+        <span class="text-xs uppercase tracking-[0.25em] text-[#c9a84c] font-cinzel font-semibold">Haute Couture Collection</span>
       </div>
 
-      <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-[#ede8df] font-normal tracking-tight leading-[1.1] mb-6">
+      <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-normal leading-tight mb-6">
         Timeless Elegance.<br />
-        <span class="italic font-light gold-gradient-text">Handcrafted Glory.</span>
+        <span class="italic gold-text">Handcrafted Glory.</span>
       </h1>
 
-      <p class="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-[#ded7c8] font-light leading-relaxed mb-10 tracking-wide">
+      <p class="max-w-2xl mx-auto text-sm sm:text-base text-[#ded7c8] font-light leading-relaxed mb-10">
         Immerse in the regal opulence of pure Banarasi silk, Katan heirlooms, and bespoke artisanal ensembles curated for momentous celebrations.
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="category.html?cat=sarees" class="luxury-btn w-full sm:w-auto px-9 py-4 bg-[#c9a84c] hover:bg-[#dbb95d] text-[#0f1a14] font-cinzel font-bold text-xs uppercase tracking-[0.2em] shadow-lg hover:shadow-gold transition-all">
+        <a href="category.html?cat=sarees" class="btn-gold">
           Explore Royal Sarees
         </a>
-        <a href="category.html?cat=three-piece" class="luxury-btn w-full sm:w-auto px-9 py-4 border border-[#c9a84c] text-[#f0ebe1] hover:bg-white hover:text-[#0f1a14] font-cinzel font-bold text-xs uppercase tracking-[0.2em] transition-all backdrop-blur-sm">
+        <a href="category.html?cat=three-piece" class="btn-outline-gold">
           Three Piece Collection
         </a>
       </div>
 
-      <!-- Trust Badges -->
-      <div class="mt-16 pt-8 border-t border-[#c9a84c]/20 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <!-- Trust Badges Strip -->
+      <div class="mt-16 pt-8 border-t border-[#c9a84c]/25 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div>
-          <p class="font-cinzel text-xl sm:text-2xl text-[#c9a84c] font-semibold">100%</p>
-          <p class="text-[11px] text-[#ded7c8] uppercase tracking-wider mt-1">Pure Silk Guarantee</p>
+          <p class="font-cinzel text-xl sm:text-2xl text-[#c9a84c] font-bold">100%</p>
+          <p class="text-[11px] text-[#ded7c8] uppercase tracking-wider mt-0.5">Pure Silk Yarn</p>
         </div>
         <div>
-          <p class="font-cinzel text-xl sm:text-2xl text-[#c9a84c] font-semibold">Kadwa</p>
-          <p class="text-[11px] text-[#ded7c8] uppercase tracking-wider mt-1">Authentic Weave</p>
+          <p class="font-cinzel text-xl sm:text-2xl text-[#c9a84c] font-bold">Kadwa</p>
+          <p class="text-[11px] text-[#ded7c8] uppercase tracking-wider mt-0.5">Authentic Weave</p>
         </div>
         <div>
-          <p class="font-cinzel text-xl sm:text-2xl text-[#c9a84c] font-semibold">Free</p>
-          <p class="text-[11px] text-[#ded7c8] uppercase tracking-wider mt-1">Express Shipping</p>
+          <p class="font-cinzel text-xl sm:text-2xl text-[#c9a84c] font-bold">Free</p>
+          <p class="text-[11px] text-[#ded7c8] uppercase tracking-wider mt-0.5">Insured Dispatch</p>
         </div>
         <div>
-          <p class="font-cinzel text-xl sm:text-2xl text-[#c9a84c] font-semibold">Bespoke</p>
-          <p class="text-[11px] text-[#ded7c8] uppercase tracking-wider mt-1">Artisanal Finish</p>
+          <p class="font-cinzel text-xl sm:text-2xl text-[#c9a84c] font-bold">Bespoke</p>
+          <p class="text-[11px] text-[#ded7c8] uppercase tracking-wider mt-0.5">Artisan Finished</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Marquee Ticker -->
-  <div class="bg-[#1a3c2a] text-[#f0ebe1] py-4 overflow-hidden border-y border-[#c9a84c]/30">
-    <div class="animate-marquee whitespace-nowrap text-xs sm:text-sm font-cinzel uppercase tracking-[0.3em] flex items-center gap-12">
+  <!-- Marquee Ribbon -->
+  <div class="bg-[#1a3c2a] text-[#f4efe6] py-3.5 overflow-hidden border-y border-[#c9a84c]/30">
+    <div class="marquee-inner text-xs sm:text-sm font-cinzel uppercase tracking-[0.25em] flex items-center gap-10">
       <span>✦ ARBACHIN COUTURE</span>
       <span>✦ AUTHENTIC GOLD ZARI WEAVE</span>
       <span>✦ PURE KATAN & BANARASI SILK</span>
       <span>✦ HANDCRAFTED THREE PIECE ENSEMBLES</span>
       <span>✦ COMPLIMENTARY INSURED DISPATCH</span>
-      <span>✦ HERITAGE BENGALI WEAVING MASTERY</span>
       <span>✦ ARBACHIN COUTURE</span>
       <span>✦ AUTHENTIC GOLD ZARI WEAVE</span>
       <span>✦ PURE KATAN & BANARASI SILK</span>
-      <span>✦ HANDCRAFTED THREE PIECE ENSEMBLES</span>
     </div>
   </div>
 
   <!-- Category Showcase: 2 Grand Editorial Cards -->
   <section class="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <span class="text-xs uppercase tracking-[0.25em] text-[#c9a84c] font-cinzel font-semibold">Curated Universes</span>
-      <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-[#1a3c2a] font-normal mt-2 leading-tight">
+    <div class="text-center max-w-xl mx-auto mb-14">
+      <span class="text-xs uppercase tracking-[0.25em] text-[#c9a84c] font-cinzel font-bold">Curated Universes</span>
+      <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-[#1a3c2a] font-normal mt-1">
         Mastery in Every Thread
       </h2>
-      <div class="w-16 h-[2px] bg-[#c9a84c] mx-auto mt-4"></div>
+      <div class="w-16 h-[2px] bg-[#c9a84c] mx-auto mt-3"></div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-      <!-- Category 1: Sarees -->
-      <div class="group relative aspect-[4/5] overflow-hidden bg-[#1a3c2a] shadow-xl border border-[#dfd8cb]">
-        <img src="assets/image/saree_2.jpg" alt="Royal Sarees" class="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-108 filter brightness-90 group-hover:brightness-100" />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0f1a14] via-[#0f1a14]/30 to-transparent"></div>
-        <div class="absolute inset-0 p-8 sm:p-12 flex flex-col justify-end text-white">
-          <span class="text-xs font-cinzel uppercase tracking-[0.25em] text-[#c9a84c] mb-2 font-semibold">The Regal Drape</span>
-          <h3 class="font-serif text-3xl sm:text-4xl text-[#ede8df] font-normal mb-3">Heritage Sarees</h3>
-          <p class="text-xs sm:text-sm text-[#ded7c8] font-light max-w-md mb-6 leading-relaxed">
-            Pure Banarasi and Katan silks handwoven with authentic electroplated gold and silver zari embroidery.
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+      <!-- Sarees Card -->
+      <div class="category-card group">
+        <img src="assets/image/saree_2.jpg" alt="Royal Sarees" />
+        <div class="category-card-overlay">
+          <span class="text-xs font-cinzel uppercase tracking-[0.25em] text-[#c9a84c] mb-1 font-bold">The Regal Drape</span>
+          <h3 class="font-serif text-3xl text-[#ede8df] font-normal mb-2">Heritage Sarees</h3>
+          <p class="text-xs sm:text-sm text-[#ded7c8] font-light max-w-sm mb-6 leading-relaxed">
+            Pure Banarasi and Katan silks handwoven with authentic electroplated gold and silver zari.
           </p>
           <div>
-            <a href="category.html?cat=sarees" class="inline-flex items-center gap-3 text-xs uppercase tracking-[0.2em] font-cinzel font-bold text-[#c9a84c] group-hover:text-white transition-colors border-b border-[#c9a84c] pb-1">
-              Explore 3 Masterpieces <span class="transition-transform group-hover:translate-x-2">→</span>
+            <a href="category.html?cat=sarees" class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-cinzel font-bold text-[#c9a84c] hover:text-white transition-colors border-b border-[#c9a84c] pb-0.5">
+              Explore 3 Masterpieces →
             </a>
           </div>
         </div>
       </div>
 
-      <!-- Category 2: Three Piece -->
-      <div class="group relative aspect-[4/5] overflow-hidden bg-[#1a3c2a] shadow-xl border border-[#dfd8cb]">
-        <img src="assets/image/saree_3.jpg" alt="Three Piece Ensembles" class="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-108 filter brightness-90 group-hover:brightness-100" />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0f1a14] via-[#0f1a14]/30 to-transparent"></div>
-        <div class="absolute inset-0 p-8 sm:p-12 flex flex-col justify-end text-white">
-          <span class="text-xs font-cinzel uppercase tracking-[0.25em] text-[#c9a84c] mb-2 font-semibold">Artisanal Silhouettes</span>
-          <h3 class="font-serif text-3xl sm:text-4xl text-[#ede8df] font-normal mb-3">Three Piece Ensembles</h3>
-          <p class="text-xs sm:text-sm text-[#ded7c8] font-light max-w-md mb-6 leading-relaxed">
-            Exquisite salwar kameez, anarkalis, and bridal sets embellished with intricate resham and pearl needlecraft.
+      <!-- Three Piece Card -->
+      <div class="category-card group">
+        <img src="assets/image/saree_3.jpg" alt="Three Piece Ensembles" />
+        <div class="category-card-overlay">
+          <span class="text-xs font-cinzel uppercase tracking-[0.25em] text-[#c9a84c] mb-1 font-bold">Artisanal Silhouettes</span>
+          <h3 class="font-serif text-3xl text-[#ede8df] font-normal mb-2">Three Piece Ensembles</h3>
+          <p class="text-xs sm:text-sm text-[#ded7c8] font-light max-w-sm mb-6 leading-relaxed">
+            Exquisite salwar kameez, anarkalis, and bridal sets embellished with intricate pearl needlecraft.
           </p>
           <div>
-            <a href="category.html?cat=three-piece" class="inline-flex items-center gap-3 text-xs uppercase tracking-[0.2em] font-cinzel font-bold text-[#c9a84c] group-hover:text-white transition-colors border-b border-[#c9a84c] pb-1">
-              Explore 3 Ensembles <span class="transition-transform group-hover:translate-x-2">→</span>
+            <a href="category.html?cat=three-piece" class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-cinzel font-bold text-[#c9a84c] hover:text-white transition-colors border-b border-[#c9a84c] pb-0.5">
+              Explore 3 Ensembles →
             </a>
           </div>
         </div>
@@ -225,55 +230,48 @@
   </section>
 
   <!-- Featured Products Section -->
-  <section class="py-20 bg-[#f0ebe1] border-y border-[#dfd8cb]">
+  <section class="py-20 bg-[#f4efe6] border-y border-[#dfd7ca]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
         <div>
-          <span class="text-xs uppercase tracking-[0.25em] text-[#c9a84c] font-cinzel font-semibold">The Royal Selection</span>
+          <span class="text-xs uppercase tracking-[0.25em] text-[#c9a84c] font-cinzel font-bold">The Sovereign Selection</span>
           <h2 class="font-serif text-3xl sm:text-4xl text-[#1a3c2a] font-normal mt-1">
             Featured Creations
           </h2>
         </div>
-        <div class="mt-4 md:mt-0 flex gap-4 text-xs font-cinzel uppercase tracking-wider">
-          <a href="category.html" class="inline-flex items-center gap-2 text-[#1a3c2a] font-semibold hover:text-[#c9a84c] transition-colors border-b border-[#1a3c2a] pb-0.5">
-            View All Creations (6) <span>→</span>
+        <div>
+          <a href="category.html" class="inline-flex items-center gap-2 font-cinzel text-xs font-bold uppercase tracking-wider text-[#1a3c2a] hover:text-[#c9a84c] transition-colors border-b border-[#1a3c2a] pb-0.5">
+            View All Creations (6) →
           </a>
         </div>
       </div>
 
-      <!-- Dynamic Grid Container -->
-      <div id="home-featured-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-        <!-- Injected by script.js -->
+      <!-- Injected Grid -->
+      <div id="home-featured-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <!-- Products injected by script.js -->
       </div>
 
     </div>
   </section>
 
-  <!-- Heritage & Brand Story Section (Sabyasachi-inspired Editorial) -->
-  <section id="heritage-story" class="py-24 sm:py-32 bg-[#0f1a14] text-[#ede8df] relative overflow-hidden">
+  <!-- Heritage Brand Story Section -->
+  <section id="heritage-story" class="py-24 bg-[#0d1712] text-[#ede8df]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Left Visual Composition -->
-        <div class="lg:col-span-6 relative">
-          <div class="relative z-10 border border-[#c9a84c]/40 p-3 bg-[#0f2419]">
-            <img src="assets/image/saree_1.jpg" alt="Artisan Weaving" class="w-full aspect-[4/5] object-cover shadow-2xl" />
-          </div>
-          <!-- Decorative Floating Card -->
-          <div class="absolute -bottom-8 -right-6 z-20 hidden sm:block p-6 bg-[#1a3c2a] border border-[#c9a84c] shadow-2xl max-w-xs">
-            <p class="font-serif italic text-sm text-[#f0ebe1] mb-2">"Each motif is an echo of timeless Bengali artisanal memory."</p>
-            <span class="text-[10px] tracking-widest uppercase text-[#c9a84c] font-cinzel">— Arbachin Atelier</span>
+        <div class="lg:col-span-6">
+          <div class="relative border border-[#c9a84c]/40 p-3 bg-[#1a3c2a]/40">
+            <img src="assets/image/saree_1.jpg" alt="Atelier Artistry" class="w-full aspect-[4/5] object-cover" />
           </div>
         </div>
 
-        <!-- Right Story Content -->
         <div class="lg:col-span-6 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3 py-1 border border-[#c9a84c]/30 text-xs uppercase tracking-[0.25em] text-[#c9a84c] font-cinzel">
+          <div class="inline-block px-3 py-1 border border-[#c9a84c]/40 text-xs uppercase tracking-[0.25em] text-[#c9a84c] font-cinzel font-bold">
             The Atelier Legacy
           </div>
 
-          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal leading-tight text-[#ede8df]">
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal leading-tight text-[#f4efe6]">
             Preserving the Grandeur of Handwoven Heritage
           </h2>
 
@@ -282,23 +280,23 @@
           </p>
 
           <p class="text-sm sm:text-base text-[#ded7c8] font-light leading-relaxed">
-            From the historic loom clusters of Banaras to the ancestral master embroiderers of Bengal, every yard of silk is touched by generational dedication. Our pieces are not merely garments—they are heirloom treasures crafted to be cherished across generations.
+            From the historic loom clusters of Banaras to the ancestral master embroiderers of Bengal, every yard of silk is touched by generational dedication.
           </p>
 
           <div class="grid grid-cols-2 gap-6 pt-6 border-t border-[#c9a84c]/20">
             <div>
-              <h4 class="font-cinzel text-2xl text-[#c9a84c] font-semibold">180+</h4>
-              <p class="text-xs text-[#98a39c] uppercase tracking-wider mt-1">Hours of Loom Artistry per Saree</p>
+              <h4 class="font-cinzel text-2xl text-[#c9a84c] font-bold">180+</h4>
+              <p class="text-xs text-[#98a39c] uppercase tracking-wider mt-1">Hours of Loom Artistry</p>
             </div>
             <div>
-              <h4 class="font-cinzel text-2xl text-[#c9a84c] font-semibold">Zero-Compromise</h4>
+              <h4 class="font-cinzel text-2xl text-[#c9a84c] font-bold">100%</h4>
               <p class="text-xs text-[#98a39c] uppercase tracking-wider mt-1">Authentic Pure Silk Yarn</p>
             </div>
           </div>
 
           <div class="pt-4">
-            <a href="category.html" class="luxury-btn inline-block px-8 py-3.5 bg-[#c9a84c] text-[#0f1a14] font-cinzel text-xs font-bold uppercase tracking-[0.2em] hover:bg-white transition-all">
-              Discover Our Creations
+            <a href="category.html" class="btn-gold">
+              Discover All Creations
             </a>
           </div>
         </div>
@@ -308,52 +306,52 @@
   </section>
 
   <!-- Praise & Testimonials -->
-  <section class="py-24 bg-[#f8f6f0]">
+  <section class="py-24 bg-[#fcfbfa]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <span class="text-xs uppercase tracking-[0.25em] text-[#c9a84c] font-cinzel font-semibold">Patron Testimonials</span>
-      <h2 class="font-serif text-3xl sm:text-4xl text-[#1a3c2a] font-normal mt-2 mb-16">
-        Words from Our Esteemed Connoisseurs
+      <span class="text-xs uppercase tracking-[0.25em] text-[#c9a84c] font-cinzel font-bold">Patron Testimonials</span>
+      <h2 class="font-serif text-3xl sm:text-4xl text-[#1a3c2a] font-normal mt-1 mb-16">
+        Words from Our Connoisseurs
       </h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
         
-        <div class="p-8 bg-white border border-[#dfd8cb] shadow-sm flex flex-col justify-between text-left">
+        <div class="p-8 bg-white border border-[#dfd7ca] flex flex-col justify-between">
           <div>
             <div class="text-[#c9a84c] text-sm mb-3">★★★★★</div>
-            <p class="font-serif text-base text-[#2e3832] italic leading-relaxed mb-6">
+            <p class="font-serif text-base text-[#1e2922] italic leading-relaxed mb-6">
               "The Burgundy Banarasi Saree I ordered for my sister's wedding reception is absolute poetry in silk. The gold zari has the most regal, authentic lustre."
             </p>
           </div>
-          <div class="border-t border-[#dfd8cb]/60 pt-4">
-            <h4 class="font-cinzel text-xs font-bold text-[#1a3c2a] uppercase tracking-wider">Samira Chowdhury</h4>
-            <p class="text-[11px] text-[#6b7770]">Dhaka, Bangladesh</p>
+          <div class="border-t border-[#f0ebe1] pt-4">
+            <h4 class="font-cinzel text-xs font-bold text-[#1a3c2a] uppercase">Samira Chowdhury</h4>
+            <p class="text-[11px] text-[#5c6861]">Dhaka, Bangladesh</p>
           </div>
         </div>
 
-        <div class="p-8 bg-white border border-[#c9a84c] shadow-md flex flex-col justify-between text-left relative">
-          <span class="absolute -top-3 right-6 badge-gold text-[9px] uppercase tracking-widest px-3 py-1">Bridal Choice</span>
+        <div class="p-8 bg-white border border-[#c9a84c] shadow-md flex flex-col justify-between relative">
+          <span class="absolute -top-3 right-6 bg-[#c9a84c] text-[#0d1712] font-cinzel text-[9px] uppercase font-bold tracking-widest px-3 py-1">Bridal Choice</span>
           <div>
             <div class="text-[#c9a84c] text-sm mb-3">★★★★★</div>
-            <p class="font-serif text-base text-[#2e3832] italic leading-relaxed mb-6">
+            <p class="font-serif text-base text-[#1e2922] italic leading-relaxed mb-6">
               "The Ivory Bridal Three Piece exceeded every expectation. The delicate pearl work and raw silk finish made me feel like royalty on my special day."
             </p>
           </div>
-          <div class="border-t border-[#dfd8cb]/60 pt-4">
-            <h4 class="font-cinzel text-xs font-bold text-[#1a3c2a] uppercase tracking-wider">Dr. Nusrat Jahan</h4>
-            <p class="text-[11px] text-[#6b7770]">Chittagong, Bangladesh</p>
+          <div class="border-t border-[#f0ebe1] pt-4">
+            <h4 class="font-cinzel text-xs font-bold text-[#1a3c2a] uppercase">Dr. Nusrat Jahan</h4>
+            <p class="text-[11px] text-[#5c6861]">Chittagong, Bangladesh</p>
           </div>
         </div>
 
-        <div class="p-8 bg-white border border-[#dfd8cb] shadow-sm flex flex-col justify-between text-left">
+        <div class="p-8 bg-white border border-[#dfd7ca] flex flex-col justify-between">
           <div>
             <div class="text-[#c9a84c] text-sm mb-3">★★★★★</div>
-            <p class="font-serif text-base text-[#2e3832] italic leading-relaxed mb-6">
+            <p class="font-serif text-base text-[#1e2922] italic leading-relaxed mb-6">
               "The bespoke packaging and express insured delivery were extraordinary. Arbachin has set a new gold standard for South Asian luxury couture."
             </p>
           </div>
-          <div class="border-t border-[#dfd8cb]/60 pt-4">
-            <h4 class="font-cinzel text-xs font-bold text-[#1a3c2a] uppercase tracking-wider">Tasnim Rahman</h4>
-            <p class="text-[11px] text-[#6b7770]">Sylhet, Bangladesh</p>
+          <div class="border-t border-[#f0ebe1] pt-4">
+            <h4 class="font-cinzel text-xs font-bold text-[#1a3c2a] uppercase">Tasnim Rahman</h4>
+            <p class="text-[11px] text-[#5c6861]">Sylhet, Bangladesh</p>
           </div>
         </div>
 
@@ -362,142 +360,96 @@
   </section>
 
   <!-- Newsletter Section -->
-  <section class="py-20 bg-[#1a3c2a] text-[#f0ebe1] border-t border-[#c9a84c]/30">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <span class="text-xs uppercase tracking-[0.3em] text-[#c9a84c] font-cinzel font-semibold">Join The Arbachin Circle</span>
-      <h2 class="font-serif text-3xl sm:text-4xl text-[#ede8df] font-normal mt-2 mb-4">
-        Receive Private Previews & Exclusive Privileges
+  <section class="py-20 bg-[#1a3c2a] text-[#f4efe6] border-t border-[#c9a84c]/30">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <span class="text-xs uppercase tracking-[0.25em] text-[#c9a84c] font-cinzel font-bold">Join The Privé Circle</span>
+      <h2 class="font-serif text-3xl sm:text-4xl text-[#ede8df] font-normal mt-1 mb-4">
+        Receive Private Salon Previews
       </h2>
-      <p class="text-xs sm:text-sm text-[#ded7c8] font-light max-w-xl mx-auto mb-8">
-        Subscribe to receive invitations to private salon viewings, early access to festive collections, and complimentary couture consultations.
+      <p class="text-xs sm:text-sm text-[#ded7c8] font-light max-w-lg mx-auto mb-8">
+        Subscribe for invitations to private previews, early access to festive collections, and complimentary couture consultations.
       </p>
 
-      <form onsubmit="event.preventDefault(); arbachinApp.showToast('Thank you for subscribing to Arbachin Privé Circle', 'success'); this.reset();" class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
-        <input type="email" required placeholder="Enter your email address..." class="flex-1 px-5 py-3.5 bg-[#0f2419] border border-[#c9a84c]/50 text-sm text-[#ede8df] placeholder-[#98a39c] focus:outline-none focus:border-[#c9a84c]" />
-        <button type="submit" class="luxury-btn px-8 py-3.5 bg-[#c9a84c] text-[#0f1a14] font-cinzel font-bold text-xs uppercase tracking-[0.2em] hover:bg-white transition-all">
-          Subscribe
-        </button>
+      <form onsubmit="event.preventDefault(); arbachinApp.showToast('Thank you for subscribing to Arbachin Privé Circle'); this.reset();" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" required placeholder="Enter your email address..." class="flex-1 px-4 py-3 bg-[#0f2419] border border-[#c9a84c]/50 text-sm text-[#f4efe6] placeholder-[#98a39c] focus:outline-none focus:border-[#c9a84c]" />
+        <button type="submit" class="btn-gold">Subscribe</button>
       </form>
     </div>
   </section>
 
-  <!-- Dark Luxury Footer -->
-  <footer class="bg-[#0f1a14] text-[#ede8df] pt-16 pb-12 border-t border-[#24382c]">
+  <!-- Footer -->
+  <footer class="bg-[#0d1712] text-[#f4efe6] pt-16 pb-12 border-t border-[#1a3c2a]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-        
-        <!-- Col 1: About & Monogram -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
         <div class="space-y-4">
           <img src="assets/image/logo.png" alt="Arbachin" class="h-12 w-auto" />
-          <p class="text-xs text-[#98a39c] leading-relaxed font-light">
+          <p class="text-xs text-[#98a39c] leading-relaxed">
             আরবাচীন — Haute couture handwoven sarees and artisanal three-piece ensembles celebrating quintessential subcontinental heritage.
           </p>
-          <div class="pt-2 flex gap-3 text-[#c9a84c]">
-            <a href="#" class="w-8 h-8 rounded-full border border-[#c9a84c]/40 flex items-center justify-center hover:bg-[#c9a84c] hover:text-[#0f1a14] transition-all">FB</a>
-            <a href="#" class="w-8 h-8 rounded-full border border-[#c9a84c]/40 flex items-center justify-center hover:bg-[#c9a84c] hover:text-[#0f1a14] transition-all">IG</a>
-            <a href="#" class="w-8 h-8 rounded-full border border-[#c9a84c]/40 flex items-center justify-center hover:bg-[#c9a84c] hover:text-[#0f1a14] transition-all">PT</a>
-          </div>
         </div>
-
-        <!-- Col 2: The Collections -->
         <div>
           <h4 class="font-cinzel text-xs font-bold uppercase tracking-[0.2em] text-[#c9a84c] mb-4">The Collections</h4>
-          <ul class="space-y-2.5 text-xs text-[#ded7c8]">
+          <ul class="space-y-2 text-xs text-[#ded7c8]">
             <li><a href="category.html?cat=sarees" class="hover:text-[#c9a84c] transition-colors">Banarasi Silk Sarees</a></li>
             <li><a href="category.html?cat=sarees" class="hover:text-[#c9a84c] transition-colors">Katan Silk Heirloom</a></li>
             <li><a href="category.html?cat=three-piece" class="hover:text-[#c9a84c] transition-colors">Embroidered Three Piece</a></li>
             <li><a href="category.html?cat=three-piece" class="hover:text-[#c9a84c] transition-colors">Anarkali Ensembles</a></li>
-            <li><a href="category.html" class="hover:text-[#c9a84c] transition-colors">All Haute Creations</a></li>
           </ul>
         </div>
-
-        <!-- Col 3: Client Services -->
         <div>
-          <h4 class="font-cinzel text-xs font-bold uppercase tracking-[0.2em] text-[#c9a84c] mb-4">Concierge & Care</h4>
-          <ul class="space-y-2.5 text-xs text-[#ded7c8]">
+          <h4 class="font-cinzel text-xs font-bold uppercase tracking-[0.2em] text-[#c9a84c] mb-4">Client Services</h4>
+          <ul class="space-y-2 text-xs text-[#ded7c8]">
             <li><a href="#" class="hover:text-[#c9a84c] transition-colors">Bespoke Bridal Styling</a></li>
             <li><a href="#" class="hover:text-[#c9a84c] transition-colors">Silk Care & Preservation</a></li>
             <li><a href="#" class="hover:text-[#c9a84c] transition-colors">Complimentary Insured Shipping</a></li>
-            <li><a href="#" class="hover:text-[#c9a84c] transition-colors">Returns & Authenticity Policy</a></li>
-            <li><a href="#" class="hover:text-[#c9a84c] transition-colors">Store Locator & Salon</a></li>
           </ul>
         </div>
-
-        <!-- Col 4: Atelier Contacts -->
         <div>
           <h4 class="font-cinzel text-xs font-bold uppercase tracking-[0.2em] text-[#c9a84c] mb-4">Atelier House</h4>
-          <div class="space-y-3 text-xs text-[#ded7c8]">
+          <div class="space-y-2 text-xs text-[#ded7c8]">
             <p>House 14, Road 11, Banani, Dhaka, Bangladesh</p>
             <p>Hotline: +880 1700-000000</p>
             <p>Email: concierge@arbachin.com</p>
-            <p class="text-[#c9a84c] text-[11px] font-cinzel">Open Daily: 10:00 AM – 9:00 PM</p>
           </div>
         </div>
-
       </div>
-
-      <div class="pt-8 border-t border-[#24382c] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#98a39c]">
-        <p>© 2026 আরবাচীন (Arbachin). All Rights Reserved. Handcrafted with devotion.</p>
-        <div class="flex items-center gap-4 text-[11px] tracking-wider uppercase font-cinzel text-[#c9a84c]">
-          <span>BKash / Nagad</span>
-          <span>•</span>
-          <span>Visa / Mastercard</span>
-          <span>•</span>
-          <span>Cash on Delivery</span>
-        </div>
+      <div class="pt-8 border-t border-[#1a3c2a] text-center text-xs text-[#98a39c]">
+        © 2026 আরবাচীন (Arbachin). All Rights Reserved.
       </div>
     </div>
   </footer>
 
-  <!-- Slide-Over Cart Drawer -->
-  <div id="cart-overlay" onclick="arbachinApp.closeCartDrawer()" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300"></div>
-  <aside id="cart-drawer" class="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-white shadow-2xl border-l border-[#dfd8cb] transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between">
-    <!-- Header -->
-    <div class="p-6 border-b border-[#dfd8cb] flex items-center justify-between bg-[#f8f6f0]">
-      <div class="flex items-center gap-2">
-        <h3 class="font-serif text-xl font-medium text-[#1a3c2a]">Your Shopping Bag</h3>
-        <span class="cart-count-badge w-5 h-5 rounded-full bg-[#1a3c2a] text-[#f0ebe1] text-xs font-bold items-center justify-center hidden">0</span>
-      </div>
-      <button onclick="arbachinApp.closeCartDrawer()" class="text-[#1a3c2a] hover:text-[#c9a84c] p-2 transition-colors">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12"/></svg>
-      </button>
+  <!-- Shopping Bag Slide-Over -->
+  <div id="cart-overlay" onclick="arbachinApp.closeCartDrawer()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:50;transition:opacity 0.3s ease;opacity:0;"></div>
+  <aside id="cart-drawer" class="cart-drawer-box" style="position:fixed;top:0;bottom:0;right:0;width:100%;max-width:420px;background:#ffffff;border-left:1px solid #dfd7ca;z-index:50;transform:translateX(100%);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;">
+    <div style="padding:20px;border-bottom:1px solid #dfd7ca;display:flex;justify-content:space-between;align-items:center;background:#f4efe6;">
+      <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:#1a3c2a;font-weight:600;">Your Shopping Bag</h3>
+      <button onclick="arbachinApp.closeCartDrawer()" style="background:none;border:none;color:#1a3c2a;font-size:24px;cursor:pointer;">&times;</button>
     </div>
 
-    <!-- Free Shipping Progress -->
-    <div class="px-6 py-3 bg-[#f0ebe1] border-b border-[#dfd8cb]/60">
-      <div id="free-shipping-text" class="text-xs text-[#2e3832] mb-1.5 font-medium">Add ৳5,000 for Complimentary Shipping</div>
-      <div class="w-full h-1.5 bg-[#dfd8cb] overflow-hidden">
-        <div id="free-shipping-progress" class="h-full bg-[#1a3c2a] transition-all duration-300" style="width: 0%"></div>
+    <div style="padding:12px 20px;background:#fcfbfa;border-bottom:1px solid #dfd7ca;">
+      <div id="free-shipping-text" style="font-size:11px;color:#1a3c2a;margin-bottom:6px;font-weight:500;">Add ৳5,000 for Complimentary Shipping</div>
+      <div style="width:100%;height:4px;background:#dfd7ca;overflow:hidden;">
+        <div id="free-shipping-progress" style="height:100%;background:#1a3c2a;width:0%;transition:width 0.3s ease;"></div>
       </div>
     </div>
 
-    <!-- Items List -->
-    <div id="cart-items-container" class="flex-1 overflow-y-auto divide-y divide-[#dfd8cb]/50">
-      <!-- Items dynamically injected -->
-    </div>
+    <div id="cart-items-container" style="flex:1;overflow-y:auto;"></div>
 
-    <!-- Footer Checkout Summary -->
-    <div class="p-6 border-t border-[#dfd8cb] bg-[#f8f6f0] space-y-4">
-      <div class="flex justify-between items-baseline text-sm">
-        <span class="text-[#6b7770] uppercase font-cinzel text-xs tracking-wider">Subtotal:</span>
-        <span id="cart-subtotal-price" class="font-serif text-2xl font-bold text-[#1a3c2a]">৳0</span>
+    <div style="padding:20px;border-top:1px solid #dfd7ca;background:#f4efe6;">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;">
+        <span style="font-family:'Cinzel',serif;font-size:12px;color:#5c6861;text-transform:uppercase;letter-spacing:0.1em;">Subtotal:</span>
+        <span id="cart-subtotal-price" style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#1a3c2a;">৳0</span>
       </div>
-      <p class="text-[11px] text-[#6b7770]">Taxes and express doorstep delivery calculated at checkout.</p>
-      
-      <button id="cart-checkout-btn" onclick="alert('Proceeding to Arbachin Secure Luxury Checkout with order total: ' + document.getElementById('cart-subtotal-price').textContent)" class="luxury-btn w-full py-4 bg-[#1a3c2a] hover:bg-[#c9a84c] text-[#f0ebe1] hover:text-[#0f1a14] font-cinzel text-xs font-bold uppercase tracking-[0.2em] transition-all disabled:opacity-50 disabled:pointer-events-none">
+      <button id="cart-checkout-btn" onclick="alert('Proceeding to Arbachin Luxury Checkout: ' + document.getElementById('cart-subtotal-price').textContent)" class="btn-forest" style="width:100%;padding:14px 0;font-size:11px;">
         Proceed to Checkout
-      </button>
-      
-      <button onclick="arbachinApp.closeCartDrawer()" class="w-full text-center text-xs uppercase tracking-widest text-[#1a3c2a] hover:text-[#c9a84c] font-semibold py-1">
-        Continue Exploring
       </button>
     </div>
   </aside>
 
-  <!-- Core Scripts -->
+  <!-- Scripts -->
   <script src="script.js"></script>
   <script>
-    // Initialize Home Page Featured Products
     document.addEventListener('DOMContentLoaded', () => {
       const grid = document.getElementById('home-featured-grid');
       if (grid) {

@@ -1,71 +1,83 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product Details | আরবাচীন (Arbachin) Haute Couture</title>
   <meta name="description" content="Detailed craftsmanship and specifications for Arbachin handwoven sarees and three-piece creations." />
   
-  <!-- Tailwind CSS v4 CDN -->
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#1a3c2a',
+            'brand-dark': '#0f2419',
+            accent: '#c9a84c',
+            cream: '#f4efe6',
+            'bg-dark': '#0d1712',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
   
-  <!-- Custom Luxury Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-[#f8f6f0] text-[#2e3832] selection:bg-[#c9a84c] selection:text-[#0f1a14]">
+<body class="bg-[#fcfbfa] text-[#1e2922] selection:bg-[#c9a84c] selection:text-[#0d1712]">
 
   <!-- Top Announcement Bar -->
-  <div class="bg-[#1a3c2a] text-[#f0ebe1] text-xs py-2 px-4 border-b border-[#c9a84c]/30">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <div class="hidden sm:flex items-center gap-4 text-[11px] tracking-wider uppercase font-cinzel text-[#c9a84c]">
+  <div class="announcement-bar">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1">
+      <div class="hidden md:flex items-center gap-3 font-cinzel text-[#c9a84c] text-[11px] tracking-wider uppercase">
         <span>✦ Heritage Craftsmanship</span>
         <span>✦ 100% Pure Silk Certified</span>
       </div>
-      <div class="w-full sm:w-auto text-center font-medium tracking-wide">
+      <div class="font-medium tracking-wide text-center">
         Complimentary Insured Nationwide Delivery on Orders Over ৳5,000
       </div>
-      <div class="hidden md:flex items-center gap-4 text-xs">
+      <div class="hidden sm:flex items-center gap-3 text-xs">
         <a href="tel:+8801700000000" class="hover:text-[#c9a84c] transition-colors">+880 1700-000000</a>
-        <span class="text-[#c9a84c]">|</span>
-        <a href="category.html" class="hover:text-[#c9a84c] transition-colors">Bespoke Concierge</a>
       </div>
     </div>
   </div>
 
-  <!-- Main Navigation Header (Solid Glass) -->
-  <header id="main-header" class="sticky top-0 inset-x-0 z-40 transition-all duration-300 glass-nav border-b border-[#dfd8cb]/60 shadow-sm">
+  <!-- Header -->
+  <header id="main-header" class="sticky top-0 inset-x-0 z-40 header-glass">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
-        <!-- Mobile Menu Trigger -->
-        <button id="mobile-menu-btn" class="lg:hidden p-2 text-[#1a3c2a] hover:text-[#c9a84c] transition-colors" aria-label="Open Navigation">
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-[#1a3c2a] hover:text-[#c9a84c] transition-colors">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
 
-        <!-- Left Nav Links -->
-        <nav class="hidden lg:flex items-center gap-8 text-xs font-medium tracking-[0.2em] uppercase">
-          <a href="index.html" class="nav-link text-[#1a3c2a] hover:text-[#c9a84c] transition-colors pb-1">Home</a>
-          <a href="category.html?cat=sarees" class="nav-link text-[#1a3c2a] hover:text-[#c9a84c] transition-colors pb-1">Sarees</a>
-          <a href="category.html?cat=three-piece" class="nav-link text-[#1a3c2a] hover:text-[#c9a84c] transition-colors pb-1">Three Piece</a>
-          <a href="index.html#heritage-story" class="nav-link text-[#1a3c2a] hover:text-[#c9a84c] transition-colors pb-1">Our Heritage</a>
+        <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold tracking-[0.2em] uppercase font-cinzel">
+          <a href="index.html" class="text-[#1a3c2a] hover:text-[#c9a84c] transition-colors pb-1">Home</a>
+          <a href="category.html?cat=sarees" class="text-[#1a3c2a] hover:text-[#c9a84c] transition-colors pb-1">Royal Sarees</a>
+          <a href="category.html?cat=three-piece" class="text-[#1a3c2a] hover:text-[#c9a84c] transition-colors pb-1">Three Piece</a>
+          <a href="index.html#heritage-story" class="text-[#1a3c2a] hover:text-[#c9a84c] transition-colors pb-1">Our Heritage</a>
         </nav>
 
-        <!-- Centered Luxury Logo -->
         <div class="flex-shrink-0 flex items-center justify-center">
-          <a href="index.html" class="flex items-center gap-3 group">
-            <img src="assets/image/logo.png" alt="Arbachin Logo" class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+          <a href="index.html" class="block">
+            <img src="assets/image/logo.png" alt="Arbachin Logo" class="h-12 w-auto object-contain" />
           </a>
         </div>
 
-        <!-- Right Action Icons -->
-        <div class="flex items-center gap-4 sm:gap-6">
-          <button onclick="arbachinApp.openSearchModal()" class="text-[#1a3c2a] hover:text-[#c9a84c] transition-colors p-2" title="Search Creations">
+        <div class="flex items-center gap-3 sm:gap-5">
+          <button onclick="arbachinApp.openSearchModal()" class="text-[#1a3c2a] hover:text-[#c9a84c] transition-colors p-2" title="Search">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
           </button>
 
           <button onclick="arbachinApp.openCartDrawer()" class="relative text-[#1a3c2a] hover:text-[#c9a84c] transition-colors p-2" title="Shopping Bag">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-            <span class="cart-count-badge absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#1a3c2a] text-[#f0ebe1] text-[10px] font-bold items-center justify-center hidden">0</span>
+            <span class="cart-count-badge absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#1a3c2a] text-[#f4efe6] text-[10px] font-bold items-center justify-center hidden">0</span>
           </button>
         </div>
 
@@ -73,40 +85,30 @@
     </div>
   </header>
 
-  <!-- Mobile Navigation Drawer -->
-  <div id="mobile-menu-overlay" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300"></div>
-  <div id="mobile-menu-drawer" class="fixed inset-y-0 left-0 z-50 w-80 max-w-full bg-[#0f1a14] text-[#f0ebe1] border-r border-[#c9a84c]/30 transform -translate-x-full transition-transform duration-300 ease-in-out p-6 flex flex-col justify-between">
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:50;transition:opacity 0.3s ease;opacity:0;"></div>
+  <div id="mobile-menu-drawer" style="position:fixed;top:0;bottom:0;left:0;width:300px;background:#0d1712;color:#f4efe6;border-right:1px solid #c9a84c;z-index:50;transform:translateX(-100%);transition:transform 0.3s ease;padding:24px;display:flex;flex-direction:column;justify-content:space-between;">
     <div>
-      <div class="flex items-center justify-between pb-6 border-b border-[#24382c]">
-        <img src="assets/image/logo.png" alt="Arbachin" class="h-10 w-auto" />
-        <button id="mobile-menu-close" class="text-[#c9a84c] hover:text-white p-2">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:16px;border-bottom:1px solid #1a3c2a;">
+        <img src="assets/image/logo.png" alt="Arbachin" style="height:38px;width:auto;" />
+        <button id="mobile-menu-close" style="background:none;border:none;color:#c9a84c;font-size:24px;cursor:pointer;">&times;</button>
       </div>
-
-      <nav class="mt-8 space-y-6 text-sm uppercase tracking-[0.2em] font-cinzel">
-        <a href="index.html" class="block text-[#ede8df] hover:text-[#c9a84c] transition-colors py-2">Home</a>
-        <a href="category.html?cat=sarees" class="block text-[#c9a84c] font-semibold py-2">Royal Sarees</a>
-        <a href="category.html?cat=three-piece" class="block text-[#ede8df] hover:text-[#c9a84c] transition-colors py-2">Three Piece Ensembles</a>
-        <a href="category.html" class="block text-[#ede8df] hover:text-[#c9a84c] transition-colors py-2">All Collections</a>
-        <a href="index.html#heritage-story" class="block text-[#ede8df] hover:text-[#c9a84c] transition-colors py-2">Heritage Story</a>
+      <nav style="margin-top:32px;display:flex;flex-direction:column;gap:18px;font-family:'Cinzel',serif;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;">
+        <a href="index.html" style="color:#f4efe6;text-decoration:none;">Home</a>
+        <a href="category.html?cat=sarees" style="color:#c9a84c;text-decoration:none;">Royal Sarees</a>
+        <a href="category.html?cat=three-piece" style="color:#f4efe6;text-decoration:none;">Three Piece Ensembles</a>
+        <a href="category.html" style="color:#f4efe6;text-decoration:none;">All Creations</a>
       </nav>
-    </div>
-
-    <div class="pt-6 border-t border-[#24382c] space-y-3 text-xs text-[#98a39c]">
-      <p class="font-cinzel text-[#c9a84c]">Concierge Support</p>
-      <p>Phone: +880 1700-000000</p>
-      <p>Email: concierge@arbachin.com</p>
     </div>
   </div>
 
-  <!-- Breadcrumb Navigation -->
-  <div class="bg-[#f0ebe1] border-b border-[#dfd8cb] py-3.5">
+  <!-- Breadcrumb -->
+  <div class="bg-[#f4efe6] border-b border-[#dfd7ca] py-3">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="flex items-center gap-2 text-xs text-[#6b7770]">
-        <a href="index.html" class="hover:text-[#1a3c2a] transition-colors">Home</a>
+      <nav class="flex items-center gap-2 text-xs text-[#5c6861]">
+        <a href="index.html" class="hover:text-[#1a3c2a]">Home</a>
         <span>/</span>
-        <a id="pd-breadcrumb-cat" href="category.html" class="hover:text-[#1a3c2a] transition-colors">Collections</a>
+        <a id="pd-breadcrumb-cat" href="category.html" class="hover:text-[#1a3c2a]">Collections</a>
         <span>/</span>
         <span id="pd-breadcrumb-name" class="text-[#1a3c2a] font-semibold truncate max-w-xs">Product Details</span>
       </nav>
@@ -115,402 +117,242 @@
 
   <!-- Product Details Section -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
       
-      <!-- Left Column: Gallery (55%) -->
-      <div class="lg:col-span-7 flex flex-col gap-4 sticky top-28">
-        <!-- Main Image with Zoom -->
-        <div class="zoom-container relative aspect-[3/4] w-full bg-[#f8f6f0] border border-[#dfd8cb] shadow-sm overflow-hidden" id="pdp-zoom-box">
-          <img id="pdp-main-img" src="assets/image/saree_1.jpg" alt="Product Image" class="zoom-image w-full h-full object-cover object-top transition-transform duration-200" />
-          <span id="pdp-badge" class="absolute top-4 left-4 badge-gold text-[10px] tracking-widest uppercase px-3 py-1 font-semibold">
-            Bestseller
-          </span>
-          <div class="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm text-white px-3 py-1 text-[11px] font-sans rounded-none flex items-center gap-1.5 pointer-events-none">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
-            Hover to Magnify
-          </div>
+      <!-- Gallery Left (7 cols) -->
+      <div class="lg:col-span-7 flex flex-col gap-4">
+        <div style="position:relative;width:100%;aspect-ratio:3/4;overflow:hidden;background:#f4efe6;border:1px solid #dfd7ca;">
+          <img id="pdp-main-img" src="assets/image/saree_1.jpg" alt="Product Image" style="width:100%;height:100%;object-fit:cover;object-position:top;" />
+          <span id="pdp-badge" class="product-badge">Bestseller</span>
         </div>
 
-        <!-- Thumbnails Row -->
-        <div id="pdp-thumbnails" class="grid grid-cols-4 gap-3">
-          <!-- Thumbnails injected dynamically -->
-        </div>
+        <div id="pdp-thumbnails" class="grid grid-cols-4 gap-3"></div>
 
-        <!-- Trust Features Strip -->
-        <div class="grid grid-cols-3 gap-3 p-4 bg-white border border-[#dfd8cb] text-center mt-2">
+        <div class="grid grid-cols-3 gap-3 p-4 bg-white border border-[#dfd7ca] text-center mt-2">
           <div>
-            <span class="text-base text-[#c9a84c]">✦</span>
+            <span class="text-[#c9a84c]">✦</span>
             <p class="font-cinzel text-[11px] font-bold text-[#1a3c2a] mt-0.5">100% Pure Silk</p>
-            <p class="text-[10px] text-[#6b7770]">Silk Mark Certified</p>
+            <p class="text-[10px] text-[#5c6861]">Silk Mark Certified</p>
           </div>
           <div>
-            <span class="text-base text-[#c9a84c]">✦</span>
+            <span class="text-[#c9a84c]">✦</span>
             <p class="font-cinzel text-[11px] font-bold text-[#1a3c2a] mt-0.5">Kadwa Weave</p>
-            <p class="text-[10px] text-[#6b7770]">Authentic Handloom</p>
+            <p class="text-[10px] text-[#5c6861]">Authentic Handloom</p>
           </div>
           <div>
-            <span class="text-base text-[#c9a84c]">✦</span>
-            <p class="font-cinzel text-[11px] font-bold text-[#1a3c2a] mt-0.5">Insured Dispatch</p>
-            <p class="text-[10px] text-[#6b7770]">Signature Box Included</p>
+            <span class="text-[#c9a84c]">✦</span>
+            <p class="font-cinzel text-[11px] font-bold text-[#1a3c2a] mt-0.5">Insured Delivery</p>
+            <p class="text-[10px] text-[#5c6861]">Signature Box Included</p>
           </div>
         </div>
       </div>
 
-      <!-- Right Column: Product Meta & Purchase (45%) -->
+      <!-- Meta Right (5 cols) -->
       <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
         <div>
-          <!-- Category & SKU -->
           <div class="flex items-center justify-between text-xs text-[#98a39c] mb-2 font-cinzel">
-            <span id="pdp-category-tag" class="uppercase tracking-widest text-[#c9a84c] font-semibold">Heritage Sarees</span>
+            <span id="pdp-category-tag" class="uppercase tracking-widest text-[#c9a84c] font-bold">Heritage Sarees</span>
             <span id="pdp-sku" class="text-xs">SKU: ARB-SAR-001</span>
           </div>
 
-          <!-- Product Title -->
           <h1 id="pdp-title" class="font-serif text-3xl sm:text-4xl text-[#1a3c2a] font-normal leading-tight mb-3">
             Burgundy Banarasi Silk Saree
           </h1>
 
-          <!-- Reviews & Rating -->
-          <div class="flex items-center gap-3 pb-4 border-b border-[#dfd8cb]">
+          <div class="flex items-center gap-3 pb-4 border-b border-[#dfd7ca]">
             <div class="flex items-center text-[#c9a84c] text-sm">
               <span>★★★★★</span>
               <span id="pdp-rating-num" class="text-xs font-bold text-[#1a3c2a] ml-1.5">4.9</span>
             </div>
-            <span class="text-[#dfd8cb]">•</span>
-            <a href="#accordions" class="text-xs text-[#6b7770] hover:text-[#1a3c2a] underline underline-offset-2">
-              <span id="pdp-reviews-count">28</span> Verified Reviews
-            </a>
+            <span class="text-[#dfd7ca]">•</span>
+            <span class="text-xs text-[#5c6861]"><span id="pdp-reviews-count">28</span> Verified Reviews</span>
           </div>
 
-          <!-- Pricing Block -->
-          <div class="py-4 border-b border-[#dfd8cb]">
+          <div class="py-4 border-b border-[#dfd7ca]">
             <div class="flex items-baseline gap-3">
               <span id="pdp-price" class="font-serif text-3xl sm:text-4xl font-bold text-[#1a3c2a]">৳12,500</span>
               <span id="pdp-orig-price" class="text-base text-[#98a39c] line-through">৳15,000</span>
-              <span id="pdp-discount-badge" class="badge-gold text-xs font-semibold px-2.5 py-0.5">Save 17%</span>
+              <span id="pdp-discount-badge" class="bg-[#c9a84c] text-[#0d1712] font-cinzel text-xs font-bold px-2 py-0.5">Save 17%</span>
             </div>
-            <p class="text-[11px] text-[#6b7770] mt-1.5">Inclusive of all handcrafted luxury taxes and keepsake packaging.</p>
+            <p class="text-[11px] text-[#5c6861] mt-1">Inclusive of all handcrafted luxury taxes and keepsake packaging.</p>
           </div>
 
-          <!-- Description -->
-          <p id="pdp-description" class="text-sm text-[#2e3832] leading-relaxed py-4 border-b border-[#dfd8cb]">
-            Handwoven burgundy Banarasi silk saree with intricate gold zari work featuring traditional paisley and floral motifs. The ornamental border and richly detailed pallu make it perfect for weddings and festive occasions.
+          <p id="pdp-description" class="text-sm text-[#1e2922] leading-relaxed py-4 border-b border-[#dfd7ca]">
+            Handwoven burgundy Banarasi silk saree with intricate gold zari work.
           </p>
 
-          <!-- Fabric & Craft Pills -->
-          <div class="py-4 border-b border-[#dfd8cb] space-y-2 text-xs">
-            <div class="flex items-center gap-2">
-              <span class="font-cinzel font-bold text-[#1a3c2a] uppercase tracking-wider w-24">Fabric:</span>
-              <span id="pdp-fabric" class="text-[#2e3832]">Pure Banarasi Silk</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="font-cinzel font-bold text-[#1a3c2a] uppercase tracking-wider w-24">Embroidery:</span>
-              <span id="pdp-work" class="text-[#2e3832]">Gold Zari Work</span>
-            </div>
+          <div class="py-4 border-b border-[#dfd7ca] space-y-1.5 text-xs">
+            <p><strong>Fabric:</strong> <span id="pdp-fabric">Pure Banarasi Silk</span></p>
+            <p><strong>Embroidery / Weave:</strong> <span id="pdp-work">Gold Zari Work</span></p>
           </div>
 
-          <!-- Color Swatches Selection -->
-          <div class="py-4 border-b border-[#dfd8cb]">
-            <label class="block font-cinzel text-xs font-bold text-[#1a3c2a] uppercase tracking-wider mb-2">Select Palette</label>
-            <div id="pdp-colors-container" class="flex gap-2.5">
-              <!-- Colors injected -->
-            </div>
+          <!-- Color Swatches -->
+          <div class="py-4 border-b border-[#dfd7ca]">
+            <label class="block font-cinzel text-xs font-bold text-[#1a3c2a] uppercase tracking-wider mb-2">Palette Options</label>
+            <div id="pdp-colors-container" class="flex gap-2"></div>
           </div>
 
-          <!-- Size / Cut Selection -->
-          <div class="py-4 border-b border-[#dfd8cb]">
-            <div class="flex justify-between items-center mb-2">
-              <label class="font-cinzel text-xs font-bold text-[#1a3c2a] uppercase tracking-wider">Dimension / Fit</label>
-              <button onclick="toggleAccordion('acc-fit')" class="text-xs text-[#c9a84c] hover:underline">View Size Guide</button>
-            </div>
-            <div class="flex gap-2">
-              <button class="size-pill px-4 py-2 border-2 border-[#1a3c2a] bg-[#1a3c2a] text-[#f0ebe1] text-xs font-medium">Standard Heritage Fit</button>
-              <button class="size-pill px-4 py-2 border border-[#dfd8cb] bg-white text-[#2e3832] text-xs hover:border-[#1a3c2a]">Custom Stitched Blouse</button>
-            </div>
-          </div>
-
-          <!-- Purchase Controls (Qty + Add to Cart + Buy Now) -->
+          <!-- Purchase Controls -->
           <div class="pt-6 space-y-4">
             <div class="flex gap-3">
-              <div class="flex items-center border border-[#1a3c2a] bg-white w-32 shrink-0">
-                <button onclick="const q=document.getElementById('pdp-qty'); if(+q.value>1) q.value=+q.value-1" class="w-10 h-12 flex items-center justify-center text-sm font-bold text-[#1a3c2a] hover:bg-[#f0ebe1]">-</button>
-                <input id="pdp-qty" type="text" value="1" readonly class="w-12 text-center text-sm font-semibold text-[#1a3c2a] bg-transparent focus:outline-none" />
-                <button onclick="const q=document.getElementById('pdp-qty'); q.value=+q.value+1" class="w-10 h-12 flex items-center justify-center text-sm font-bold text-[#1a3c2a] hover:bg-[#f0ebe1]">+</button>
+              <div class="flex items-center border border-[#1a3c2a] bg-white w-28 shrink-0">
+                <button onclick="const q=document.getElementById('pdp-qty'); if(+q.value>1) q.value=+q.value-1" class="w-8 h-12 flex items-center justify-center text-sm font-bold text-[#1a3c2a]">-</button>
+                <input id="pdp-qty" type="text" value="1" readonly class="w-12 text-center text-sm font-semibold text-[#1a3c2a] bg-transparent outline-none" />
+                <button onclick="const q=document.getElementById('pdp-qty'); q.value=+q.value+1" class="w-8 h-12 flex items-center justify-center text-sm font-bold text-[#1a3c2a]">+</button>
               </div>
 
-              <button id="pdp-add-cart-btn" class="luxury-btn flex-1 bg-[#1a3c2a] hover:bg-[#c9a84c] text-[#f0ebe1] hover:text-[#0f1a14] py-3.5 px-6 font-cinzel text-xs font-bold uppercase tracking-[0.2em] shadow-md transition-all">
+              <button id="pdp-add-cart-btn" class="btn-forest flex-1">
                 Add to Shopping Bag
               </button>
             </div>
 
-            <div class="flex gap-3">
-              <button id="pdp-buy-now-btn" class="luxury-btn flex-1 py-3 px-6 border-2 border-[#1a3c2a] text-[#1a3c2a] hover:bg-[#1a3c2a] hover:text-[#f0ebe1] font-cinzel text-xs font-bold uppercase tracking-[0.2em] transition-all bg-white">
-                Express Buy Now
-              </button>
-              
-              <button id="pdp-wishlist-btn" class="w-12 h-12 border border-[#dfd8cb] hover:border-[#c9a84c] bg-white flex items-center justify-center text-[#1a3c2a] transition-all shrink-0" title="Save to Wishlist">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-              </button>
-            </div>
+            <button id="pdp-buy-now-btn" class="btn-gold w-full">
+              Express Buy Now
+            </button>
           </div>
-
-          <!-- Concierge Assistance Note -->
-          <div class="p-4 bg-[#f0ebe1] border border-[#dfd8cb] mt-6 flex items-center justify-between text-xs">
-            <div class="flex items-center gap-3">
-              <span class="text-[#c9a84c] text-lg">✦</span>
-              <div>
-                <p class="font-cinzel font-bold text-[#1a3c2a]">Need Styling Consultation?</p>
-                <p class="text-[#6b7770]">Connect with our master drape stylist</p>
-              </div>
-            </div>
-            <a href="tel:+8801700000000" class="font-cinzel text-xs font-bold text-[#1a3c2a] hover:text-[#c9a84c] underline uppercase tracking-wider">Call Concierge</a>
-          </div>
-
         </div>
 
-        <!-- Accordions Container -->
-        <div id="accordions" class="pt-6 border-t border-[#dfd8cb] divide-y divide-[#dfd8cb]">
-          
-          <!-- Accordion 1: Details -->
-          <div class="py-4">
-            <button onclick="toggleAccordion('acc-details')" class="w-full flex items-center justify-between text-left font-cinzel text-xs uppercase tracking-wider font-bold text-[#1a3c2a]">
+        <!-- Accordions -->
+        <div class="pt-6 border-t border-[#dfd7ca]">
+          <div class="accordion-item">
+            <button onclick="toggleAcc('acc-details')" class="accordion-btn">
               <span>Mastery & Specifications</span>
-              <span id="acc-details-icon" class="text-sm text-[#c9a84c]">+</span>
+              <span id="acc-details-icon">+</span>
             </button>
-            <div id="acc-details" class="accordion-content pt-3 text-xs text-[#2e3832] space-y-2">
-              <ul id="pdp-details-list" class="list-disc list-inside space-y-1.5 text-[#6b7770]"></ul>
+            <div id="acc-details" class="accordion-body">
+              <ul id="pdp-details-list" class="list-disc list-inside space-y-1"></ul>
             </div>
           </div>
 
-          <!-- Accordion 2: Delivery -->
-          <div class="py-4">
-            <button onclick="toggleAccordion('acc-shipping')" class="w-full flex items-center justify-between text-left font-cinzel text-xs uppercase tracking-wider font-bold text-[#1a3c2a]">
+          <div class="accordion-item">
+            <button onclick="toggleAcc('acc-shipping')" class="accordion-btn">
               <span>Complimentary Shipping & Returns</span>
-              <span id="acc-shipping-icon" class="text-sm text-[#c9a84c]">+</span>
+              <span id="acc-shipping-icon">+</span>
             </button>
-            <div id="acc-shipping" class="accordion-content pt-3 text-xs text-[#6b7770] space-y-2">
-              <p id="pdp-delivery-text">Express dispatched in 2-3 business days in Arbachin signature white-glove packaging.</p>
-              <p>We provide a 7-day hassle-free replacement or store credit guarantee on unstitched and unworn creations.</p>
+            <div id="acc-shipping" class="accordion-body">
+              <p id="pdp-delivery-text"></p>
             </div>
           </div>
 
-          <!-- Accordion 3: Care -->
-          <div class="py-4">
-            <button onclick="toggleAccordion('acc-care')" class="w-full flex items-center justify-between text-left font-cinzel text-xs uppercase tracking-wider font-bold text-[#1a3c2a]">
+          <div class="accordion-item">
+            <button onclick="toggleAcc('acc-care')" class="accordion-btn">
               <span>Silk Care & Preservation</span>
-              <span id="acc-care-icon" class="text-sm text-[#c9a84c]">+</span>
+              <span id="acc-care-icon">+</span>
             </button>
-            <div id="acc-care" class="accordion-content pt-3 text-xs text-[#6b7770] space-y-2">
-              <p id="pdp-care-text">Dry clean only. Store wrapped in pure muslin fabric away from moisture.</p>
+            <div id="acc-care" class="accordion-body">
+              <p id="pdp-care-text"></p>
             </div>
           </div>
-
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Related Products: "You May Also Admire" -->
-  <section class="py-20 bg-[#f0ebe1] border-t border-[#dfd8cb]">
+  <!-- Related Products -->
+  <section class="py-20 bg-[#f4efe6] border-t border-[#dfd7ca]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-xl mx-auto mb-12">
-        <span class="text-xs uppercase tracking-[0.25em] text-[#c9a84c] font-cinzel font-semibold">Harmonious Pairings</span>
+        <span class="text-xs uppercase tracking-[0.25em] text-[#c9a84c] font-cinzel font-bold">Harmonious Pairings</span>
         <h2 class="font-serif text-3xl text-[#1a3c2a] font-normal mt-1">You May Also Admire</h2>
       </div>
-
-      <div id="related-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-        <!-- Injected -->
-      </div>
+      <div id="related-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"></div>
     </div>
   </section>
 
-  <!-- Slide-Over Cart Drawer -->
-  <div id="cart-overlay" onclick="arbachinApp.closeCartDrawer()" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300"></div>
-  <aside id="cart-drawer" class="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-white shadow-2xl border-l border-[#dfd8cb] transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between">
-    <div class="p-6 border-b border-[#dfd8cb] flex items-center justify-between bg-[#f8f6f0]">
-      <div class="flex items-center gap-2">
-        <h3 class="font-serif text-xl font-medium text-[#1a3c2a]">Your Shopping Bag</h3>
-        <span class="cart-count-badge w-5 h-5 rounded-full bg-[#1a3c2a] text-[#f0ebe1] text-xs font-bold items-center justify-center hidden">0</span>
-      </div>
-      <button onclick="arbachinApp.closeCartDrawer()" class="text-[#1a3c2a] hover:text-[#c9a84c] p-2 transition-colors">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12"/></svg>
-      </button>
+  <!-- Slide-Over Bag -->
+  <div id="cart-overlay" onclick="arbachinApp.closeCartDrawer()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:50;transition:opacity 0.3s ease;opacity:0;"></div>
+  <aside id="cart-drawer" class="cart-drawer-box" style="position:fixed;top:0;bottom:0;right:0;width:100%;max-width:420px;background:#ffffff;border-left:1px solid #dfd7ca;z-index:50;transform:translateX(100%);transition:transform 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;">
+    <div style="padding:20px;border-bottom:1px solid #dfd7ca;display:flex;justify-content:space-between;align-items:center;background:#f4efe6;">
+      <h3 style="font-family:'Playfair Display',serif;font-size:18px;color:#1a3c2a;font-weight:600;">Your Shopping Bag</h3>
+      <button onclick="arbachinApp.closeCartDrawer()" style="background:none;border:none;color:#1a3c2a;font-size:24px;cursor:pointer;">&times;</button>
     </div>
-
-    <div class="px-6 py-3 bg-[#f0ebe1] border-b border-[#dfd8cb]/60">
-      <div id="free-shipping-text" class="text-xs text-[#2e3832] mb-1.5 font-medium">Add ৳5,000 for Complimentary Shipping</div>
-      <div class="w-full h-1.5 bg-[#dfd8cb] overflow-hidden">
-        <div id="free-shipping-progress" class="h-full bg-[#1a3c2a] transition-all duration-300" style="width: 0%"></div>
+    <div style="padding:12px 20px;background:#fcfbfa;border-bottom:1px solid #dfd7ca;">
+      <div id="free-shipping-text" style="font-size:11px;color:#1a3c2a;margin-bottom:6px;font-weight:500;">Add ৳5,000 for Complimentary Shipping</div>
+      <div style="width:100%;height:4px;background:#dfd7ca;overflow:hidden;">
+        <div id="free-shipping-progress" style="height:100%;background:#1a3c2a;width:0%;transition:width 0.3s ease;"></div>
       </div>
     </div>
-
-    <div id="cart-items-container" class="flex-1 overflow-y-auto divide-y divide-[#dfd8cb]/50"></div>
-
-    <div class="p-6 border-t border-[#dfd8cb] bg-[#f8f6f0] space-y-4">
-      <div class="flex justify-between items-baseline text-sm">
-        <span class="text-[#6b7770] uppercase font-cinzel text-xs tracking-wider">Subtotal:</span>
-        <span id="cart-subtotal-price" class="font-serif text-2xl font-bold text-[#1a3c2a]">৳0</span>
+    <div id="cart-items-container" style="flex:1;overflow-y:auto;"></div>
+    <div style="padding:20px;border-top:1px solid #dfd7ca;background:#f4efe6;">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;">
+        <span style="font-family:'Cinzel',serif;font-size:12px;color:#5c6861;text-transform:uppercase;letter-spacing:0.1em;">Subtotal:</span>
+        <span id="cart-subtotal-price" style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#1a3c2a;">৳0</span>
       </div>
-      <p class="text-[11px] text-[#6b7770]">Taxes and express doorstep delivery calculated at checkout.</p>
-      
-      <button id="cart-checkout-btn" onclick="alert('Proceeding to Arbachin Secure Luxury Checkout with order total: ' + document.getElementById('cart-subtotal-price').textContent)" class="luxury-btn w-full py-4 bg-[#1a3c2a] hover:bg-[#c9a84c] text-[#f0ebe1] hover:text-[#0f1a14] font-cinzel text-xs font-bold uppercase tracking-[0.2em] transition-all disabled:opacity-50 disabled:pointer-events-none">
+      <button id="cart-checkout-btn" onclick="alert('Proceeding to Arbachin Luxury Checkout: ' + document.getElementById('cart-subtotal-price').textContent)" class="btn-forest" style="width:100%;padding:14px 0;font-size:11px;">
         Proceed to Checkout
-      </button>
-      
-      <button onclick="arbachinApp.closeCartDrawer()" class="w-full text-center text-xs uppercase tracking-widest text-[#1a3c2a] hover:text-[#c9a84c] font-semibold py-1">
-        Continue Exploring
       </button>
     </div>
   </aside>
 
-  <!-- Dark Luxury Footer -->
-  <footer class="bg-[#0f1a14] text-[#ede8df] pt-16 pb-12 border-t border-[#24382c]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-        <div class="space-y-4">
-          <img src="assets/image/logo.png" alt="Arbachin" class="h-12 w-auto" />
-          <p class="text-xs text-[#98a39c] leading-relaxed font-light">
-            আরবাচীন — Haute couture handwoven sarees and artisanal three-piece ensembles celebrating quintessential subcontinental heritage.
-          </p>
-        </div>
-        <div>
-          <h4 class="font-cinzel text-xs font-bold uppercase tracking-[0.2em] text-[#c9a84c] mb-4">The Collections</h4>
-          <ul class="space-y-2.5 text-xs text-[#ded7c8]">
-            <li><a href="category.html?cat=sarees" class="hover:text-[#c9a84c] transition-colors">Banarasi Silk Sarees</a></li>
-            <li><a href="category.html?cat=sarees" class="hover:text-[#c9a84c] transition-colors">Katan Silk Heirloom</a></li>
-            <li><a href="category.html?cat=three-piece" class="hover:text-[#c9a84c] transition-colors">Embroidered Three Piece</a></li>
-            <li><a href="category.html?cat=three-piece" class="hover:text-[#c9a84c] transition-colors">Anarkali Ensembles</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-cinzel text-xs font-bold uppercase tracking-[0.2em] text-[#c9a84c] mb-4">Concierge & Care</h4>
-          <ul class="space-y-2.5 text-xs text-[#ded7c8]">
-            <li><a href="#" class="hover:text-[#c9a84c] transition-colors">Bespoke Bridal Styling</a></li>
-            <li><a href="#" class="hover:text-[#c9a84c] transition-colors">Silk Care & Preservation</a></li>
-            <li><a href="#" class="hover:text-[#c9a84c] transition-colors">Complimentary Insured Shipping</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-cinzel text-xs font-bold uppercase tracking-[0.2em] text-[#c9a84c] mb-4">Atelier House</h4>
-          <div class="space-y-3 text-xs text-[#ded7c8]">
-            <p>House 14, Road 11, Banani, Dhaka, Bangladesh</p>
-            <p>Hotline: +880 1700-000000</p>
-            <p>Email: concierge@arbachin.com</p>
-          </div>
-        </div>
-      </div>
-      <div class="pt-8 border-t border-[#24382c] text-center text-xs text-[#98a39c]">
-        © 2026 আরবাচীন (Arbachin). All Rights Reserved.
-      </div>
+  <!-- Footer -->
+  <footer class="bg-[#0d1712] text-[#f4efe6] pt-14 pb-10 border-t border-[#1a3c2a] mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-[#98a39c]">
+      <p>© 2026 আরবাচীন (Arbachin). All Rights Reserved.</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="script.js"></script>
   <script>
     let currentProduct = null;
     let selectedColor = null;
 
-    function toggleAccordion(id) {
+    function toggleAcc(id) {
       const el = document.getElementById(id);
       const icon = document.getElementById(id + '-icon');
       if (el) {
-        const isOpen = el.classList.contains('open');
-        if (isOpen) {
-          el.classList.remove('open');
-          if (icon) icon.textContent = '+';
-        } else {
-          el.classList.add('open');
-          if (icon) icon.textContent = '−';
-        }
+        el.classList.toggle('open');
+        if (icon) icon.textContent = el.classList.contains('open') ? '−' : '+';
       }
     }
 
-    function initProductDetails() {
+    function initPDP() {
       const params = new URLSearchParams(window.location.search);
-      const productId = params.get('id') || 'saree-001';
-      currentProduct = PRODUCTS.find(p => p.id === productId) || PRODUCTS[0];
+      const pid = params.get('id') || 'saree-001';
+      currentProduct = PRODUCTS.find(p => p.id === pid) || PRODUCTS[0];
       selectedColor = currentProduct.colors[0];
 
-      // Page Title & Meta
       document.title = `${currentProduct.name} | আরবাচীন (Arbachin) Haute Couture`;
       
-      // Breadcrumbs
-      const bcCat = document.getElementById('pd-breadcrumb-cat');
-      const bcName = document.getElementById('pd-breadcrumb-name');
-      if (bcCat) {
-        bcCat.textContent = currentProduct.categoryName;
-        bcCat.href = `category.html?cat=${currentProduct.category}`;
-      }
-      if (bcName) bcName.textContent = currentProduct.name;
+      document.getElementById('pd-breadcrumb-cat').textContent = currentProduct.categoryName;
+      document.getElementById('pd-breadcrumb-cat').href = `category.html?cat=${currentProduct.category}`;
+      document.getElementById('pd-breadcrumb-name').textContent = currentProduct.name;
 
-      // Imagery
-      const mainImg = document.getElementById('pdp-main-img');
-      const badge = document.getElementById('pdp-badge');
-      if (mainImg) mainImg.src = currentProduct.image;
-      if (badge) {
-        if (currentProduct.badge) {
-          badge.textContent = currentProduct.badge;
-          badge.classList.remove('hidden');
-        } else {
-          badge.classList.add('hidden');
-        }
-      }
+      document.getElementById('pdp-main-img').src = currentProduct.image;
+      document.getElementById('pdp-badge').textContent = currentProduct.badge;
 
-      // Thumbnails
-      const thumbContainer = document.getElementById('pdp-thumbnails');
-      if (thumbContainer) {
-        thumbContainer.innerHTML = currentProduct.gallery.map((img, i) => `
-          <button onclick="switchPDPImage('${img}', this)" class="aspect-[3/4] border ${i===0 ? 'border-[#c9a84c] ring-1 ring-[#c9a84c]' : 'border-[#dfd8cb]'} overflow-hidden hover:border-[#c9a84c] transition-all focus:outline-none">
-            <img src="${img}" class="w-full h-full object-cover" />
-          </button>
-        `).join('');
-      }
+      document.getElementById('pdp-thumbnails').innerHTML = currentProduct.gallery.map((img, i) => `
+        <button onclick="document.getElementById('pdp-main-img').src='${img}'" style="aspect-ratio:3/4;border:1px solid #dfd7ca;overflow:hidden;cursor:pointer;">
+          <img src="${img}" style="width:100%;height:100%;object-fit:cover;" />
+        </button>
+      `).join('');
 
-      // Metadata
       document.getElementById('pdp-category-tag').textContent = currentProduct.categoryName;
       document.getElementById('pdp-sku').textContent = `SKU: ${currentProduct.sku}`;
       document.getElementById('pdp-title').textContent = currentProduct.name;
       document.getElementById('pdp-rating-num').textContent = currentProduct.rating;
       document.getElementById('pdp-reviews-count').textContent = currentProduct.reviewsCount;
       document.getElementById('pdp-price').textContent = arbachinApp.formatPrice(currentProduct.price);
-      
-      const origPriceEl = document.getElementById('pdp-orig-price');
-      const discountEl = document.getElementById('pdp-discount-badge');
-      if (currentProduct.originalPrice) {
-        origPriceEl.textContent = arbachinApp.formatPrice(currentProduct.originalPrice);
-        const pct = Math.round(((currentProduct.originalPrice - currentProduct.price) / currentProduct.originalPrice) * 100);
-        discountEl.textContent = `Save ${pct}%`;
-      } else {
-        origPriceEl.style.display = 'none';
-        discountEl.style.display = 'none';
-      }
+      document.getElementById('pdp-orig-price').textContent = arbachinApp.formatPrice(currentProduct.originalPrice);
+
+      const pct = Math.round(((currentProduct.originalPrice - currentProduct.price)/currentProduct.originalPrice)*100);
+      document.getElementById('pdp-discount-badge').textContent = `Save ${pct}%`;
 
       document.getElementById('pdp-description').textContent = currentProduct.description;
       document.getElementById('pdp-fabric').textContent = currentProduct.fabric;
       document.getElementById('pdp-work').textContent = currentProduct.work;
 
-      // Colors
-      const colorsBox = document.getElementById('pdp-colors-container');
-      if (colorsBox) {
-        colorsBox.innerHTML = currentProduct.colors.map((c, idx) => `
-          <button onclick="selectProductColor('${c}', this)" class="color-swatch-btn flex items-center gap-2 px-3 py-1.5 border ${idx===0 ? 'border-[#1a3c2a] bg-[#1a3c2a] text-[#f0ebe1]' : 'border-[#dfd8cb] bg-white text-[#2e3832]'} text-xs font-medium transition-all">
-            <span class="w-3 h-3 rounded-full border border-black/10" style="background-color: ${currentProduct.colorHex[idx] || '#1a3c2a'}"></span>
-            ${c}
-          </button>
-        `).join('');
-      }
+      document.getElementById('pdp-colors-container').innerHTML = currentProduct.colors.map((c, idx) => `
+        <button onclick="selectedColor='${c}'; document.querySelectorAll('.c-btn').forEach(b => b.style.borderColor='#dfd7ca'); this.style.borderColor='#1a3c2a';" class="c-btn" style="padding:6px 12px;border:1px solid ${idx===0 ? '#1a3c2a' : '#dfd7ca'};background:#ffffff;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;">
+          <span style="width:12px;height:12px;border-radius:50%;background:${currentProduct.colorHex[idx] || '#1a3c2a'};display:inline-block;"></span>
+          ${c}
+        </button>
+      `).join('');
 
-      // Details List
-      const detailsList = document.getElementById('pdp-details-list');
-      if (detailsList && currentProduct.details) {
-        detailsList.innerHTML = currentProduct.details.map(d => `<li>${d}</li>`).join('');
-      }
+      document.getElementById('pdp-details-list').innerHTML = currentProduct.details.map(d => `<li>${d}</li>`).join('');
       document.getElementById('pdp-delivery-text').textContent = currentProduct.delivery;
       document.getElementById('pdp-care-text').textContent = currentProduct.care;
 
-      // Buttons
       document.getElementById('pdp-add-cart-btn').onclick = () => {
         const qty = Number(document.getElementById('pdp-qty').value) || 1;
         arbachinApp.addToCart(currentProduct.id, qty, 'Standard', selectedColor);
@@ -519,60 +361,13 @@
       document.getElementById('pdp-buy-now-btn').onclick = () => {
         const qty = Number(document.getElementById('pdp-qty').value) || 1;
         arbachinApp.addToCart(currentProduct.id, qty, 'Standard', selectedColor);
-        arbachinApp.openCartDrawer();
       };
 
-      document.getElementById('pdp-wishlist-btn').onclick = () => {
-        arbachinApp.toggleWishlist(currentProduct.id);
-      };
-
-      // Related Products
-      const relatedGrid = document.getElementById('related-products-grid');
-      if (relatedGrid) {
-        const related = PRODUCTS.filter(p => p.id !== currentProduct.id).slice(0, 3);
-        relatedGrid.innerHTML = related.map(p => arbachinApp.generateProductCardHTML(p)).join('');
-      }
-
-      // Image Magnifier
-      initImageZoom();
+      const rel = PRODUCTS.filter(p => p.id !== currentProduct.id).slice(0, 3);
+      document.getElementById('related-products-grid').innerHTML = rel.map(p => arbachinApp.generateProductCardHTML(p)).join('');
     }
 
-    function switchPDPImage(imgSrc, btn) {
-      document.getElementById('pdp-main-img').src = imgSrc;
-      document.querySelectorAll('#pdp-thumbnails button').forEach(b => {
-        b.className = 'aspect-[3/4] border border-[#dfd8cb] overflow-hidden hover:border-[#c9a84c] transition-all focus:outline-none';
-      });
-      btn.className = 'aspect-[3/4] border border-[#c9a84c] ring-1 ring-[#c9a84c] overflow-hidden hover:border-[#c9a84c] transition-all focus:outline-none';
-    }
-
-    function selectProductColor(color, btn) {
-      selectedColor = color;
-      document.querySelectorAll('.color-swatch-btn').forEach(b => {
-        b.className = 'color-swatch-btn flex items-center gap-2 px-3 py-1.5 border border-[#dfd8cb] bg-white text-[#2e3832] text-xs font-medium transition-all';
-      });
-      btn.className = 'color-swatch-btn flex items-center gap-2 px-3 py-1.5 border border-[#1a3c2a] bg-[#1a3c2a] text-[#f0ebe1] text-xs font-medium transition-all';
-    }
-
-    function initImageZoom() {
-      const box = document.getElementById('pdp-zoom-box');
-      const img = document.getElementById('pdp-main-img');
-      if (!box || !img) return;
-
-      box.addEventListener('mousemove', (e) => {
-        const rect = box.getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / rect.width) * 100;
-        const y = ((e.clientY - rect.top) / rect.height) * 100;
-        img.style.transformOrigin = `${x}% ${y}%`;
-        img.style.transform = 'scale(1.8)';
-      });
-
-      box.addEventListener('mouseleave', () => {
-        img.style.transform = 'scale(1)';
-        img.style.transformOrigin = 'center center';
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', initProductDetails);
+    document.addEventListener('DOMContentLoaded', initPDP);
   </script>
 </body>
 </html>

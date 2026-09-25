@@ -1083,23 +1083,26 @@ img { max-width: 100%; height: auto; display: block; }
 
 @media (max-width: 768px) {
   .rk-topbar { flex-direction: column; gap: 6px; padding: 10px 16px; text-align: center; }
-  .rk-header-main { padding: 12px 20px; }
+  .rk-header-top-row { padding: 12px 20px; justify-content: space-between; }
+  .rk-header-left { display: none; }
   .rk-nav-row { display: none; }
-  .rk-hero-slider { height: 450px; }
-  .rk-hero-title { font-size: 32px; }
-  .rk-section, .cat-layout-wrapper, .pdp-layout-wrapper { padding-left: 20px; padding-right: 20px; }
+  .rk-hero-slider { height: 420px; }
+  .rk-hero-title { font-size: 28px; letter-spacing: 2px; }
+  .rk-section, .cat-layout-wrapper, .pdp-layout-wrapper { padding-left: 16px; padding-right: 16px; }
   .rk-card-grid, .rk-product-grid { grid-template-columns: 1fr; }
   .pdp-gallery { flex-direction: column-reverse; }
-  .pdp-thumbs { flex-direction: row; width: 100%; overflow-x: auto; }
-  .pdp-main-img-box { height: 380px; }
+  .pdp-thumbs { flex-direction: row; width: 100%; overflow-x: auto; gap: 8px; }
+  .pdp-main-img-box { height: 360px; }
   .pdp-btn-group, .pdp-cta-box { flex-direction: column; }
-  .rk-footer-grid { grid-template-columns: 1fr; }
+  .rk-footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .reviews-list-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
-  .rk-header-main { flex-wrap: wrap; gap: 10px; }
-  .rk-brand-logo img { height: 36px; }
-  .pdp-info-panel { padding: 20px 16px; }
-  .rk-modal-card { padding: 20px 16px; }
+  .rk-header-top-row { padding: 10px 14px; }
+  .rk-brand-logo img { height: 46px; }
+  .pdp-info-panel { padding: 20px 14px; }
+  .rk-modal-card { padding: 20px 14px; }
+  .rk-campaign-banner { height: 380px; }
+  .btn-rk-primary, .btn-rk-gold { padding: 12px 20px; font-size: 11px; }
 }

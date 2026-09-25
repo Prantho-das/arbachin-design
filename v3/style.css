@@ -904,8 +904,14 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 @media (max-width: 480px) {
+  .hom-header-inner { padding: 10px 14px; }
+  .hom-brand img { height: 42px; }
+  .hom-hero-boat-section { height: 400px; }
+  .hom-hero-boat-title { font-size: 26px; }
   .hom-main-catalog-grid { grid-template-columns: 1fr; }
   .hom-similar-grid { grid-template-columns: 1fr; }
   .aza-actions-row { flex-direction: column; }
   .aza-support-strip { grid-template-columns: 1fr; }
+  .hom-masaba-subscribe-form { flex-direction: column; gap: 8px; }
+  .hom-masaba-subscribe-form button { padding: 12px; }
 }

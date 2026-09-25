@@ -1192,30 +1192,38 @@ img { max-width: 100%; height: auto; display: block; }
   .gd-new-arrivals-layout { grid-template-columns: 1fr; }
   .gd-new-arrivals-sidebar { text-align: center; margin-bottom: 20px; padding-right: 0; }
   .gd-new-arrivals-grid { grid-template-columns: repeat(2, 1fr); }
+  .gd-combo-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
   .gd-top-strip { flex-direction: column; gap: 6px; padding: 10px 16px; text-align: center; }
   .gd-header-inner { padding: 12px 20px; }
   .gd-nav { display: none; }
-  .gd-hero-box { height: 450px; }
-  .gd-hero-headline { font-size: 32px; }
+  .gd-hero-slider-wrap { height: 420px; }
+  .gd-hero-slide-overlay { padding: 0 24px; }
+  .gd-hero-title { font-size: 28px; }
+  .gd-dual-hero { padding: 16px 20px; }
+  .gd-dual-hero-grid { grid-template-columns: 1fr; gap: 16px; }
+  .gd-hero-split-card { height: 400px; }
   .gd-section, .sabya-wrapper, .gd-pdp-layout, .gd-new-arrivals-section, .gd-gram-section {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
   .sabya-gallery-grid { grid-template-columns: 1fr; }
   .gd-2x2-grid { grid-template-columns: 1fr; }
   .gd-footer { padding-left: 20px; padding-right: 20px; }
-  .gd-footer-grid { grid-template-columns: 1fr; }
+  .gd-footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .gd-gram-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 480px) {
-  .gd-header-inner { flex-wrap: wrap; }
-  .gd-brand img { height: 34px; }
-  .gd-info-panel { padding: 24px 16px; }
+  .gd-header-inner { padding: 10px 14px; }
+  .gd-logo-wrap img { height: 44px; }
+  .gd-info-panel { padding: 20px 14px; }
   .gd-actions-row { flex-direction: column; }
   .gd-new-arrivals-grid { grid-template-columns: 1fr; }
   .gd-gram-grid { grid-template-columns: 1fr; }
+  .gd-hero-slider-wrap { height: 380px; }
+  .gd-hero-title { font-size: 24px; }
+  .gd-flash-bar { flex-direction: column; gap: 8px; text-align: center; }
 }

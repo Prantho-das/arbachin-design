@@ -1215,6 +1215,8 @@ img { max-width: 100%; height: auto; display: block; }
   .gd-footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .gd-gram-grid { grid-template-columns: repeat(2, 1fr); }
   .gd-na-next-btn { display: none; }
+  .gd-icons { gap: 12px; }
+  .gd-icon-btn span:not(.gd-cart-badge):not(.cart-count) { display: none; }
 }
 
 @media (max-width: 480px) {

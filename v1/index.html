@@ -122,6 +122,11 @@
       gap: 60px;
       align-items: center;
     }
+    .craft-heritage-inner h2 {
+      font-size: 38px;
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
     .occasions-grid-wrap {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -166,6 +171,35 @@
       transition: transform 0.4s ease;
     }
     .insta-pic-item:hover img { transform: scale(1.1); }
+
+    @media (max-width: 1024px) {
+      .features-grid-strip { grid-template-columns: repeat(2, 1fr); padding: 0 24px; }
+      .craft-heritage-inner { grid-template-columns: 1fr; gap: 36px; }
+      .occasions-grid-wrap { grid-template-columns: repeat(2, 1fr); }
+      .insta-grid-row { grid-template-columns: repeat(3, 1fr); }
+      .hotspot-banner-box { padding: 0 24px; }
+    }
+
+    @media (max-width: 768px) {
+      .press-section-box { padding: 40px 16px; }
+      .press-quote-text { font-size: 16px; }
+      .press-logo-row { gap: 24px; }
+      .press-logo-item { font-size: 16px; }
+      .features-grid-strip { grid-template-columns: 1fr; padding: 0 16px; margin: 30px auto; gap: 14px; }
+      .hotspot-banner-box { padding: 0 16px; margin: 30px auto; }
+      .hotspot-banner-inner { height: 380px; }
+      .craft-heritage-box { padding: 40px 16px; }
+      .craft-heritage-inner h2 { font-size: 26px !important; }
+      .occasions-grid-wrap { grid-template-columns: 1fr; gap: 16px; }
+      .occasion-tile-card { height: 300px; }
+      .insta-grid-row { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    }
+
+    @media (max-width: 480px) {
+      .insta-grid-row { grid-template-columns: repeat(2, 1fr); }
+      .hotspot-banner-inner { height: 280px; }
+      .craft-heritage-inner h2 { font-size: 22px !important; }
+    }
   </style>
 </head>
 <body>

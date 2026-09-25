@@ -901,6 +901,8 @@ img { max-width: 100%; height: auto; display: block; }
   .hom-footer-grid { grid-template-columns: 1fr; }
   .hom-connect-left, .hom-directory-left { padding: 36px 20px; }
   .hom-filter-drawer { width: 300px; }
+  .hom-icons { gap: 12px; }
+  .hom-icon-btn span:not(.hom-cart-count) { display: none; }
 }
 
 @media (max-width: 480px) {

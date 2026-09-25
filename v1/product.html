@@ -56,6 +56,19 @@
       padding: 24px;
       border-radius: 4px;
     }
+
+    @media (max-width: 1024px) {
+      .reviews-list-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .pdp-breadcrumb { padding: 0 16px; }
+      .pdp-trust-row { grid-template-columns: 1fr; gap: 12px; }
+      .reviews-summary-box { padding: 24px 16px; margin: 24px auto; }
+      .reviews-list-grid { grid-template-columns: 1fr; gap: 16px; }
+      .pdp-coupon-box { flex-direction: column; gap: 10px; align-items: flex-start; }
+      .pdp-coupon-box button { width: 100%; }
+    }
   </style>
 </head>
 <body>

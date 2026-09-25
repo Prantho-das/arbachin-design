@@ -1101,27 +1101,99 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 @media (max-width: 768px) {
-  .rk-topbar { flex-direction: column; gap: 6px; padding: 10px 16px; text-align: center; }
-  .rk-header-top-row { padding: 12px 20px; justify-content: space-between; }
+  .rk-topbar {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 14px;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+  .rk-topbar > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px !important;
+    max-width: 100%;
+  }
+  .rk-header-top-row {
+    padding: 10px 16px;
+    justify-content: space-between;
+  }
   .rk-header-left { display: none; }
   .rk-nav-row { display: none; }
-  .rk-hero-slider { height: 420px; }
-  .rk-hero-title { font-size: 28px; letter-spacing: 2px; }
-  .rk-section, .cat-layout-wrapper, .pdp-layout-wrapper { padding-left: 16px; padding-right: 16px; }
+  .rk-header-right { gap: 14px; }
+  .rk-icon-btn span:not(.rk-cart-badge):not(.cart-count) { display: none; }
+  
+  .rk-hero-banner {
+    height: auto;
+    min-height: 460px;
+    padding: 40px 0;
+  }
+  .rk-hero-content { padding: 0 16px; }
+  .rk-hero-title { font-size: 28px; letter-spacing: 1px; }
+  .rk-hero-desc { font-size: 13px; margin-bottom: 20px; }
+  .rk-hero-box > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn-rk-white { margin-left: 0; }
+  
+  .rk-story-ribbon {
+    padding: 16px;
+    justify-content: flex-start;
+    gap: 16px;
+    scrollbar-width: none;
+  }
+  .rk-story-img { width: 64px; height: 64px; }
+  .rk-story-title { font-size: 10px; }
+
+  .rk-section, .cat-layout-wrapper, .pdp-container, .pdp-layout-wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .cat-layout-wrapper {
+    grid-template-columns: 1fr;
+    margin: 16px auto 40px;
+    gap: 20px;
+  }
+  .cat-filter-sidebar {
+    position: static;
+    top: auto;
+    padding: 16px;
+  }
   .rk-card-grid, .rk-product-grid { grid-template-columns: 1fr; }
-  .pdp-gallery { flex-direction: column-reverse; }
-  .pdp-thumbs { flex-direction: row; width: 100%; overflow-x: auto; gap: 8px; }
+  
+  .pdp-gallery {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  .pdp-thumbs {
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+    gap: 8px;
+  }
+  .pdp-thumb { width: 60px; height: 75px; flex-shrink: 0; }
   .pdp-main-img-box { height: 360px; }
+  .pdp-title { font-size: 22px; }
   .pdp-btn-group, .pdp-cta-box { flex-direction: column; }
-  .rk-footer-grid { grid-template-columns: 1fr; gap: 28px; }
-  .reviews-list-grid { grid-template-columns: 1fr; }
+
+  .rk-footer-wrap { padding: 40px 16px 0; }
+  .rk-footer-grid { grid-template-columns: 1fr; gap: 28px; margin-bottom: 30px; }
+  .rk-footer-bottom-bar { padding: 20px 16px; }
+  .rk-footer-bottom-inner { flex-direction: column; text-align: center; gap: 10px; }
+  .rk-newsletter-box { padding: 18px 14px; }
+  .rk-newsletter-input-wrap { flex-direction: column; gap: 8px; }
+  .rk-newsletter-btn { padding: 12px; }
 }
 
 @media (max-width: 480px) {
-  .rk-header-top-row { padding: 10px 14px; }
-  .rk-brand-logo img { height: 46px; }
+  .rk-header-top-row { padding: 8px 12px; }
+  .rk-brand-logo img { height: 42px; }
   .pdp-info-panel { padding: 20px 14px; }
   .rk-modal-card { padding: 20px 14px; }
-  .rk-campaign-banner { height: 380px; }
-  .btn-rk-primary, .btn-rk-gold { padding: 12px 20px; font-size: 11px; }
+  .rk-campaign-banner { height: 340px; }
+  .btn-rk-primary, .btn-rk-gold, .btn-rk-white { padding: 12px 18px; font-size: 11px; text-align: center; }
 }

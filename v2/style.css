@@ -1214,6 +1214,7 @@ img { max-width: 100%; height: auto; display: block; }
   .gd-footer { padding-left: 20px; padding-right: 20px; }
   .gd-footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .gd-gram-grid { grid-template-columns: repeat(2, 1fr); }
+  .gd-na-next-btn { display: none; }
 }
 
 @media (max-width: 480px) {

@@ -421,6 +421,58 @@
       color: var(--hom-emerald);
       background: #fbf9f6;
     }
+
+    /* Responsive Breakpoints for PDP */
+    @media (max-width: 1024px) {
+      .aza-pdp-2col-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 20px;
+        margin: 20px auto 50px;
+      }
+      .aza-panel {
+        position: static;
+        top: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .aza-promo-top-strip {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 12px 16px;
+      }
+      .aza-promo-title {
+        font-size: 15px;
+      }
+      .aza-pdp-2col-layout {
+        padding: 0 16px;
+        gap: 24px;
+        margin: 16px auto 40px;
+      }
+      .aza-2col-photo-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .aza-panel {
+        padding: 24px 16px;
+      }
+      .aza-product-name {
+        font-size: 17px;
+      }
+      .aza-main-price {
+        font-size: 20px;
+      }
+      .aza-actions-row {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .aza-support-strip {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+    }
   </style>
 </head>
 <body>

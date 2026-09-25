@@ -525,10 +525,29 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 12px;
 }
 
+/* Category Layout (Anita Dongre RTS Style) */
+.cat-layout-wrapper {
+  max-width: 1440px;
+  margin: 40px auto 80px;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+}
+.cat-filter-sidebar {
+  background: #ffffff;
+  border: 1px solid var(--rk-border);
+  padding: 24px;
+  border-radius: 4px;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
 /* Product Cards Grid */
 .rk-card-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 .rk-card {

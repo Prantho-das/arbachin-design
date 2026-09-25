@@ -526,6 +526,7 @@ img { max-width: 100%; height: auto; display: block; }
   align-items: center;
   gap: 8px;
   transition: var(--transition);
+  cursor: pointer;
 }
 .gd-silhouette-chip:hover, .gd-silhouette-chip.active {
   background: var(--gd-primary);
@@ -534,11 +535,128 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 4px 15px rgba(138, 28, 61, 0.25);
 }
 
+/* Trending Drops Section */
+.v2-trending-section {
+  max-width: 1440px;
+  margin: 50px auto;
+  padding: 0 40px;
+}
+.v2-trending-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 28px;
+}
+.v2-view-all-link {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gd-primary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+.v2-trending-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.v2-trending-card {
+  background: #fff;
+  border: 1px solid var(--gd-border);
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+}
+.v2-card-img-wrap {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  background: #f3eee7;
+}
+.v2-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.v2-trending-card:hover .v2-card-img-wrap img {
+  transform: scale(1.05);
+}
+.v2-card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--gd-primary);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 2px;
+  z-index: 2;
+}
+.v2-card-badge.archive {
+  background: #14070a;
+  color: var(--gd-gold-light);
+}
+.v2-card-badge.handloom {
+  background: #135610;
+  color: #fff;
+}
+.v2-card-cat {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gd-gold);
+  text-transform: uppercase;
+}
+.v2-card-title {
+  font-size: 14px;
+  margin: 4px 0 8px;
+  color: var(--gd-dark);
+  font-weight: 600;
+  line-height: 1.35;
+}
+.v2-card-price {
+  font-weight: 700;
+  color: var(--gd-dark);
+  font-size: 15px;
+}
+.v2-card-strike {
+  font-size: 12px;
+  color: #999;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+/* Community Love Section */
+.v2-community-section {
+  max-width: 1440px;
+  margin: 60px auto;
+  padding: 0 40px;
+}
+.v2-community-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.v2-community-card {
+  background: #fff;
+  border: 1px solid var(--gd-border);
+  padding: 24px;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
 /* Product Card with Quick Size Selector & Instant Buy */
 .gd-card-size-row {
   display: flex;
   gap: 6px;
   margin: 10px 0;
+  flex-wrap: wrap;
 }
 .gd-size-chip {
   width: 28px;
@@ -1236,6 +1354,99 @@ img { max-width: 100%; height: auto; display: block; }
   .gd-hero-split-overlay { padding: 24px 16px; }
   .gd-hero-split-title { font-size: 22px; }
 
+  /* 1. Silhouette Horizontal Touch Slider */
+  .gd-silhouette-section {
+    padding: 0 16px !important;
+    margin: 30px auto !important;
+  }
+  .gd-silhouette-section h2 {
+    font-size: 22px !important;
+  }
+  .gd-silhouette-grid {
+    display: flex !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    white-space: nowrap !important;
+    padding: 8px 16px 14px !important;
+    margin: 16px -16px 0 !important;
+    scrollbar-width: none !important;
+  }
+  .gd-silhouette-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+  .gd-silhouette-chip {
+    flex: 0 0 auto !important;
+    scroll-snap-align: start !important;
+    white-space: nowrap !important;
+    font-size: 11px !important;
+    padding: 8px 16px !important;
+  }
+
+  /* 2. Trending Drops Horizontal Touch Slider */
+  .v2-trending-section {
+    padding: 0 16px !important;
+    margin: 30px auto !important;
+  }
+  .v2-trending-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    margin-bottom: 18px !important;
+  }
+  .v2-trending-header h2 {
+    font-size: 22px !important;
+  }
+  .v2-trending-grid {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 14px !important;
+    padding: 0 16px 14px !important;
+    margin: 0 -16px !important;
+    scrollbar-width: none !important;
+  }
+  .v2-trending-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+  .v2-trending-card {
+    flex: 0 0 250px !important;
+    min-width: 250px !important;
+    scroll-snap-align: start !important;
+  }
+
+  /* 3. Community Reviews Horizontal Touch Slider */
+  .v2-community-section {
+    padding: 0 16px !important;
+    margin: 40px auto !important;
+  }
+  .v2-community-section h2 {
+    font-size: 22px !important;
+  }
+  .v2-community-grid {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 14px !important;
+    padding: 0 16px 14px !important;
+    margin: 0 -16px !important;
+    scrollbar-width: none !important;
+  }
+  .v2-community-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+  .v2-community-card {
+    flex: 0 0 280px !important;
+    min-width: 280px !important;
+    scroll-snap-align: start !important;
+    padding: 18px !important;
+  }
+
   .sabya-header h1 {
     font-size: 26px !important;
     letter-spacing: 1.5px !important;
@@ -1280,7 +1491,8 @@ img { max-width: 100%; height: auto; display: block; }
   }
   .gd-grid-photo {
     width: 100% !important;
-    height: 400px !important;
+    aspect-ratio: 3/4 !important;
+    height: auto !important;
   }
   .gd-info-panel {
     width: 100% !important;

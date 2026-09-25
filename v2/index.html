@@ -72,6 +72,27 @@
       line-height: 1.7;
       margin-bottom: 26px;
     }
+
+    .v2-occasions-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 1024px) {
+      .v2-feature-strip { grid-template-columns: repeat(2, 1fr); padding: 0 24px; }
+      .v2-lookbook-banner { padding: 0 24px; }
+      .v2-occasions-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .v2-feature-strip { grid-template-columns: 1fr; padding: 0 16px; margin: 30px auto; gap: 14px; }
+      .v2-lookbook-banner { padding: 0 16px; margin: 30px auto; }
+      .v2-lookbook-wrap { height: auto; min-height: 380px; }
+      .v2-lookbook-overlay { padding: 24px 16px; background: rgba(6, 26, 19, 0.92); max-width: 100%; }
+      .v2-lookbook-overlay h2 { font-size: 24px !important; }
+      .v2-occasions-grid { grid-template-columns: 1fr; gap: 16px; }
+    }
   </style>
 </head>
 <body>
@@ -557,7 +578,7 @@
       <div style="width:50px; height:2px; background:var(--gd-gold); margin:12px auto 0;"></div>
     </div>
 
-    <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:20px;">
+    <div class="v2-occasions-grid">
       <div style="position:relative; height:380px; border-radius:4px; overflow:hidden;">
         <img src="../assets/image/threepiece_1.jpg" alt="Sangeet & Mehendi" style="width:100%; height:100%; object-fit:cover;">
         <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(8,29,22,0.85) 0%, transparent 60%); display:flex; flex-direction:column; justify-content:flex-end; padding:24px; color:#fff;">

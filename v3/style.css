@@ -879,41 +879,88 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 @media (max-width: 768px) {
-  .hom-top-bar { flex-direction: column; gap: 6px; padding: 10px 16px; text-align: center; }
-  .hom-top-links { flex-wrap: wrap; justify-content: center; }
-  .hom-header-inner { padding: 12px 20px; }
-  .hom-nav { display: none; }
-  .hom-hero-boat-section { height: 480px; }
-  .hom-hero-boat-title { font-size: 32px; }
-  .hom-section, .hom-collection-intro-strip, .hom-masaba-newsletter-banner, .hom-footer, .hom-similar-section, .aza-pdp-2col-layout, .hom-main-catalog-grid {
-    padding-left: 20px;
-    padding-right: 20px;
+  .hom-top-bar {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    padding: 8px 12px !important;
+    text-align: center !important;
+    font-size: 10px !important;
+    letter-spacing: 0.5px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
   }
-  .hom-cat-toolbar-strip { padding: 12px 20px; }
-  .hom-subcat-ribbon { padding: 0 20px; justify-content: flex-start; }
+  .hom-top-links, .hom-top-center {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+  .hom-header-inner { padding: 10px 16px; justify-content: space-between; }
+  .hom-nav { display: none; }
+  .hom-header-actions { gap: 12px; }
+  .hom-action-icon span:not(.hom-cart-count) { display: none !important; }
+  .hom-icon-btn span:not(.hom-cart-count) { display: none !important; }
+
+  .hom-hero-boat-section { height: auto; min-height: 420px; padding: 40px 0; }
+  .hom-hero-boat-title { font-size: 28px; }
+  .hom-hero-boat-overlay { padding: 0 16px; }
+
+  .hom-full-editorial-banner {
+    height: auto !important;
+    min-height: 380px !important;
+    margin: 30px auto !important;
+  }
+  .hom-editorial-overlay {
+    padding: 24px 16px !important;
+    position: static !important;
+    background: rgba(8, 29, 22, 0.92) !important;
+    max-width: 100% !important;
+  }
+  .hom-editorial-overlay h2 { font-size: 24px !important; }
+
+  .hom-section, .hom-collection-intro-strip, .hom-masaba-newsletter-banner, .hom-footer, .hom-similar-section, .aza-pdp-2col-layout, .hom-main-catalog-grid {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .hom-cat-toolbar-strip { padding: 10px 16px; }
+  .hom-subcat-ribbon { padding: 0 16px; justify-content: flex-start; }
   .hom-main-catalog-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 12px; }
   .hom-main-catalog-grid.view-2col { grid-template-columns: 1fr; }
   .aza-2col-photo-grid { grid-template-columns: 1fr; }
-  .aza-promo-top-strip { flex-direction: column; gap: 10px; text-align: center; padding: 14px 20px; }
+  .aza-promo-top-strip { flex-direction: column; gap: 8px; text-align: center; padding: 12px 16px; }
   .hom-celeb-grid, .hom-product-grid { grid-template-columns: 1fr; }
   .hom-similar-grid { grid-template-columns: repeat(2, 1fr); gap: 16px 12px; }
-  .hom-masaba-subscribe-form { width: 100%; }
-  .hom-footer-grid { grid-template-columns: 1fr; }
-  .hom-connect-left, .hom-directory-left { padding: 36px 20px; }
+  .hom-masaba-subscribe-form { width: 100%; flex-direction: column; gap: 8px; }
+  .hom-masaba-subscribe-form button { padding: 12px; }
+  
+  .hom-footer {
+    padding: 40px 16px 0 !important;
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+  .hom-footer-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 28px !important;
+    margin-bottom: 24px !important;
+    width: 100% !important;
+  }
+  .hom-connect-left, .hom-directory-left { padding: 30px 16px; }
   .hom-filter-drawer { width: 300px; }
-  .hom-icons { gap: 12px; }
-  .hom-icon-btn span:not(.hom-cart-count) { display: none; }
 }
 
 @media (max-width: 480px) {
-  .hom-header-inner { padding: 10px 14px; }
-  .hom-brand img { height: 42px; }
-  .hom-hero-boat-section { height: 400px; }
-  .hom-hero-boat-title { font-size: 26px; }
+  .hom-header-inner { padding: 8px 12px; }
+  .hom-brand img { height: 40px; }
+  .hom-hero-boat-section { height: 360px; }
+  .hom-hero-boat-title { font-size: 24px; }
   .hom-main-catalog-grid { grid-template-columns: 1fr; }
   .hom-similar-grid { grid-template-columns: 1fr; }
   .aza-actions-row { flex-direction: column; }
   .aza-support-strip { grid-template-columns: 1fr; }
-  .hom-masaba-subscribe-form { flex-direction: column; gap: 8px; }
-  .hom-masaba-subscribe-form button { padding: 12px; }
 }

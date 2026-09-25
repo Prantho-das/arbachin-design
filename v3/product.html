@@ -425,52 +425,58 @@
     /* Responsive Breakpoints for PDP */
     @media (max-width: 1024px) {
       .aza-pdp-2col-layout {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        padding: 0 20px;
-        margin: 20px auto 50px;
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        padding: 0 20px !important;
+        margin: 20px auto 40px !important;
+        width: 100% !important;
       }
       .aza-panel {
-        position: static;
-        top: 0;
+        position: static !important;
+        top: 0 !important;
+        width: 100% !important;
       }
     }
 
     @media (max-width: 768px) {
       .aza-promo-top-strip {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-        padding: 12px 16px;
+        flex-direction: column !important;
+        gap: 10px !important;
+        text-align: center !important;
+        padding: 12px 16px !important;
       }
-      .aza-promo-title {
-        font-size: 15px;
-      }
+      .aza-promo-title { font-size: 14px !important; }
       .aza-pdp-2col-layout {
-        padding: 0 16px;
-        gap: 24px;
-        margin: 16px auto 40px;
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 0 16px !important;
+        gap: 20px !important;
+        margin: 16px auto 30px !important;
+        width: 100% !important;
       }
       .aza-2col-photo-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+      }
+      .aza-photo-item {
+        width: 100% !important;
+        height: 400px !important;
       }
       .aza-panel {
-        padding: 24px 16px;
+        width: 100% !important;
+        padding: 20px 16px !important;
       }
-      .aza-product-name {
-        font-size: 17px;
-      }
-      .aza-main-price {
-        font-size: 20px;
-      }
+      .aza-product-name { font-size: 16px !important; }
+      .aza-main-price { font-size: 20px !important; }
       .aza-actions-row {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: column !important;
+        gap: 10px !important;
       }
       .aza-support-strip {
-        grid-template-columns: 1fr;
-        gap: 8px;
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
       }
     }
   </style>

@@ -906,9 +906,31 @@ img { max-width: 100%; height: auto; display: block; }
   .hom-action-icon span:not(.hom-cart-count) { display: none !important; }
   .hom-icon-btn span:not(.hom-cart-count) { display: none !important; }
 
-  .hom-hero-boat-section { height: auto; min-height: 420px; padding: 40px 0; }
-  .hom-hero-boat-title { font-size: 28px; }
-  .hom-hero-boat-overlay { padding: 0 16px; }
+  .hom-hero-boat-section {
+    height: 500px !important;
+    position: relative !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+  .hom-hero-boat-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+  }
+  .hom-hero-boat-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    padding: 0 16px 32px !important;
+    background: linear-gradient(to top, rgba(5,20,15,0.92) 0%, rgba(5,20,15,0.45) 50%, rgba(5,20,15,0.1) 100%) !important;
+    text-align: center !important;
+  }
+  .hom-hero-boat-title { font-size: 32px !important; margin-bottom: 4px !important; }
+  .hom-hero-boat-sub { font-size: 10px !important; margin-bottom: 14px !important; }
 
   .hom-full-editorial-banner {
     height: auto !important;

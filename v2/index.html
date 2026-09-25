@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arbachin Bohemian Luxury Couture | Contemporary Edition (V2)</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .v2-feature-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1440px;
+      margin: 50px auto;
+      padding: 0 40px;
+    }
+    .v2-feature-card {
+      background: #fff;
+      border: 1px solid var(--gd-border);
+      padding: 24px;
+      text-align: center;
+      border-radius: 4px;
+      transition: var(--transition);
+    }
+    .v2-feature-card:hover {
+      border-color: var(--gd-primary);
+      box-shadow: 0 8px 24px rgba(15, 74, 56, 0.12);
+    }
+    .v2-lookbook-banner {
+      position: relative;
+      max-width: 1440px;
+      margin: 60px auto;
+      padding: 0 40px;
+    }
+    .v2-lookbook-wrap {
+      position: relative;
+      height: 480px;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid rgba(197, 155, 39, 0.3);
+      box-shadow: 0 12px 35px rgba(8, 29, 22, 0.15);
+    }
+    .v2-lookbook-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .v2-lookbook-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(6, 26, 19, 0.96) 0%, rgba(6, 26, 19, 0.85) 45%, rgba(6, 26, 19, 0.1) 85%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 50px 60px;
+      max-width: 620px;
+      z-index: 2;
+    }
+    .v2-lookbook-overlay h2 {
+      color: #ffffff !important;
+      font-family: var(--font-serif);
+      font-size: 38px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .v2-lookbook-overlay p {
+      color: #e5eee9 !important;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 26px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Top Announcement Strip -->
+  <div class="gd-top-strip">
+    <div style="display:flex; gap:14px;">
+      <a href="category.html">🚩 SABYASACHI ATELIER</a>
+      <span>|</span>
+      <a href="https://wa.me/8801700000000" target="_blank" style="color:var(--gd-gold-light);">💬 STYLIST CONCIERGE</a>
+    </div>
+    <div style="font-weight:700;">
+      ARBACHIN CONTEMPORARY ARCHIVE &bull; COMPLIMENTARY SHIPPING OVER ৳5,000 &bull; 7-DAY EXCHANGE
+    </div>
+    <div style="display:flex; gap:12px; align-items:center;">
+      <span>BDT (৳) / USD ($)</span>
+      <span>|</span>
+      <a href="../index.html" style="background:var(--gd-gold); color:#000; padding:2px 8px; border-radius:2px; font-weight:700;">SWITCH VERSION ↗</a>
+    </div>
+  </div>
+
+  <!-- 2. Header (Sabyasachi x Global Desi) -->
+  <header class="gd-header">
+    <div class="gd-header-inner">
+      <div class="gd-logo-wrap">
+        <a href="index.html" style="display:flex; flex-direction:column; align-items:center;">
+          <img src="../assets/image/logo.png" alt="Arbachin" style="height:48px; object-fit:contain;">
+        </a>
+      </div>
+      
+      <ul class="gd-nav">
+        <li class="gd-nav-item"><a href="index.html" class="active">HOME</a></li>
+        <li class="gd-nav-item">
+          <a href="category.html">HERITAGE ARCHIVE</a>
+          <div class="gd-mega-menu">
+            <div class="gd-mega-col">
+              <h5>Heritage Drapes</h5>
+              <ul>
+                <li><a href="category.html">Kolkata Handloom Sarees</a></li>
+                <li><a href="category.html">Zari Brocade Masterpieces</a></li>
+                <li><a href="category.html">Bengal Silk Edit</a></li>
+              </ul>
+            </div>
+            <div class="gd-mega-col">
+              <h5>Boho Contemporary</h5>
+              <ul>
+                <li><a href="category.html">Global Desi Printed Kurtas</a></li>
+                <li><a href="category.html">Indo-Western Tunics</a></li>
+                <li><a href="category.html">Boho Co-ord Sets</a></li>
+              </ul>
+            </div>
+            <div class="gd-mega-col">
+              <h5>Curations</h5>
+              <ul>
+                <li><a href="category.html">Artisan Heritage 2026</a></li>
+                <li><a href="product.html">Printed Kurta in Beige (PDP)</a></li>
+              </ul>
+            </div>
+            <div class="gd-mega-featured">
+              <img src="../assets/image/saree_2.jpg" alt="Featured Edit">
+              <span style="font-size:11px; font-weight:700; color:var(--gd-primary); display:block;">Sabyasachi Silk</span>
+              <a href="category.html" style="font-size:10px; color:var(--gd-gold); font-weight:700;">EXPLORE &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="gd-nav-item"><a href="category.html">KURTAS & TUNICS</a></li>
+        <li class="gd-nav-item"><a href="category.html">SILK SAREES</a></li>
+        <li class="gd-nav-item"><a href="product.html">BEIGE KURTA (PDP)</a></li>
+        <li class="gd-nav-item"><a href="category.html" style="color:var(--gd-primary);">SPECIAL OFFERS</a></li>
+      </ul>
+
+      <div class="gd-icons">
+        <button class="gd-icon-btn" onclick="alert('Search catalog...')">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>SEARCH</span>
+        </button>
+        <button class="gd-icon-btn" onclick="alert('Bag has ' + cartV2.length + ' item(s)')">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span>BAG (<span class="v2-cart-badge">0</span>)</span>
+          <span class="gd-cart-badge v2-cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Dynamic Full-Width Hero Slider (Requested Top Feature) -->
+  <section class="gd-hero-slider-wrap" id="gdHeroSlider">
+    <!-- Slide 1 -->
+    <div class="gd-hero-slide active">
+      <img src="../assets/image/threepiece_1.jpg" alt="Festive Bohemian Pret">
+      <div class="gd-hero-slide-overlay">
+        <span class="gd-hero-badge">ARBACHIN BOHO COUTURE &bull; 2026</span>
+        <h1 class="gd-hero-title">Effortless Bohemian Elegance</h1>
+        <p class="gd-hero-sub">Vibrant artisanal block prints, light-as-air fabrics, and contemporary silhouettes tailored for free-spirited luxury.</p>
+        <a href="category.html" class="gd-hero-btn">DISCOVER THE EDIT &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="gd-hero-slide">
+      <img src="../assets/image/saree_2.jpg" alt="Sabyasachi Heritage Weaves">
+      <div class="gd-hero-slide-overlay">
+        <span class="gd-hero-badge">SABYASACHI ART ARCHIVE</span>
+        <h1 class="gd-hero-title">Centuries of Handloom Royalty</h1>
+        <p class="gd-hero-sub">Pure antique zari brocades, heirloom Banarasi weaves, and master-crafted drapes from the royal ateliers of Bengal.</p>
+        <a href="category.html" class="gd-hero-btn">EXPLORE THE ARCHIVE &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="gd-hero-slide">
+      <img src="../assets/image/threepiece_3.jpg" alt="Festive pret edit">
+      <div class="gd-hero-slide-overlay">
+        <span class="gd-hero-badge">NEW ARRIVALS 2026</span>
+        <h1 class="gd-hero-title">Celebration In Motion</h1>
+        <p class="gd-hero-sub">Twirl-worthy kurtas, fusion jacket sets, and festive co-ords designed to illuminate your grand occasions.</p>
+        <a href="product.html" class="gd-hero-btn">SHOP NEW ARRIVALS &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="gd-slider-btn prev" onclick="moveGdSlide(-1)" aria-label="Previous Slide">&#10094;</button>
+    <button class="gd-slider-btn next" onclick="moveGdSlide(1)" aria-label="Next Slide">&#10095;</button>
+
+    <div class="gd-slider-dots">
+      <span class="gd-dot active" onclick="jumpGdSlide(0)"></span>
+      <span class="gd-dot" onclick="jumpGdSlide(1)"></span>
+      <span class="gd-dot" onclick="jumpGdSlide(2)"></span>
+    </div>
+  </section>
+
+  <!-- 4. Global Desi Flash Deal Countdown Bar -->
+  <div class="gd-flash-bar">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <span style="font-size:16px;">⚡</span>
+      <span style="font-size:12px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase;">FESTIVE FLASH DROP &bull; UP TO 25% OFF BOHO KURTAS & SETS</span>
+    </div>
+    <div class="gd-countdown-timer">
+      <span>ENDS IN:</span>
+      <span class="gd-time-unit" id="timerHours">08</span> :
+      <span class="gd-time-unit" id="timerMins">42</span> :
+      <span class="gd-time-unit" id="timerSecs">19</span>
+    </div>
+  </div>
+
+  <!-- 5. Global Desi Dual Split Hero (50/50 Signature Layout) -->
+  <section class="gd-dual-hero">
+    <div class="gd-dual-hero-grid">
+      <!-- Left Split Hero -->
+      <div class="gd-hero-split-card">
+        <img src="../assets/image/threepiece_1.jpg" alt="Boho Printed Kurtas">
+        <div class="gd-hero-split-overlay">
+          <div class="gd-hero-split-tag">GLOBAL DESI EDIT 2026</div>
+          <h2 class="gd-hero-split-title">Effortless Boho Kurtas & Tunics</h2>
+          <p style="color:#ded8cd; font-size:13px; margin-bottom:18px; max-width:400px;">
+            Artisanal block prints, lightweight breathable silks, and joyful vibrant silhouettes for everyday luxury.
+          </p>
+          <a href="product.html" class="gd-hero-split-btn">SHOP PRINTED KURTAS &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Right Split Hero -->
+      <div class="gd-hero-split-card">
+        <img src="../assets/image/saree_2.jpg" alt="Sabyasachi Heritage Drapes">
+        <div class="gd-hero-split-overlay">
+          <div class="gd-hero-split-tag">SABYASACHI ART ARCHIVE</div>
+          <h2 class="gd-hero-split-title">Heirloom Handloom Royal Drapes</h2>
+          <p style="color:#ded8cd; font-size:13px; margin-bottom:18px; max-width:400px;">
+            Centuries of Bengal weaving heritage, pure antique zari borders, and bespoke festive brocades.
+          </p>
+          <a href="category.html" class="gd-hero-split-btn">EXPLORE THE ARCHIVE &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. NEW ARRIVALS (Global Desi Live Left-Sidebar & Horizontal Carousel) -->
+  <section class="gd-new-arrivals-section">
+    <div class="gd-new-arrivals-layout">
+      <!-- Left Sidebar Title -->
+      <div class="gd-new-arrivals-sidebar">
+        <h2 class="gd-new-arrivals-title">NEW ARRIVALS</h2>
+        <a href="category.html" class="gd-new-arrivals-explore">EXPLORE</a>
+      </div>
+
+      <!-- Right Cards Grid / Carousel -->
+      <div class="gd-new-arrivals-slider-wrap">
+        <div class="gd-new-arrivals-grid">
+          <!-- Card 1 -->
+          <div class="gd-na-card">
+            <div class="gd-na-media">
+              <span class="gd-na-badge">New</span>
+              <a href="product.html">
+                <img src="../assets/image/threepiece_2.jpg" alt="Solid Maxi Jacket Set in Mint">
+              </a>
+            </div>
+            <div class="gd-na-title"><a href="product.html">Solid Maxi Jacket Set in Mint</a></div>
+            <div class="gd-na-price">$115</div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="gd-na-card">
+            <div class="gd-na-media">
+              <span class="gd-na-badge">New</span>
+              <a href="product.html">
+                <img src="../assets/image/threepiece_1.jpg" alt="Printed Kurta in Beige">
+              </a>
+            </div>
+            <div class="gd-na-title"><a href="product.html">Printed Kurta in Beige</a></div>
+            <div class="gd-na-price">$31</div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="gd-na-card">
+            <div class="gd-na-media">
+              <span class="gd-na-badge">New</span>
+              <a href="product.html">
+                <img src="../assets/image/threepiece_3.jpg" alt="Straight Playsuit in Black">
+              </a>
+            </div>
+            <div class="gd-na-title"><a href="product.html">Straight Playsuit in Black</a></div>
+            <div class="gd-na-price">$31</div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="gd-na-card">
+            <div class="gd-na-media">
+              <span class="gd-na-badge">New</span>
+              <a href="product.html">
+                <img src="../assets/image/saree_1.jpg" alt="Tiered Solid Co-ord Set">
+              </a>
+            </div>
+            <div class="gd-na-title"><a href="product.html">Tiered Solid Co-ord Set</a></div>
+            <div class="gd-na-price">$47</div>
+          </div>
+        </div>
+
+        <button class="gd-na-next-btn" onclick="alert('Viewing next fresh couture arrivals...')" aria-label="Next Arrivals">&rsaquo;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Shop by Silhouette Interactive Pills -->
+  <section class="gd-silhouette-section">
+    <div style="font-size:11px; font-weight:800; letter-spacing:2px; color:var(--gd-primary); text-transform:uppercase;">EXPLORE YOUR STYLE</div>
+    <h2 style="font-family:var(--font-serif); font-size:32px; color:var(--gd-dark); margin-top:4px;">Shop By Bohemian Silhouette</h2>
+    <div class="gd-silhouette-grid">
+      <button class="gd-silhouette-chip active" onclick="filterSilhouette('all', this)">✨ ALL STYLES</button>
+      <button class="gd-silhouette-chip" onclick="filterSilhouette('kurtas', this)">👗 STRAIGHT KURTAS</button>
+      <button class="gd-silhouette-chip" onclick="filterSilhouette('tunics', this)">🌸 FLARED TUNICS</button>
+      <button class="gd-silhouette-chip" onclick="filterSilhouette('coords', this)">⚡ BOHO CO-ORD SETS</button>
+      <button class="gd-silhouette-chip" onclick="filterSilhouette('anarkali', this)">👑 ANARKALI PRET</button>
+      <button class="gd-silhouette-chip" onclick="filterSilhouette('sarees', this)">🧵 BANARASI DRAPES</button>
+    </div>
+  </section>
+
+  <!-- 6. Trending Drops with Size Selectors & Instant Buy -->
+  <section style="max-width:1440px; margin:40px auto; padding:0 40px;">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:28px;">
+      <div>
+        <div style="font-size:11px; font-weight:800; letter-spacing:2px; color:var(--gd-primary); text-transform:uppercase;">FRESH OFF THE ATELIER</div>
+        <h2 style="font-family:var(--font-serif); font-size:32px; color:var(--gd-dark);">Trending Boho Drops</h2>
+      </div>
+      <a href="category.html" style="font-size:12px; font-weight:700; color:var(--gd-primary); letter-spacing:1px; text-transform:uppercase; text-decoration:underline;">View All 36 Styles &rarr;</a>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px;">
+      <!-- Product Card 1 -->
+      <div style="background:#fff; border:1px solid var(--gd-border); padding:16px; border-radius:6px; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+        <div style="position:relative; aspect-ratio:3/4; overflow:hidden; border-radius:4px; margin-bottom:14px;">
+          <span style="position:absolute; top:10px; left:10px; background:var(--gd-primary); color:#fff; font-size:10px; font-weight:800; padding:3px 8px; border-radius:2px; z-index:2;">19% OFF</span>
+          <img src="../assets/image/threepiece_1.jpg" alt="Printed Kurta in Beige" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div style="font-size:11px; font-weight:700; color:var(--gd-gold); text-transform:uppercase;">Global Desi Tunics</div>
+        <h4 style="font-size:15px; margin:4px 0 8px; color:var(--gd-dark); font-weight:600;"><a href="product.html">Printed Kurta in Beige (F26H233KU)</a></h4>
+        <div style="font-weight:700; color:var(--gd-dark); font-size:16px;">৳8,500 <span style="font-size:13px; color:#999; text-decoration:line-through; font-weight:400;">৳10,500</span></div>
+        <div class="gd-card-size-row">
+          <span class="gd-size-chip selected">S</span>
+          <span class="gd-size-chip">M</span>
+          <span class="gd-size-chip">L</span>
+          <span class="gd-size-chip">XL</span>
+        </div>
+        <button class="btn-gd-instant-buy" onclick="addToCartV2('F26H233KU_BEIGE')">⚡ ADD TO BAG</button>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div style="background:#fff; border:1px solid var(--gd-border); padding:16px; border-radius:6px; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+        <div style="position:relative; aspect-ratio:3/4; overflow:hidden; border-radius:4px; margin-bottom:14px;">
+          <span style="position:absolute; top:10px; left:10px; background:#14070a; color:var(--gd-gold-light); font-size:10px; font-weight:800; padding:3px 8px; border-radius:2px; z-index:2;">ARCHIVE</span>
+          <img src="../assets/image/saree_1.jpg" alt="Crimson Banarasi Saree" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div style="font-size:11px; font-weight:700; color:var(--gd-gold); text-transform:uppercase;">Sabyasachi Silk</div>
+        <h4 style="font-size:15px; margin:4px 0 8px; color:var(--gd-dark); font-weight:600;"><a href="category.html">Royal Crimson Banarasi Saree</a></h4>
+        <div style="font-weight:700; color:var(--gd-dark); font-size:16px;">৳12,500 <span style="font-size:13px; color:#999; text-decoration:line-through; font-weight:400;">৳15,000</span></div>
+        <div class="gd-card-size-row">
+          <span class="gd-size-chip selected">FREE SIZE (6.5M)</span>
+        </div>
+        <button class="btn-gd-instant-buy" onclick="addToCartV2('saree_1')">⚡ ADD TO BAG</button>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div style="background:#fff; border:1px solid var(--gd-border); padding:16px; border-radius:6px; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+        <div style="position:relative; aspect-ratio:3/4; overflow:hidden; border-radius:4px; margin-bottom:14px;">
+          <span style="position:absolute; top:10px; left:10px; background:var(--gd-primary); color:#fff; font-size:10px; font-weight:800; padding:3px 8px; border-radius:2px; z-index:2;">BESTSELLER</span>
+          <img src="../assets/image/threepiece_2.jpg" alt="Midnight Navy Anarkali" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div style="font-size:11px; font-weight:700; color:var(--gd-gold); text-transform:uppercase;">Festive Pret</div>
+        <h4 style="font-size:15px; margin:4px 0 8px; color:var(--gd-dark); font-weight:600;"><a href="product.html">Midnight Navy Anarkali Set</a></h4>
+        <div style="font-weight:700; color:var(--gd-dark); font-size:16px;">৳9,200 <span style="font-size:13px; color:#999; text-decoration:line-through; font-weight:400;">৳11,800</span></div>
+        <div class="gd-card-size-row">
+          <span class="gd-size-chip">S</span>
+          <span class="gd-size-chip selected">M</span>
+          <span class="gd-size-chip">L</span>
+          <span class="gd-size-chip">XL</span>
+        </div>
+        <button class="btn-gd-instant-buy" onclick="addToCartV2('threepiece_2')">⚡ ADD TO BAG</button>
+      </div>
+
+      <!-- Product Card 4 -->
+      <div style="background:#fff; border:1px solid var(--gd-border); padding:16px; border-radius:6px; box-shadow:0 4px 15px rgba(0,0,0,0.03);">
+        <div style="position:relative; aspect-ratio:3/4; overflow:hidden; border-radius:4px; margin-bottom:14px;">
+          <span style="position:absolute; top:10px; left:10px; background:#135610; color:#fff; font-size:10px; font-weight:800; padding:3px 8px; border-radius:2px; z-index:2;">HANDLOOM</span>
+          <img src="../assets/image/saree_3.jpg" alt="Emerald Forest Silk Saree" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div style="font-size:11px; font-weight:700; color:var(--gd-gold); text-transform:uppercase;">Royal Katan</div>
+        <h4 style="font-size:15px; margin:4px 0 8px; color:var(--gd-dark); font-weight:600;"><a href="category.html">Emerald Forest Katan Silk Saree</a></h4>
+        <div style="font-weight:700; color:var(--gd-dark); font-size:16px;">৳10,800 <span style="font-size:13px; color:#999; text-decoration:line-through; font-weight:400;">৳13,500</span></div>
+        <div class="gd-card-size-row">
+          <span class="gd-size-chip selected">FREE SIZE</span>
+        </div>
+        <button class="btn-gd-instant-buy" onclick="addToCartV2('saree_3')">⚡ ADD TO BAG</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Sabyasachi Art Archive Full-Width Dark Editorial -->
+  <section class="sabya-archive-dark-wrap">
+    <div class="sabya-archive-inner">
+      <div>
+        <div class="sabya-archive-tag">SABYASACHI ART FOUNDATION</div>
+        <h2 class="sabya-archive-title">Preserving the Master Weavers of Bengal</h2>
+        <p class="sabya-archive-desc">
+          Every thread tells a story of centuries-old handloom heritage. From intricate kadwa zari weaving to pure mulberry silk processing, our master artisans create wearable heirlooms designed to transcend generations.
+        </p>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="category.html" class="btn-gd-primary" style="background:var(--gd-gold); color:#14070a;">DISCOVER THE ARCHIVE &rarr;</a>
+          <a href="category.html" class="btn-gd-primary" style="background:transparent; border:1px solid #fff;">BOOK ATELIER APPOINTMENT</a>
+        </div>
+      </div>
+      <div>
+        <img src="../assets/image/saree_2.jpg" alt="Artisan Heritage" style="width:100%; border-radius:4px; box-shadow:0 15px 40px rgba(0,0,0,0.5);">
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. ON THE GRAM (Global Desi Live Festive Edit 2026 / 3x2 Collage) -->
+  <section class="gd-gram-section">
+    <div class="gd-gram-header">
+      <h2 class="gd-gram-title">ON THE GRAM</h2>
+      <p class="gd-gram-sub">Your next outfit inspiration is waiting on our feed. Follow <strong>@arbachin</strong> for more.</p>
+    </div>
+
+    <div class="gd-gram-grid">
+      <!-- Tile 1: Top-Left Model in black crop vest with sparkle -->
+      <div class="gd-gram-card">
+        <img src="../assets/image/threepiece_1.jpg" alt="Festive Look 1">
+        <span class="gd-gram-sparkle" style="top:20px; right:20px;">✦</span>
+        <span class="gd-gram-sparkle" style="bottom:24px; left:20px;">✨</span>
+      </div>
+
+      <!-- Tile 2: Top-Middle Festive Edit 2026 with Mughal Arched Window -->
+      <div class="gd-gram-card gd-gram-editorial-center">
+        <div class="gd-gram-festive-tag">FESTIVE <span>2026</span></div>
+        <div class="gd-gram-festive-script">edit</div>
+        <div class="gd-gram-jharokha-arch">
+          <div class="gd-gram-jharokha-inner">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tile 3: Top-Right Model in embroidered black jumpsuit -->
+      <div class="gd-gram-card">
+        <img src="../assets/image/threepiece_3.jpg" alt="Festive Look 2">
+        <span class="gd-gram-sparkle" style="top:30px; left:20px;">✨</span>
+        <span class="gd-gram-sparkle" style="bottom:25px; right:25px;">✦</span>
+      </div>
+
+      <!-- Tile 4: Bottom-Left Model in emerald maxi jumpsuit -->
+      <div class="gd-gram-card">
+        <img src="../assets/image/saree_3.jpg" alt="Festive Look 3">
+        <span class="gd-gram-sparkle" style="top:25px; left:20px;">✨</span>
+      </div>
+
+      <!-- Tile 5: Bottom-Middle Portrait with Cursive Sparkle Typography -->
+      <div class="gd-gram-card" style="background:#110507;">
+        <img src="../assets/image/saree_1.jpg" alt="Festive Look 4" style="object-position:top center;">
+        <div class="gd-gram-quote-tag">
+          a little<br>festive<br><span style="color:var(--gd-gold-light); font-size:18px;">sparkle</span>
+        </div>
+        <span class="gd-gram-sparkle" style="top:20px; right:20px;">✨</span>
+      </div>
+
+      <!-- Tile 6: Bottom-Right Model in emerald palazzo set with crop jacket -->
+      <div class="gd-gram-card">
+        <img src="../assets/image/threepiece_2.jpg" alt="Festive Look 5">
+        <span class="gd-gram-sparkle" style="top:25px; left:25px;">✨</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Interactive Style Studio (Complete the Look Combo Builder) -->
+  <section class="gd-style-studio-wrap">
+    <div class="gd-style-studio-card">
+      <div style="text-align:center; margin-bottom:20px;">
+        <div style="font-size:11px; font-weight:800; letter-spacing:2px; color:var(--gd-primary); text-transform:uppercase;">MIX & MATCH STUDIO</div>
+        <h2 style="font-family:var(--font-serif); font-size:30px; color:var(--gd-dark);">Complete The Bohemian Ensemble</h2>
+        <p style="color:var(--gd-muted); font-size:13px;">Bundle our printed beige kurta with handcrafted silk dupatta & pants for extra savings.</p>
+      </div>
+
+      <div class="gd-combo-grid">
+        <div class="gd-combo-piece">
+          <img src="../assets/image/threepiece_1.jpg" alt="Printed Kurta">
+          <div style="font-weight:700; font-size:13px;">Printed Kurta (Beige)</div>
+          <div style="color:var(--gd-primary); font-weight:800;">৳8,500</div>
+        </div>
+        <div style="font-size:24px; font-weight:800; color:var(--gd-primary); text-align:center;">+</div>
+        <div class="gd-combo-piece">
+          <img src="../assets/image/saree_1.jpg" alt="Silk Dupatta">
+          <div style="font-weight:700; font-size:13px;">Zari Silk Stole</div>
+          <div style="color:var(--gd-primary); font-weight:800;">৳3,200</div>
+        </div>
+        <div class="gd-combo-calc-box">
+          <div style="font-size:12px; color:var(--gd-muted); text-transform:uppercase; font-weight:700;">Combo Bundle Price</div>
+          <div style="font-size:26px; font-weight:800; color:var(--gd-primary); margin:6px 0;">৳10,200 <span style="font-size:14px; color:#999; text-decoration:line-through; font-weight:400;">৳11,700</span></div>
+          <div style="font-size:11px; color:#135610; font-weight:700; margin-bottom:14px;">✓ SAVE ৳1,500 ON COMPLETE SET</div>
+          <button class="btn-gd-primary" style="width:100%;" onclick="addToCartV2('combo-bundle')">BUY COMPLETE LOOK</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Customer Love Community Wall (#GlobalDesiGirls) -->
+  <section style="max-width:1440px; margin:60px auto; padding:0 40px;">
+    <div style="text-align:center; margin-bottom:30px;">
+      <div style="font-size:11px; font-weight:800; letter-spacing:2px; color:var(--gd-primary); text-transform:uppercase;">COMMUNITY LOVE</div>
+      <h2 style="font-family:var(--font-serif); font-size:30px; color:var(--gd-dark);">#GlobalDesiGirls In Arbachin</h2>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
+      <div style="background:#fff; border:1px solid var(--gd-border); padding:20px; border-radius:6px;">
+        <div style="color:var(--gd-gold); font-size:14px; margin-bottom:8px;">★★★★★</div>
+        <p style="font-size:13px; color:#444; line-height:1.6; margin-bottom:12px;">
+          "The Printed Kurta in Beige fits like a dream! The fabric is so light and the block print details are super crisp. Wore it to family dinner and got endless compliments."
+        </p>
+        <div style="font-size:12px; font-weight:700; color:var(--gd-dark);">&#8212; Samira K., Gulshan Dhaka</div>
+      </div>
+      <div style="background:#fff; border:1px solid var(--gd-border); padding:20px; border-radius:6px;">
+        <div style="color:var(--gd-gold); font-size:14px; margin-bottom:8px;">★★★★★</div>
+        <p style="font-size:13px; color:#444; line-height:1.6; margin-bottom:12px;">
+          "The Sabyasachi heritage archive banarasi drape is absolutely royal! Truly feels like heirloom couture at a fair price. Delivery was super fast within 48h."
+        </p>
+        <div style="font-size:12px; font-weight:700; color:var(--gd-dark);">&#8212; Tasnim R., Chittagong</div>
+      </div>
+      <div style="background:#fff; border:1px solid var(--gd-border); padding:20px; border-radius:6px;">
+        <div style="color:var(--gd-gold); font-size:14px; margin-bottom:8px;">★★★★★</div>
+        <p style="font-size:13px; color:#444; line-height:1.6; margin-bottom:12px;">
+          "Bohemian elegance at its finest. Love the color palette, the stitching quality, and the instant size options. Global Desi aesthetic done right!"
+        </p>
+        <div style="font-size:12px; font-weight:700; color:var(--gd-dark);">&#8212; Anika M., Sylhet</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Occasion Wear 4-Tile Editorial Grid -->
+  <section style="max-width:1440px; margin:60px auto; padding:0 40px;">
+    <div style="text-align:center; margin-bottom:36px;">
+      <div style="font-size:11px; font-weight:800; letter-spacing:2px; color:var(--gd-primary); text-transform:uppercase;">CURATED OCCASIONS</div>
+      <h2 style="font-family:var(--font-serif); font-size:32px; color:var(--gd-dark);">Dress for the Festivities</h2>
+      <div style="width:50px; height:2px; background:var(--gd-gold); margin:12px auto 0;"></div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:20px;">
+      <div style="position:relative; height:380px; border-radius:4px; overflow:hidden;">
+        <img src="../assets/image/threepiece_1.jpg" alt="Sangeet & Mehendi" style="width:100%; height:100%; object-fit:cover;">
+        <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(8,29,22,0.85) 0%, transparent 60%); display:flex; flex-direction:column; justify-content:flex-end; padding:24px; color:#fff;">
+          <div style="font-size:10px; font-weight:700; letter-spacing:1px; color:var(--gd-gold-accent); text-transform:uppercase;">OCCASION 01</div>
+          <h4 style="font-size:18px; margin:4px 0 10px; font-family:var(--font-serif);">Sangeet & Mehendi</h4>
+          <a href="category.html" style="font-size:11px; font-weight:700; color:#fff; text-decoration:underline;">EXPLORE &rarr;</a>
+        </div>
+      </div>
+
+      <div style="position:relative; height:380px; border-radius:4px; overflow:hidden;">
+        <img src="../assets/image/saree_1.jpg" alt="Poojas & Festive Drapes" style="width:100%; height:100%; object-fit:cover;">
+        <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(8,29,22,0.85) 0%, transparent 60%); display:flex; flex-direction:column; justify-content:flex-end; padding:24px; color:#fff;">
+          <div style="font-size:10px; font-weight:700; letter-spacing:1px; color:var(--gd-gold-accent); text-transform:uppercase;">OCCASION 02</div>
+          <h4 style="font-size:18px; margin:4px 0 10px; font-family:var(--font-serif);">Festive Poojas</h4>
+          <a href="category.html" style="font-size:11px; font-weight:700; color:#fff; text-decoration:underline;">EXPLORE &rarr;</a>
+        </div>
+      </div>
+
+      <div style="position:relative; height:380px; border-radius:4px; overflow:hidden;">
+        <img src="../assets/image/threepiece_2.jpg" alt="Cocktails & Soirees" style="width:100%; height:100%; object-fit:cover;">
+        <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(8,29,22,0.85) 0%, transparent 60%); display:flex; flex-direction:column; justify-content:flex-end; padding:24px; color:#fff;">
+          <div style="font-size:10px; font-weight:700; letter-spacing:1px; color:var(--gd-gold-accent); text-transform:uppercase;">OCCASION 03</div>
+          <h4 style="font-size:18px; margin:4px 0 10px; font-family:var(--font-serif);">Cocktails & Soirees</h4>
+          <a href="category.html" style="font-size:11px; font-weight:700; color:#fff; text-decoration:underline;">EXPLORE &rarr;</a>
+        </div>
+      </div>
+
+      <div style="position:relative; height:380px; border-radius:4px; overflow:hidden;">
+        <img src="../assets/image/saree_3.jpg" alt="Royal Wedding Trousseau" style="width:100%; height:100%; object-fit:cover;">
+        <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(8,29,22,0.85) 0%, transparent 60%); display:flex; flex-direction:column; justify-content:flex-end; padding:24px; color:#fff;">
+          <div style="font-size:10px; font-weight:700; letter-spacing:1px; color:var(--gd-gold-accent); text-transform:uppercase;">OCCASION 04</div>
+          <h4 style="font-size:18px; margin:4px 0 10px; font-family:var(--font-serif);">Royal Wedding Gala</h4>
+          <a href="category.html" style="font-size:11px; font-weight:700; color:#fff; text-decoration:underline;">EXPLORE &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Boho Festive Lookbook Campaign Banner -->
+  <section class="v2-lookbook-banner">
+    <div class="v2-lookbook-wrap">
+      <img src="../assets/image/threepiece_3.jpg" alt="Boho Festive Lookbook">
+      <div class="v2-lookbook-overlay">
+        <div style="font-size:11px; font-weight:800; letter-spacing:2px; color:var(--gd-gold); text-transform:uppercase; margin-bottom:10px;">CAMPAIGN 2026</div>
+        <h2 style="font-family:var(--font-serif); font-size:36px; line-height:1.2; margin-bottom:16px;">The Bohemian Royal Celebration</h2>
+        <p style="font-size:14px; color:#e0d6d6; line-height:1.7; margin-bottom:24px;">
+          Effortless fusion pieces designed for vibrant sangeets, festive poojas, and contemporary evening cocktail parties.
+        </p>
+        <div>
+          <a href="category.html" class="btn-gd-primary">View Full Lookbook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Feature / Value Propositions Strip -->
+  <section class="v2-feature-strip">
+    <div class="v2-feature-card">
+      <div style="font-size:24px; color:var(--gd-primary); margin-bottom:8px;">🚚</div>
+      <h4 style="font-size:13px; font-weight:700; text-transform:uppercase; margin-bottom:4px;">Free Express Shipping</h4>
+      <p style="font-size:12px; color:var(--gd-muted);">Complimentary courier delivery on all orders over ৳5,000.</p>
+    </div>
+    <div class="v2-feature-card">
+      <div style="font-size:24px; color:var(--gd-primary); margin-bottom:8px;">👗</div>
+      <h4 style="font-size:13px; font-weight:700; text-transform:uppercase; margin-bottom:4px;">Perfect Fit Guarantee</h4>
+      <p style="font-size:12px; color:var(--gd-muted);">Detailed size charts and free 7-day hassle-free size exchange.</p>
+    </div>
+    <div class="v2-feature-card">
+      <div style="font-size:24px; color:var(--gd-primary); margin-bottom:8px;">🌿</div>
+      <h4 style="font-size:13px; font-weight:700; text-transform:uppercase; margin-bottom:4px;">Artisanal Prints</h4>
+      <p style="font-size:12px; color:var(--gd-muted);">Authentic wooden block and digital festive prints.</p>
+    </div>
+    <div class="v2-feature-card">
+      <div style="font-size:24px; color:var(--gd-primary); margin-bottom:8px;">💳</div>
+      <h4 style="font-size:13px; font-weight:700; text-transform:uppercase; margin-bottom:4px;">Cash On Delivery</h4>
+      <p style="font-size:12px; color:var(--gd-muted);">Pay securely upon arrival across all districts in BD.</p>
+    </div>
+  </section>
+
+  <!-- 9. Sabyasachi x Global Desi Royal Ebony Footer -->
+  <footer class="gd-footer">
+    <div class="gd-footer-grid">
+      <!-- Col 1: Heritage & Foundation -->
+      <div>
+        <img src="../assets/image/logo_gold.png" alt="Arbachin" style="height:38px; object-fit:contain; display:block; margin-bottom:16px;">
+        <h4 class="gd-footer-title" style="margin-bottom:8px;">THE HOUSE OF ARBACHIN</h4>
+        <p style="color:#bcaaa8; font-size:13px; line-height:1.8; margin-bottom:14px;">
+          A confluence of Sabyasachi heritage couture archives and Global Desi bohemian energy. Preserving indigenous hand-block printing and Bengali weaving.
+        </p>
+        <p style="font-size:12px; font-weight:700; color:var(--gd-gold); margin-bottom:4px;">ATELIER DESK: +880 1700-000000</p>
+        <p style="font-size:12px; color:#9a8b8d;">sabyasachi-concierge@arbachin.com</p>
+        <div class="gd-footer-badge-strip">
+          <span class="gd-footer-badge">👑 SABYASACHI ART FOUNDATION</span>
+          <span class="gd-footer-badge">🌿 PURE ECO HANDLOOMS</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Shop Online -->
+      <div>
+        <h4 class="gd-footer-title">THE ARCHIVE</h4>
+        <ul class="gd-footer-links">
+          <li><a href="category.html">Kolkata Heritage Drapes</a></li>
+          <li><a href="category.html">Global Desi Printed Kurtas</a></li>
+          <li><a href="category.html">Boho Co-ord Ensembles</a></li>
+          <li><a href="category.html">Royal Zari Banarasi Sarees</a></li>
+          <li><a href="product.html">Printed Kurta in Beige (PDP)</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Client Assistance -->
+      <div>
+        <h4 class="gd-footer-title">CLIENT PRIVÉ</h4>
+        <ul class="gd-footer-links">
+          <li><a href="category.html">📦 Track Global Shipment</a></li>
+          <li><a href="category.html">✈ Express Worldwide Delivery</a></li>
+          <li><a href="category.html">↺ 7-Day Easy Exchange Policy</a></li>
+          <li><a href="category.html">📏 Bohemian Size & Fit Guide</a></li>
+          <li><a href="category.html">💬 WhatsApp Stylist Consultation</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Boutiques -->
+      <div>
+        <h4 class="gd-footer-title">FLAGSHIP BOUTIQUES</h4>
+        <div style="font-size:12px; line-height:1.7; color:#bcaaa8; margin-bottom:12px;">
+          <strong style="color:#ffffff; display:block;">NEW YORK FLAGSHIP</strong>
+          160 Christopher Street, New York, NY 10014
+        </div>
+        <div style="font-size:12px; line-height:1.7; color:#bcaaa8; margin-bottom:12px;">
+          <strong style="color:#ffffff; display:block;">MUMBAI COUTURE ATELIER</strong>
+          Ador House, K Dubash Marg, Kala Ghoda, Mumbai
+        </div>
+        <div style="font-size:12px; line-height:1.7; color:#bcaaa8;">
+          <strong style="color:#ffffff; display:block;">DHAKA ATELIER SUITE</strong>
+          Gulshan Avenue, Dhaka 1212
+        </div>
+      </div>
+
+      <!-- Col 5: VIP Journal -->
+      <div>
+        <h4 class="gd-footer-title">THE SABYASACHI JOURNAL</h4>
+        <div class="gd-newsletter-box">
+          <p style="font-size:12px; color:#dfd4d5; line-height:1.6; margin-bottom:6px;">
+            Subscribe for private archive releases, bohemian runway previews & <strong>10% off</strong> your first order.
+          </p>
+          <form class="gd-newsletter-input-wrap" onsubmit="event.preventDefault(); alert('Subscribed to Sabyasachi & Global Desi Journal'); this.reset();">
+            <input type="email" class="gd-newsletter-input" placeholder="Enter your email" required>
+            <button type="submit" class="gd-newsletter-btn">JOIN</button>
+          </form>
+          <div class="gd-footer-badge-strip" style="margin-top:14px;">
+            <span class="gd-footer-badge">VISA</span>
+            <span class="gd-footer-badge">MASTERCARD</span>
+            <span class="gd-footer-badge">AMEX</span>
+            <span class="gd-footer-badge">BKASH</span>
+            <span class="gd-footer-badge">COD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="gd-footer-bottom-bar">
+      <div class="gd-footer-bottom-inner">
+        <div>&copy; 2026 ARBACHIN HAUTE COUTURE. ALL RIGHTS RESERVED.</div>
+        <div style="display:flex; gap:18px;">
+          <a href="../index.html" style="color:var(--gd-gold); font-weight:700;">★ MASTER VERSIONS HUB</a>
+          <a href="category.html" style="color:#9a8b8d;">GALLERY ARCHIVE</a>
+          <a href="product.html" style="color:#9a8b8d;">PRODUCT DETAILS</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    let currentGdSlide = 0;
+    const gdSlides = document.querySelectorAll('.gd-hero-slide');
+    const gdDots = document.querySelectorAll('.gd-dot');
+    let gdSlideTimer = setInterval(() => moveGdSlide(1), 5000);
+
+    function updateGdSlider() {
+      gdSlides.forEach((s, idx) => {
+        s.classList.toggle('active', idx === currentGdSlide);
+      });
+      gdDots.forEach((d, idx) => {
+        d.classList.toggle('active', idx === currentGdSlide);
+      });
+    }
+
+    function moveGdSlide(step) {
+      currentGdSlide = (currentGdSlide + step + gdSlides.length) % gdSlides.length;
+      updateGdSlider();
+      resetGdTimer();
+    }
+
+    function jumpGdSlide(idx) {
+      currentGdSlide = idx;
+      updateGdSlider();
+      resetGdTimer();
+    }
+
+    function resetGdTimer() {
+      clearInterval(gdSlideTimer);
+      gdSlideTimer = setInterval(() => moveGdSlide(1), 5000);
+    }
+  </script>
+</body>
+</html>

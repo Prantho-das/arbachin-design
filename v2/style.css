@@ -1,0 +1,1221 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  --gd-primary: #0f4a38;
+  --gd-primary-dark: #092c21;
+  --gd-primary-light: #16634c;
+  --gd-primary-hover: #0a3528;
+  --gd-gold: #c59b27;
+  --gd-gold-light: #f5eedb;
+  --gd-gold-accent: #dfba53;
+  --gd-bg: #faf7f2;
+  --gd-card-bg: #ffffff;
+  --gd-dark: #081d16;
+  --gd-text: #1a2923;
+  --gd-muted: #5e6f67;
+  --gd-border: #dbe4de;
+  --gd-border-light: #ecf1ee;
+  --font-serif: 'Bodoni Moda', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Montserrat', sans-serif;
+  --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--gd-bg);
+  color: var(--gd-text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, .serif {
+  font-family: var(--font-serif);
+  color: var(--gd-dark);
+}
+
+a { text-decoration: none; color: inherit; transition: var(--transition); }
+button, input, select { font-family: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* Royal Top Announcement Strip */
+.gd-top-strip {
+  background: #081d16;
+  color: var(--gd-gold-accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(197, 155, 39, 0.3);
+}
+.gd-top-strip a { color: #ffffff; }
+.gd-top-strip a:hover { color: var(--gd-gold); }
+
+/* Header */
+.gd-header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 1000;
+  border-bottom: 1px solid var(--gd-border);
+  box-shadow: 0 4px 15px rgba(20, 7, 10, 0.05);
+}
+.gd-header-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.gd-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.gd-logo-wrap img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+.gd-logo {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: #1a080c;
+  text-transform: uppercase;
+}
+.gd-logo span { color: var(--gd-gold); }
+.gd-logo-sub {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--gd-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.gd-nav {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+.gd-nav-item {
+  position: relative;
+  padding: 6px 0;
+}
+.gd-nav-item > a {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gd-dark);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.gd-nav-item > a:hover, .gd-nav-item > a.active {
+  color: var(--gd-primary);
+}
+.gd-nav-item > a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gd-primary);
+}
+
+/* Sabyasachi Mega Dropdown */
+.gd-mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 750px;
+  background: #ffffff;
+  border: 1px solid var(--gd-border);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  padding: 26px 30px;
+  display: none;
+  grid-template-columns: repeat(3, 1fr) 200px;
+  gap: 20px;
+  z-index: 1100;
+  border-top: 2px solid var(--gd-primary);
+}
+.gd-nav-item:hover .gd-mega-menu {
+  display: grid;
+}
+.gd-mega-col h5 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gd-primary);
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--gd-border);
+}
+.gd-mega-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.gd-mega-col a {
+  font-size: 12px;
+  color: var(--gd-muted);
+}
+.gd-mega-col a:hover {
+  color: var(--gd-primary);
+  padding-left: 4px;
+}
+.gd-mega-featured {
+  background: #fff8f5;
+  padding: 12px;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid var(--gd-border);
+}
+.gd-mega-featured img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+
+.gd-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.gd-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gd-dark);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.gd-icon-btn:hover { color: var(--gd-primary); }
+.gd-cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: var(--gd-primary);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Global Desi Story Category Bubbles */
+.gd-story-section {
+  padding: 24px 40px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--gd-border);
+}
+.gd-bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+.gd-bubble-img {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  padding: 3px;
+  border: 2px solid var(--gd-primary);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.gd-bubble-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.gd-bubble:hover .gd-bubble-img {
+  transform: scale(1.08);
+  border-color: var(--gd-gold);
+}
+.gd-bubble-name {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gd-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* 4a. Global Desi Dynamic Hero Slider */
+.gd-hero-slider-wrap {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background: #081d16;
+}
+.gd-hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: none;
+}
+.gd-hero-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.gd-hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+.gd-hero-slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(6, 26, 19, 0.92) 0%, rgba(6, 26, 19, 0.5) 45%, rgba(6, 26, 19, 0.05) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 80px;
+  max-width: 680px;
+  color: #ffffff;
+}
+.gd-hero-badge {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: var(--gd-gold-accent);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.gd-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(34px, 4.5vw, 54px);
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+.gd-hero-sub {
+  font-size: 14px;
+  color: #dbe5e0;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+.gd-hero-btn {
+  display: inline-block;
+  background: var(--gd-gold);
+  color: #061a13;
+  padding: 13px 32px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: var(--transition);
+  align-self: flex-start;
+}
+.gd-hero-btn:hover {
+  background: #ffffff;
+  color: #000000;
+}
+.gd-slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: var(--transition);
+  color: #111;
+  font-size: 18px;
+}
+.gd-slider-btn:hover {
+  background: var(--gd-primary);
+  color: #ffffff;
+}
+.gd-slider-btn.prev { left: 24px; }
+.gd-slider-btn.next { right: 24px; }
+.gd-slider-dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+.gd-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.gd-dot.active {
+  background: var(--gd-gold);
+  border-color: var(--gd-gold);
+  width: 24px;
+  border-radius: 10px;
+}
+
+/* Global Desi Dual Split Hero Banner (50/50 Layout) */
+.gd-dual-hero {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 40px;
+}
+.gd-dual-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.gd-hero-split-card {
+  position: relative;
+  height: 520px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+.gd-hero-split-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.gd-hero-split-card:hover img {
+  transform: scale(1.06);
+}
+.gd-hero-split-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(20, 7, 10, 0.85) 0%, rgba(20, 7, 10, 0.2) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+  color: #fff;
+}
+.gd-hero-split-tag {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gd-gold-light);
+  margin-bottom: 8px;
+}
+.gd-hero-split-title {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+.gd-hero-split-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #14070a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: 30px;
+  width: fit-content;
+  transition: var(--transition);
+}
+.gd-hero-split-card:hover .gd-hero-split-btn {
+  background: var(--gd-primary);
+  color: #ffffff;
+}
+
+/* Flash Deals Ticker Bar */
+.gd-flash-bar {
+  background: linear-gradient(90deg, var(--gd-primary), var(--gd-primary-dark));
+  color: #fff;
+  padding: 12px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 20px;
+}
+.gd-countdown-timer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 800;
+}
+.gd-time-unit {
+  background: rgba(0,0,0,0.3);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 13px;
+  color: var(--gd-gold-light);
+}
+
+/* Shop by Silhouette Category Pills */
+.gd-silhouette-section {
+  max-width: 1440px;
+  margin: 40px auto;
+  padding: 0 40px;
+  text-align: center;
+}
+.gd-silhouette-grid {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.gd-silhouette-chip {
+  background: #ffffff;
+  border: 1px solid var(--gd-border);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gd-dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+.gd-silhouette-chip:hover, .gd-silhouette-chip.active {
+  background: var(--gd-primary);
+  color: #ffffff;
+  border-color: var(--gd-primary);
+  box-shadow: 0 4px 15px rgba(138, 28, 61, 0.25);
+}
+
+/* Product Card with Quick Size Selector & Instant Buy */
+.gd-card-size-row {
+  display: flex;
+  gap: 6px;
+  margin: 10px 0;
+}
+.gd-size-chip {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--gd-border);
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.gd-size-chip:hover, .gd-size-chip.selected {
+  background: var(--gd-primary);
+  color: #fff;
+  border-color: var(--gd-primary);
+}
+.btn-gd-instant-buy {
+  width: 100%;
+  background: var(--gd-primary);
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: var(--transition);
+}
+.btn-gd-instant-buy:hover {
+  background: var(--gd-primary-hover);
+}
+
+/* Sabyasachi Art Archive Full-Width Dark Section */
+.sabya-archive-dark-wrap {
+  background: #14070a;
+  color: #f5eedb;
+  padding: 90px 40px;
+  margin: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+.sabya-archive-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.sabya-archive-tag {
+  color: var(--gd-gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.sabya-archive-title {
+  font-family: var(--font-serif);
+  font-size: 38px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.sabya-archive-desc {
+  color: #cbb8b6;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* Interactive Style Studio (Mix & Match Combo) */
+.gd-style-studio-wrap {
+  max-width: 1440px;
+  margin: 60px auto;
+  padding: 0 40px;
+}
+.gd-style-studio-card {
+  background: #ffffff;
+  border: 1px solid var(--gd-border);
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+.gd-combo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 1.2fr;
+  gap: 24px;
+  align-items: center;
+  margin-top: 24px;
+}
+.gd-combo-piece {
+  text-align: center;
+  position: relative;
+}
+.gd-combo-piece img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.gd-combo-calc-box {
+  background: #fff8f5;
+  border: 1px dashed var(--gd-primary);
+  padding: 30px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.btn-gd-primary {
+  display: inline-block;
+  background: var(--gd-primary);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 14px 30px;
+  transition: var(--transition);
+}
+.btn-gd-primary:hover {
+  background: var(--gd-primary-hover);
+  transform: translateY(-2px);
+}
+
+/* Split Promo Banners */
+.gd-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1440px;
+  margin: 50px auto;
+  padding: 0 40px;
+}
+.gd-split-card {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.gd-split-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.gd-split-card:hover img {
+  transform: scale(1.05);
+}
+.gd-split-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 32px;
+  background: linear-gradient(to top, rgba(31, 27, 28, 0.88), transparent);
+  color: #fff;
+}
+.gd-split-info h3 {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+/* Sabyasachi Editorial Category Layout */
+.sabya-wrapper {
+  max-width: 1440px;
+  margin: 40px auto 80px;
+  padding: 0 40px;
+}
+.sabya-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.sabya-header h1 {
+  font-family: var(--font-serif);
+  font-size: 46px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gd-dark);
+}
+.sabya-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.sabya-item-card {
+  display: flex;
+  flex-direction: column;
+}
+.sabya-item-media {
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background: #f4eee8;
+  margin-bottom: 16px;
+}
+.sabya-item-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+.sabya-item-card:hover .sabya-item-media img {
+  transform: scale(1.06);
+}
+.sabya-item-title {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.sabya-item-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gd-primary);
+  text-align: center;
+}
+
+/* Global Desi Product Detail Layout */
+.gd-pdp-layout {
+  max-width: 1440px;
+  margin: 30px auto 80px;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 50px;
+}
+.gd-2x2-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.gd-grid-photo {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+.gd-grid-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.gd-grid-photo:hover img {
+  transform: scale(1.04);
+}
+
+.gd-spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+  font-size: 13px;
+}
+.gd-spec-table td {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--gd-border);
+}
+.gd-spec-table td:first-child {
+  font-weight: 600;
+  color: #333;
+  width: 40%;
+}
+.gd-spec-table td:last-child {
+  color: var(--gd-muted);
+}
+
+/* Royal Sabyasachi x Arbachin Emerald Footer */
+.gd-footer {
+  background: #061a13;
+  color: #d5ded9;
+  padding: 80px 40px 0;
+  border-top: 2px solid var(--gd-gold);
+}
+.gd-footer-grid {
+  max-width: 1440px;
+  margin: 0 auto 50px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.1fr 1.5fr;
+  gap: 36px;
+}
+.gd-footer-title {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gd-gold-accent) !important;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+}
+.gd-footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25px;
+  height: 1px;
+  background: var(--gd-gold);
+}
+.gd-footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  font-size: 13px;
+}
+.gd-footer-links a { color: #a9bcb3; }
+.gd-footer-links a:hover { color: #ffffff; padding-left: 4px; }
+.gd-footer-badge-strip {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+.gd-footer-badge {
+  background: #0b291f;
+  border: 1px solid rgba(197, 155, 39, 0.4);
+  padding: 5px 9px;
+  font-size: 10px;
+  color: var(--gd-gold-accent);
+  border-radius: 2px;
+}
+.gd-newsletter-box {
+  background: #0a251c;
+  border: 1px solid rgba(197, 155, 39, 0.35);
+  padding: 22px;
+  border-radius: 4px;
+}
+.gd-newsletter-input-wrap {
+  display: flex;
+  margin-top: 12px;
+}
+.gd-newsletter-input {
+  flex: 1;
+  background: #061a13;
+  border: 1px solid rgba(197, 155, 39, 0.5);
+  color: #ffffff;
+  padding: 10px 12px;
+  font-size: 13px;
+  outline: none;
+}
+.gd-newsletter-input::placeholder {
+  color: #7d968b;
+}
+.gd-newsletter-btn {
+  background: var(--gd-gold);
+  color: #061a13;
+  font-weight: 700;
+  border: none;
+  padding: 0 18px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.gd-newsletter-btn:hover { background: var(--gd-gold-accent); }
+.gd-footer-bottom-bar {
+  background: #030f0b;
+  color: #7d968b;
+  padding: 24px 40px;
+  font-size: 12px;
+  border-top: 1px solid #0d3627;
+}
+.gd-footer-bottom-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* 10. New Arrivals Left-Sidebar Horizontal Section (Global Desi Live) */
+.gd-new-arrivals-section {
+  max-width: 1440px;
+  margin: 70px auto;
+  padding: 0 40px;
+}
+.gd-new-arrivals-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 30px;
+  align-items: center;
+  position: relative;
+}
+.gd-new-arrivals-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 20px;
+}
+.gd-new-arrivals-title {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #111111;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  line-height: 1.15;
+}
+.gd-new-arrivals-explore {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #111111;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.gd-new-arrivals-explore:hover {
+  color: var(--gd-primary);
+}
+.gd-new-arrivals-slider-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.gd-new-arrivals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.gd-na-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.gd-na-media {
+  position: relative;
+  aspect-ratio: 3/4;
+  background: #eae5de;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.gd-na-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.gd-na-card:hover .gd-na-media img {
+  transform: scale(1.04);
+}
+.gd-na-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #dfaa37;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+.gd-na-title {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #222222;
+  margin-bottom: 4px;
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.gd-na-price {
+  font-size: 12px;
+  font-weight: 700;
+  color: #111111;
+}
+.gd-na-next-btn {
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  background: #ffffff;
+  border: 1px solid #e0d8cc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+  cursor: pointer;
+  z-index: 5;
+  color: #111;
+  font-size: 16px;
+  transition: var(--transition);
+}
+.gd-na-next-btn:hover {
+  background: var(--gd-primary);
+  color: #ffffff;
+  border-color: var(--gd-primary);
+}
+
+/* 11. On The Gram / Festive Edit 2026 Collage Section (Global Desi Live) */
+.gd-gram-section {
+  max-width: 1440px;
+  margin: 70px auto 90px;
+  padding: 0 40px;
+}
+.gd-gram-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.gd-gram-title {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #0d1f18;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.gd-gram-sub {
+  font-size: 12px;
+  color: #666666;
+}
+.gd-gram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.gd-gram-card {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #e8e2d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gd-gram-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.gd-gram-card:hover img {
+  transform: scale(1.04);
+}
+.gd-gram-sparkle {
+  position: absolute;
+  color: #ffffff;
+  font-size: 18px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+  pointer-events: none;
+  animation: floatSparkle 2.5s ease-in-out infinite alternate;
+}
+@keyframes floatSparkle {
+  0% { transform: translateY(0) scale(0.9); }
+  100% { transform: translateY(-6px) scale(1.1); }
+}
+.gd-gram-editorial-center {
+  background: #f1ebd8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  border: 1px solid rgba(197, 155, 39, 0.2);
+}
+.gd-gram-festive-tag {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #111111;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.gd-gram-festive-tag span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  vertical-align: super;
+  color: #c59b27;
+}
+.gd-gram-festive-script {
+  font-style: italic;
+  font-family: var(--font-serif);
+  font-size: 28px;
+  color: #c59b27;
+  margin-bottom: 12px;
+  text-transform: lowercase;
+}
+.gd-gram-jharokha-arch {
+  width: 90px;
+  height: 120px;
+  border: 4px solid #7c1a22;
+  border-radius: 45px 45px 0 0;
+  background: #110507;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(124, 26, 34, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gd-gram-jharokha-inner {
+  width: 70px;
+  height: 96px;
+  border: 1px dashed #d4af37;
+  border-radius: 35px 35px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2px;
+  padding: 4px;
+}
+.gd-gram-jharokha-inner span {
+  background: #7c1a22;
+  opacity: 0.8;
+  border: 1px solid #d4af37;
+}
+.gd-gram-quote-tag {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-style: italic;
+  font-family: var(--font-serif);
+  font-size: 15px;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  line-height: 1.2;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .gd-split-grid { grid-template-columns: 1fr; }
+  .sabya-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gd-pdp-layout { grid-template-columns: 1fr; }
+  .gd-footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .gd-new-arrivals-layout { grid-template-columns: 1fr; }
+  .gd-new-arrivals-sidebar { text-align: center; margin-bottom: 20px; padding-right: 0; }
+  .gd-new-arrivals-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .gd-top-strip { flex-direction: column; gap: 6px; padding: 10px 16px; text-align: center; }
+  .gd-header-inner { padding: 12px 20px; }
+  .gd-nav { display: none; }
+  .gd-hero-box { height: 450px; }
+  .gd-hero-headline { font-size: 32px; }
+  .gd-section, .sabya-wrapper, .gd-pdp-layout, .gd-new-arrivals-section, .gd-gram-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .sabya-gallery-grid { grid-template-columns: 1fr; }
+  .gd-2x2-grid { grid-template-columns: 1fr; }
+  .gd-footer { padding-left: 20px; padding-right: 20px; }
+  .gd-footer-grid { grid-template-columns: 1fr; }
+  .gd-gram-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .gd-header-inner { flex-wrap: wrap; }
+  .gd-brand img { height: 34px; }
+  .gd-info-panel { padding: 24px 16px; }
+  .gd-actions-row { flex-direction: column; }
+  .gd-new-arrivals-grid { grid-template-columns: 1fr; }
+  .gd-gram-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery Archive | Arbachin (V2)</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: #faf6f0; }
+    .sabya-curation-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 36px;
+      margin: 30px 0 50px;
+      border-top: 1px solid #e8ded4;
+      border-bottom: 1px solid #e8ded4;
+      padding: 14px 0;
+    }
+    .sabya-curation-tabs a {
+      font-family: var(--font-serif);
+      font-size: 15px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #666;
+    }
+    .sabya-curation-tabs a:hover, .sabya-curation-tabs a.active {
+      color: var(--gd-primary);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Top Announcement Strip -->
+  <div class="gd-top-strip">
+    <div style="display:flex; gap:14px;">
+      <a href="category.html">🚩 SABYASACHI ATELIER</a>
+      <span>|</span>
+      <a href="https://wa.me/8801700000000" target="_blank" style="color:var(--gd-gold-light);">💬 STYLIST CONCIERGE</a>
+    </div>
+    <div style="font-weight:700;">
+      ARBACHIN EDITORIAL GALLERY ARCHIVE &bull; COMPLIMENTARY SHIPPING OVER ৳5,000
+    </div>
+    <div style="display:flex; gap:12px; align-items:center;">
+      <span>BDT (৳) / USD ($)</span>
+      <span>|</span>
+      <a href="../index.html" style="background:var(--gd-gold); color:#000; padding:2px 8px; border-radius:2px; font-weight:700;">SWITCH VERSION ↗</a>
+    </div>
+  </div>
+
+  <!-- 2. Header (Sabyasachi x Global Desi) -->
+  <header class="gd-header">
+    <div class="gd-header-inner">
+      <div class="gd-logo-wrap">
+        <a href="index.html" style="display:flex; flex-direction:column; align-items:center;">
+          <img src="../assets/image/logo.png" alt="Arbachin" style="height:48px; object-fit:contain;">
+        </a>
+      </div>
+      
+      <ul class="gd-nav">
+        <li class="gd-nav-item"><a href="index.html">HOME</a></li>
+        <li class="gd-nav-item"><a href="category.html" class="active">HERITAGE ARCHIVE</a></li>
+        <li class="gd-nav-item"><a href="category.html">KURTAS & TUNICS</a></li>
+        <li class="gd-nav-item"><a href="category.html">SILK SAREES</a></li>
+        <li class="gd-nav-item"><a href="product.html">BEIGE KURTA (PDP)</a></li>
+        <li class="gd-nav-item"><a href="category.html" style="color:var(--gd-primary);">SPECIAL OFFERS</a></li>
+      </ul>
+
+      <div class="gd-icons">
+        <button class="gd-icon-btn" onclick="alert('Search catalog...')">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>SEARCH</span>
+        </button>
+        <button class="gd-icon-btn" onclick="alert('Bag has ' + cartV2.length + ' item(s)')">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span>BAG (<span class="v2-cart-badge">0</span>)</span>
+          <span class="gd-cart-badge v2-cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sabyasachi Editorial Gallery Layout -->
+  <div class="sabya-wrapper">
+    <div class="sabya-header">
+      <div style="font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--gd-muted); margin-bottom:10px;">AUTUMN / WINTER HAUTE COUTURE</div>
+      <h1>The Sabyasachi Editorial Archive</h1>
+      <p style="font-family:var(--font-serif); font-size:17px; color:var(--gd-muted); font-style:italic; max-width:700px; margin:12px auto 0; line-height:1.6;">
+        "A quiet homage to antique bullion zari, handwoven brocades, and classical royal portraiture of South Asia."
+      </p>
+    </div>
+
+    <!-- Editorial Curation Filter Tabs -->
+    <div class="sabya-curation-tabs">
+      <a href="#" class="active">All Ensembles (6)</a>
+      <a href="#">Royal Banarasi</a>
+      <a href="#">Katan Silk</a>
+      <a href="#">Embroidered Pret</a>
+      <a href="#">Bridal Troussseau</a>
+    </div>
+
+    <!-- 3-Column Sabyasachi Editorial Portrait Grid (2:3 Aspect Ratio) -->
+    <div class="sabya-gallery-grid">
+      <!-- Item 1 -->
+      <div class="sabya-item-card">
+        <div class="sabya-item-media">
+          <a href="product.html"><img src="../assets/image/saree_1.jpg" alt="Burgundy Silk Saree"></a>
+        </div>
+        <h3 class="sabya-item-title"><a href="product.html">Burgundy Banarasi Silk Saree</a></h3>
+        <div class="sabya-item-price">৳12,500 BDT</div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="sabya-item-card">
+        <div class="sabya-item-media">
+          <a href="product.html"><img src="../assets/image/saree_2.jpg" alt="Royal Blue Katan"></a>
+        </div>
+        <h3 class="sabya-item-title"><a href="product.html">Royal Blue Katan Silk Drape</a></h3>
+        <div class="sabya-item-price">৳15,000 BDT</div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="sabya-item-card">
+        <div class="sabya-item-media">
+          <a href="product.html"><img src="../assets/image/saree_3.jpg" alt="Emerald Green Saree"></a>
+        </div>
+        <h3 class="sabya-item-title"><a href="product.html">Emerald Green Zari Saree</a></h3>
+        <div class="sabya-item-price">৳13,800 BDT</div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="sabya-item-card">
+        <div class="sabya-item-media">
+          <a href="product.html"><img src="../assets/image/threepiece_1.jpg" alt="Dusty Rose Pret"></a>
+        </div>
+        <h3 class="sabya-item-title"><a href="product.html">Rose Pink Embroidered Three Piece</a></h3>
+        <div class="sabya-item-price">৳8,500 BDT</div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="sabya-item-card">
+        <div class="sabya-item-media">
+          <a href="product.html"><img src="../assets/image/threepiece_2.jpg" alt="Midnight Navy Anarkali"></a>
+        </div>
+        <h3 class="sabya-item-title"><a href="product.html">Midnight Navy Anarkali Set</a></h3>
+        <div class="sabya-item-price">৳9,200 BDT</div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="sabya-item-card">
+        <div class="sabya-item-media">
+          <a href="product.html"><img src="../assets/image/threepiece_3.jpg" alt="Ivory Raw Silk Ensembles"></a>
+        </div>
+        <h3 class="sabya-item-title"><a href="product.html">Ivory Bridal Raw Silk Set</a></h3>
+        <div class="sabya-item-price">৳11,000 BDT</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sabyasachi x Global Desi Royal Ebony Footer -->
+  <footer class="gd-footer">
+    <div class="gd-footer-grid">
+      <div>
+        <img src="../assets/image/logo_gold.png" alt="Arbachin" style="height:40px; object-fit:contain; margin-bottom:14px; display:block;">
+        <h4 class="gd-footer-title" style="margin-bottom:8px;">THE HOUSE OF ARBACHIN</h4>
+        <p style="color:#bcaaa8; font-size:13px; line-height:1.8; margin-bottom:14px;">
+          A confluence of Sabyasachi heritage couture archives and Global Desi bohemian energy. Preserving indigenous hand-block printing and Bengali weaving.
+        </p>
+        <p style="font-size:12px; font-weight:700; color:var(--gd-gold); margin-bottom:4px;">ATELIER DESK: +880 1700-000000</p>
+        <p style="font-size:12px; color:#9a8b8d;">sabyasachi-concierge@arbachin.com</p>
+        <div class="gd-footer-badge-strip">
+          <span class="gd-footer-badge">👑 SABYASACHI ART FOUNDATION</span>
+          <span class="gd-footer-badge">🌿 PURE ECO HANDLOOMS</span>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="gd-footer-title">THE ARCHIVE</h4>
+        <ul class="gd-footer-links">
+          <li><a href="category.html">Kolkata Heritage Drapes</a></li>
+          <li><a href="category.html">Global Desi Printed Kurtas</a></li>
+          <li><a href="category.html">Boho Co-ord Ensembles</a></li>
+          <li><a href="category.html">Royal Zari Banarasi Sarees</a></li>
+          <li><a href="product.html">Printed Kurta in Beige (PDP)</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="gd-footer-title">CLIENT PRIVÉ</h4>
+        <ul class="gd-footer-links">
+          <li><a href="category.html">📦 Track Global Shipment</a></li>
+          <li><a href="category.html">✈ Express Worldwide Delivery</a></li>
+          <li><a href="category.html">↺ 7-Day Easy Exchange Policy</a></li>
+          <li><a href="category.html">📏 Bohemian Size & Fit Guide</a></li>
+          <li><a href="category.html">💬 WhatsApp Stylist Consultation</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="gd-footer-title">FLAGSHIP BOUTIQUES</h4>
+        <div style="font-size:12px; line-height:1.7; color:#bcaaa8; margin-bottom:12px;">
+          <strong style="color:#ffffff; display:block;">NEW YORK FLAGSHIP</strong>
+          160 Christopher Street, New York, NY 10014
+        </div>
+        <div style="font-size:12px; line-height:1.7; color:#bcaaa8; margin-bottom:12px;">
+          <strong style="color:#ffffff; display:block;">MUMBAI COUTURE ATELIER</strong>
+          Ador House, K Dubash Marg, Kala Ghoda, Mumbai
+        </div>
+        <div style="font-size:12px; line-height:1.7; color:#bcaaa8;">
+          <strong style="color:#ffffff; display:block;">DHAKA ATELIER SUITE</strong>
+          Gulshan Avenue, Dhaka 1212
+        </div>
+      </div>
+
+      <div>
+        <h4 class="gd-footer-title">THE SABYASACHI JOURNAL</h4>
+        <div class="gd-newsletter-box">
+          <p style="font-size:12px; color:#dfd4d5; line-height:1.6; margin-bottom:6px;">
+            Subscribe for private archive releases, bohemian runway previews & <strong>10% off</strong> your first order.
+          </p>
+          <form class="gd-newsletter-input-wrap" onsubmit="event.preventDefault(); alert('Subscribed to Sabyasachi & Global Desi Journal'); this.reset();">
+            <input type="email" class="gd-newsletter-input" placeholder="Enter your email" required>
+            <button type="submit" class="gd-newsletter-btn">JOIN</button>
+          </form>
+          <div class="gd-footer-badge-strip" style="margin-top:14px;">
+            <span class="gd-footer-badge">VISA</span>
+            <span class="gd-footer-badge">MASTERCARD</span>
+            <span class="gd-footer-badge">AMEX</span>
+            <span class="gd-footer-badge">BKASH</span>
+            <span class="gd-footer-badge">COD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gd-footer-bottom-bar">
+      <div class="gd-footer-bottom-inner">
+        <div>&copy; 2026 ARBACHIN HAUTE COUTURE. ALL RIGHTS RESERVED.</div>
+        <div style="display:flex; gap:18px;">
+          <a href="../index.html" style="color:var(--gd-gold); font-weight:700;">★ MASTER VERSIONS HUB</a>
+          <a href="category.html" style="color:#9a8b8d;">GALLERY ARCHIVE</a>
+          <a href="product.html" style="color:#9a8b8d;">PRODUCT DETAILS</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

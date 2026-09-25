@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nazaakat By Samara Singh - White Crystals Gold Plated Stone Studded Bangle Set | Arbachin Haute Couture (V3)</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Mature & Ultra-Luxury Couture PDP Styles */
+    body {
+      background-color: #faf9f6;
+      color: #1a1a1a;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .aza-promo-top-strip {
+      background: #f4efe6;
+      padding: 14px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e8e1d5;
+    }
+    .aza-promo-title {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--hom-primary);
+      letter-spacing: 1px;
+    }
+    .btn-aza-promo-shop {
+      background: var(--hom-emerald);
+      color: #ffffff;
+      padding: 9px 24px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 2px;
+      border: 1px solid var(--hom-emerald);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .btn-aza-promo-shop:hover {
+      background: var(--hom-gold);
+      border-color: var(--hom-gold);
+      color: #05140f;
+    }
+
+    .aza-pdp-2col-layout {
+      max-width: 1440px;
+      margin: 30px auto 80px;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    /* Left 2-Column Photo Grid (Mature, Elegant Layout) */
+    .aza-2col-photo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .aza-photo-item {
+      position: relative;
+      aspect-ratio: 3/4;
+      background: #f5f2eb;
+      overflow: hidden;
+      border-radius: 2px;
+      border: 1px solid rgba(230, 223, 213, 0.6);
+    }
+    .aza-photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .aza-photo-item:hover img {
+      transform: scale(1.035);
+    }
+    .aza-photo-overlay-tag {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(6px);
+      padding: 4px 10px;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #222;
+      border-radius: 2px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    /* Right Purchase & Details Panel (Mature Hierarchy) */
+    .aza-panel {
+      display: flex;
+      flex-direction: column;
+      position: sticky;
+      top: 90px;
+      background: #ffffff;
+      padding: 36px 32px;
+      border: 1px solid #ede7dc;
+      border-radius: 4px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.02);
+    }
+    .aza-badge-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .aza-chip-badge {
+      background: #fbf0ee;
+      color: #991b1b;
+      font-size: 9px;
+      font-weight: 800;
+      padding: 3px 9px;
+      border-radius: 2px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .aza-chip-badge.exclusive {
+      background: #eef6f2;
+      color: var(--hom-emerald);
+      border: 1px solid rgba(15, 74, 56, 0.2);
+    }
+    .aza-designer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .aza-designer-name {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: #111111;
+      text-transform: uppercase;
+    }
+    .aza-designer-name a { color: #111; }
+    .aza-designer-name a:hover { color: var(--hom-emerald); }
+    .aza-header-icons {
+      display: flex;
+      gap: 14px;
+      color: #777;
+    }
+    .aza-header-icons svg:hover { color: var(--hom-emerald); cursor: pointer; }
+    .aza-product-name {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      color: #111111;
+      margin-bottom: 16px;
+      line-height: 1.35;
+    }
+    .aza-price-block {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #ede7dc;
+      margin-bottom: 20px;
+    }
+    .aza-main-price {
+      font-size: 24px;
+      font-weight: 800;
+      color: #061a14;
+      letter-spacing: 0.5px;
+    }
+    .aza-strike-price {
+      font-size: 15px;
+      color: #999999;
+      text-decoration: line-through;
+    }
+    .aza-discount-text {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--hom-emerald);
+      background: #eef6f2;
+      padding: 2px 8px;
+      border-radius: 2px;
+    }
+
+    /* Size Selector */
+    .aza-size-row-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: #444;
+    }
+    .aza-size-btn-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .aza-size-pill {
+      padding: 9px 22px;
+      border: 1px solid #dcd5c9;
+      background: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: var(--transition);
+      color: #222;
+    }
+    .aza-size-pill.active {
+      background: var(--hom-emerald);
+      color: #ffffff;
+      border-color: var(--hom-emerald);
+      box-shadow: 0 4px 12px rgba(15, 74, 56, 0.15);
+    }
+    .aza-size-pill:hover:not(.active) {
+      border-color: var(--hom-emerald);
+      color: var(--hom-emerald);
+    }
+
+    /* Urgency Row */
+    .aza-urgency-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .aza-urgency-chip {
+      background: #fff6f6;
+      color: #c92a2a;
+      border: 1px solid #fed7d7;
+      padding: 5px 11px;
+      font-size: 10px;
+      font-weight: 700;
+      border-radius: 2px;
+      letter-spacing: 0.3px;
+    }
+    .aza-urgency-chip.date {
+      background: #fdfaf3;
+      color: #856404;
+      border-color: #f1e4c7;
+    }
+    .aza-urgency-chip.contains {
+      background: #f2f8f5;
+      color: var(--hom-emerald);
+      border-color: #cde4d8;
+    }
+
+    /* Action Buttons */
+    .aza-actions-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+    .btn-aza-add-cart {
+      flex: 1.3;
+      background: var(--hom-emerald);
+      color: #ffffff;
+      border: 1px solid var(--hom-emerald);
+      padding: 15px 20px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: var(--transition);
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(15, 74, 56, 0.2);
+    }
+    .btn-aza-add-cart:hover {
+      background: #081d16;
+      border-color: #081d16;
+      transform: translateY(-1px);
+    }
+    .btn-aza-stylist {
+      flex: 1;
+      background: #ffffff;
+      color: #111111;
+      border: 1px solid #111111;
+      padding: 15px 16px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .btn-aza-stylist:hover {
+      background: #faf8f5;
+      border-color: var(--hom-emerald);
+      color: var(--hom-emerald);
+    }
+
+    /* Delivery / Location Box */
+    .aza-delivery-box {
+      border: 1px solid #ede7dc;
+      padding: 16px 18px;
+      border-radius: 3px;
+      margin-bottom: 18px;
+      background: #fbf9f6;
+    }
+    .aza-location-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      color: #111;
+    }
+    .aza-delivery-input-frame {
+      border: 1px solid #e4ddd2;
+      padding: 11px 14px;
+      font-size: 12px;
+      color: #333;
+      border-radius: 2px;
+      background: #ffffff;
+      margin-bottom: 6px;
+    }
+    .aza-delivery-input-frame strong { color: #b91c1c; }
+
+    /* Offers Box */
+    .aza-offers-box {
+      border: 1px solid #ede7dc;
+      padding: 16px 18px;
+      border-radius: 3px;
+      margin-bottom: 20px;
+      background: #ffffff;
+    }
+    .aza-offers-title {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: #111;
+    }
+    .aza-coupon-banner {
+      background: #fdfaf3;
+      border: 1px dashed var(--hom-gold);
+      padding: 11px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 2px;
+      font-size: 11px;
+      margin-bottom: 10px;
+    }
+
+    /* Accordions */
+    .aza-detail-accordions {
+      border-top: 1px solid #ede7dc;
+      margin-top: 14px;
+    }
+    .aza-pdp-acc-item {
+      border-bottom: 1px solid #ede7dc;
+    }
+    .aza-pdp-acc-btn {
+      width: 100%;
+      padding: 15px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      border: none;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      text-align: left;
+      color: #111;
+    }
+    .aza-pdp-acc-content {
+      padding-bottom: 16px;
+      font-size: 12px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    /* Customer Support Strip */
+    .aza-support-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .btn-aza-support-action {
+      background: #ffffff;
+      border: 1px solid #e0d8cc;
+      padding: 11px 8px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border-radius: 2px;
+      cursor: pointer;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      color: #333;
+      transition: var(--transition);
+    }
+    .btn-aza-support-action:hover {
+      border-color: var(--hom-emerald);
+      color: var(--hom-emerald);
+      background: #fbf9f6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Top Announcement Bar -->
+  <div class="hom-top-bar">
+    <div class="hom-top-links">
+      <a href="category.html">🚩 STORES</a>
+      <span>|</span>
+      <a href="https://wa.me/8801700000000" target="_blank" style="color:var(--hom-gold-light);">💬 STYLIST CONCIERGE</a>
+    </div>
+    <div class="hom-top-center">
+      <span>Free Shipping* &bull; COMPLIMENTARY WORLDWIDE EXPRESS ON ORDERS OVER ৳5,000</span>
+    </div>
+    <div class="hom-top-links">
+      <select id="v3CurrencySelector" class="aza-curr-select" onchange="convertCurrency(this.value)" style="background:#081d16; color:#fff; border:1px solid rgba(197, 155, 39, 0.4); padding:2px 6px; font-size:11px;">
+        <option value="BDT">BDT (৳)</option>
+        <option value="USD">USD ($)</option>
+        <option value="INR">INR (₹)</option>
+        <option value="GBP">GBP (£)</option>
+        <option value="AED">AED (د.إ)</option>
+      </select>
+      <a href="../index.html" style="background:var(--hom-gold); color:#05140f; padding:2px 8px; border-radius:2px; font-weight:800;">SWITCH VERSION ↗</a>
+    </div>
+  </div>
+
+  <!-- 2. Main Header & Navigation -->
+  <header class="hom-header">
+    <div class="hom-header-inner">
+      <div class="hom-brand">
+        <a href="index.html">
+          <img src="../assets/image/logo.png" alt="Arbachin">
+        </a>
+      </div>
+
+      <nav>
+        <ul class="hom-nav">
+          <li class="hom-nav-item"><a href="index.html">WOMEN</a></li>
+          <li class="hom-nav-item"><a href="category.html">MEN</a></li>
+          <li class="hom-nav-item"><a href="category.html?cat=sarees">BRIDAL</a></li>
+          <li class="hom-nav-item"><a href="product.html" class="active">JEWELLERY</a></li>
+          <li class="hom-nav-item"><a href="category.html" style="color:var(--hom-emerald);">SALE</a></li>
+        </ul>
+      </nav>
+
+      <div class="hom-header-actions">
+        <button class="hom-action-icon" onclick="showV3Toast('Search catalog...')">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>SEARCH</span>
+        </button>
+        <a href="category.html" class="hom-action-icon" title="Wishlist">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <span>WISHLIST</span>
+        </a>
+        <button class="hom-action-icon" onclick="showV3Toast('Your Shopping Bag contains ' + cartV3.length + ' item(s)')">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span>BAG (<span class="hom-cart-count">0</span>)</span>
+          <span class="hom-cart-badge hom-cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Top Banner ("Celebrate in the Season's Finest New Arrivals") -->
+  <div class="aza-promo-top-strip">
+    <div class="aza-promo-title">Celebrate in the Season's Finest New Arrivals</div>
+    <button class="btn-aza-promo-shop" onclick="window.location.href='category.html'">SHOP NOW</button>
+  </div>
+
+  <!-- 4. Aza Fashions 2-Column Product Layout -->
+  <div class="aza-pdp-2col-layout">
+    <!-- Left 2xN Photo Grid (6 Detail Angles) -->
+    <div class="aza-2col-photo-grid">
+      <!-- Photo 1 -->
+      <div class="aza-photo-item">
+        <img src="../assets/image/jewelry_1.jpg" alt="Model Wearing Bangle Set">
+      </div>
+
+      <!-- Photo 2 -->
+      <div class="aza-photo-item">
+        <img src="../assets/image/jewelry_2.jpg" alt="White Crystals Gold Plated Stone Studded Bangle Set">
+        <div class="aza-photo-overlay-tag">Contains: Bangle</div>
+      </div>
+
+      <!-- Photo 3 -->
+      <div class="aza-photo-item">
+        <img src="../assets/image/jewelry_3.jpg" alt="Open Clasp & Fitting">
+      </div>
+
+      <!-- Photo 4 -->
+      <div class="aza-photo-item">
+        <img src="../assets/image/jewelry_4.jpg" alt="Uncut Crystals Setting">
+      </div>
+
+      <!-- Photo 5 -->
+      <div class="aza-photo-item">
+        <img src="../assets/image/jewelry_2.jpg" alt="Gold Plating Texture">
+      </div>
+
+      <!-- Photo 6 -->
+      <div class="aza-photo-item">
+        <img src="../assets/image/jewelry_1.jpg" alt="Wrist Drape Angle">
+      </div>
+    </div>
+
+    <!-- Right Purchase & Details Panel -->
+    <div class="aza-panel">
+      <!-- Badges -->
+      <div class="aza-badge-row">
+        <span class="aza-chip-badge exclusive">👑 Aza Exclusive</span>
+        <span class="aza-chip-badge">⚡ In High Demand</span>
+      </div>
+
+      <!-- Designer Header & Icons -->
+      <div class="aza-designer-header">
+        <div class="aza-designer-name">
+          <a href="category.html">Nazaakat By Samara Singh</a> <span>&rsaquo;</span>
+        </div>
+        <div class="aza-header-icons">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" title="Share Piece"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" title="Add to Wishlist" onclick="showV3Toast('Added to your Wishlist')"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        </div>
+      </div>
+
+      <!-- Product Title -->
+      <h1 class="aza-product-name">
+        White Crystals Gold Plated Stone Studded Bangle Set (Set of 2)
+      </h1>
+
+      <!-- Price Block -->
+      <div class="aza-price-block">
+        <span class="aza-main-price aza-convert-price" data-base-bdt="18500">৳18,500</span>
+        <span class="aza-strike-price">৳22,000</span>
+        <span class="aza-discount-text">16% OFF</span>
+        <span style="font-size:11px; color:#666; margin-left:auto;">Inclusive of all duties</span>
+      </div>
+
+      <!-- Size Selector -->
+      <div style="margin-bottom:16px;">
+        <div class="aza-size-row-header">
+          <span>Select size</span>
+          <span style="color:var(--hom-emerald); cursor:pointer; text-decoration:underline;" onclick="alert('Bangle Measurement Guide:\nSize 2.4: 2.25 inches (5.7 cm)\nSize 2.6 (Standard): 2.37 inches (6.0 cm)\nSize 2.8: 2.50 inches (6.4 cm)')">📏 Size guide</span>
+        </div>
+        <div class="aza-size-btn-group">
+          <button class="aza-size-pill active" onclick="selectSize(this)">2.4</button>
+          <button class="aza-size-pill" onclick="selectSize(this)">2.6 (Standard)</button>
+          <button class="aza-size-pill" onclick="selectSize(this)">CUSTOMIZE</button>
+        </div>
+      </div>
+
+      <!-- 3 Urgency Pill Tags -->
+      <div class="aza-urgency-row">
+        <span class="aza-urgency-chip">⚡ Only 1 item left</span>
+        <span class="aza-urgency-chip date">⚡ Ready to ship 5th October</span>
+        <span class="aza-urgency-chip contains">Contains only Bangle</span>
+      </div>
+
+      <!-- Quantity & Action CTA Buttons -->
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+        <span style="font-size:11px; font-weight:800; text-transform:uppercase;">Qty:</span>
+        <select id="pdpQty" style="padding:5px 10px; border:1px solid #dcd5c9; font-size:11px; font-weight:700; border-radius:2px; background:#fff;">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+
+      <div class="aza-actions-row">
+        <button class="btn-aza-add-cart" onclick="addToCartV3('masaba-01', parseInt(document.getElementById('pdpQty').value), '2.4')">
+          🛒 Add To Cart
+        </button>
+        <button class="btn-aza-stylist" onclick="window.open('https://wa.me/8801700000000', '_blank')">
+          💬 Speak To Stylist
+        </button>
+      </div>
+
+      <!-- Delivery / Location Estimate -->
+      <div class="aza-delivery-box">
+        <div class="aza-location-header">
+          <span>📍 BANGLADESH / DHAKA</span>
+          <span style="color:var(--hom-emerald); cursor:pointer; text-decoration:underline;" onclick="alert('Enter destination postcode for live dispatch calculation...')">Change</span>
+        </div>
+        <div class="aza-delivery-input-frame">
+          Standard Delivery by <strong>22nd October</strong>
+        </div>
+        <div style="font-size:11px; color:var(--hom-text-muted);">
+          Need it by a specific date? <a href="https://wa.me/8801700000000" target="_blank" style="color:var(--hom-emerald); font-weight:800; text-decoration:underline;">Chat with us</a>
+        </div>
+      </div>
+
+      <!-- Offers & EMI -->
+      <div class="aza-offers-box">
+        <div class="aza-offers-title">Offers & Privé Benefits</div>
+        <div class="aza-coupon-banner">
+          <div>
+            Best Coupon: <strong>CREDIT10</strong>
+            <div style="font-size:10px; color:#666; margin-top:2px;">Save an extra 10% on your couture order</div>
+          </div>
+          <span style="color:var(--hom-emerald); font-weight:800; cursor:pointer;" onclick="showV3Toast('Coupon CREDIT10 Applied!')">+ 7 More &rsaquo;</span>
+        </div>
+        <div style="font-size:11px; color:#444; margin-bottom:8px;">
+          🪙 <strong>Arbachin Privé:</strong> Earn 1 Luxury Cash Credit with this purchase
+        </div>
+        <div style="font-size:11px; color:#666; border-top:1px solid #f0ede7; padding-top:8px;">
+          <strong>Price Match Promise:</strong> Found it cheaper? We'll match it. <span style="color:var(--hom-emerald); font-weight:800; cursor:pointer;" onclick="alert('Arbachin Designer Price Match Guarantee ensures you receive authentic atelier pieces at global parity.')">Know More &rsaquo;</span>
+        </div>
+      </div>
+
+      <!-- Accordion Details -->
+      <div class="aza-detail-accordions">
+        <div class="aza-pdp-acc-item">
+          <button class="aza-pdp-acc-btn" onclick="toggleAcc(this)">
+            <span>Product Details & Specifications</span>
+            <span>+</span>
+          </button>
+          <div class="aza-pdp-acc-content" style="display:none;">
+            <p><strong>Package Contains:</strong> Set of 2 Handcrafted Artisan Bangles</p>
+            <p><strong>Base Metal:</strong> High-Grade Brass with 24K Micro Gold Electroplating</p>
+            <p><strong>Stone Setting:</strong> White Uncut Polki Faux Stones, Colombian Emerald Drops & Crystals</p>
+            <p><strong>Closure:</strong> Openable push-clasp with dual side safety catch</p>
+            <p><strong>Inner Diameter:</strong> 2.4 inches (approx 5.7 cm)</p>
+          </div>
+        </div>
+
+        <div class="aza-pdp-acc-item">
+          <button class="aza-pdp-acc-btn" onclick="toggleAcc(this)">
+            <span>Shipping & Returns Policy</span>
+            <span>−</span>
+          </button>
+          <div class="aza-pdp-acc-content">
+            <p>• Refunds to original payment method.</p>
+            <p>• Complimentary express courier across Bangladesh & globally to 150+ countries.</p>
+            <p>• This fine jewelry piece is handcrafted bespoke. <span style="color:var(--hom-emerald); text-decoration:underline; cursor:pointer;" onclick="alert('7-day exchange applicable for sizing issues in original undamaged packaging.')">More Details</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Support Strip -->
+      <div style="margin-top:20px;">
+        <div style="font-size:10px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; color:#222;">Dedicated Concierge Support</div>
+        <div class="aza-support-strip">
+          <a href="https://wa.me/8801700000000" target="_blank" class="btn-aza-support-action">💬 Chat with us</a>
+          <a href="tel:+8801700000000" class="btn-aza-support-action">📞 +880 1700-000000</a>
+          <a href="mailto:shoponline@arbachin.com" class="btn-aza-support-action">✉ Mail us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Similar Items Section (Aza Fashions PDP Screenshot Exact Match) -->
+  <section class="hom-similar-section">
+    <div class="hom-similar-header">
+      <h2 class="hom-similar-title">Similar Items</h2>
+      <div class="hom-similar-tabs">
+        <button class="hom-similar-tab active">Closest Match</button>
+        <button class="hom-similar-tab">More from Designer</button>
+        <button class="hom-similar-tab">Aza Exclusive</button>
+        <button class="hom-similar-tab">Ready to Ship</button>
+      </div>
+    </div>
+
+    <div class="hom-similar-grid">
+      <!-- Card 1 -->
+      <div class="hom-similar-card">
+        <div class="hom-similar-media">
+          <img src="../assets/image/jewelry_1.jpg" alt="Carved Stone Embellished Bangles">
+          <button class="hom-similar-wish" onclick="showV3Toast('Saved to wishlist')" title="Add to Wishlist">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </button>
+        </div>
+        <div class="hom-similar-badge-row">
+          <span class="hom-similar-chip aza-exc">Aza Exclusive</span>
+        </div>
+        <div class="hom-similar-designer">Nazaakat By Samara Singh</div>
+        <div class="hom-similar-name">Carved Stone Embellished Bangles - Set of 2</div>
+        <div class="hom-similar-pricing">
+          <span class="hom-similar-cur">৳9,500</span>
+          <span class="hom-similar-strike">৳31,600</span>
+          <span class="hom-similar-disc">70% OFF</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="hom-similar-card">
+        <div class="hom-similar-media">
+          <img src="../assets/image/jewelry_2.jpg" alt="Red Zari, Diamonds, Rhinestones Jivika Bangles">
+          <button class="hom-similar-wish" onclick="showV3Toast('Saved to wishlist')" title="Add to Wishlist">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </button>
+        </div>
+        <div class="hom-similar-badge-row">
+          <span class="hom-similar-chip ready-ship">⚡ Ready to ship</span>
+        </div>
+        <div class="hom-similar-designer">Kaari</div>
+        <div class="hom-similar-name">Red Zari, Diamonds, Rhinestones Jivika Bangles</div>
+        <div class="hom-similar-pricing">
+          <span class="hom-similar-cur">৳46,400</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="hom-similar-card">
+        <div class="hom-similar-media">
+          <img src="../assets/image/jewelry_3.jpg" alt="Laxmi Pearl Studded Bangles">
+          <button class="hom-similar-wish" onclick="showV3Toast('Saved to wishlist')" title="Add to Wishlist">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </button>
+        </div>
+        <div class="hom-similar-badge-row">
+          <span class="hom-similar-chip aza-exc">Aza Exclusive</span>
+        </div>
+        <div class="hom-similar-designer">Nazaakat By Samara Singh</div>
+        <div class="hom-similar-name">Laxmi Pearl Studded Bangles - Set of 2</div>
+        <div class="hom-similar-pricing">
+          <span class="hom-similar-cur">৳12,100</span>
+          <span class="hom-similar-strike">৳40,300</span>
+          <span class="hom-similar-disc">70% OFF</span>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="hom-similar-card">
+        <div class="hom-similar-media">
+          <img src="../assets/image/jewelry_4.jpg" alt="Gold & White American Diamond Bangles">
+          <button class="hom-similar-wish" onclick="showV3Toast('Saved to wishlist')" title="Add to Wishlist">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </button>
+        </div>
+        <div class="hom-similar-badge-row">
+          <span class="hom-similar-chip ready-ship">⚡ Ready to ship</span>
+          <span class="hom-similar-chip aza-exc">Aza Exclusive</span>
+        </div>
+        <div class="hom-similar-designer">Nazaakat By Samara Singh</div>
+        <div class="hom-similar-name">Gold & White American Diamond Bangles</div>
+        <div class="hom-similar-pricing">
+          <span class="hom-similar-cur">৳6,800</span>
+          <span class="hom-similar-strike">৳11,300</span>
+          <span class="hom-similar-disc">40% OFF</span>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="hom-similar-card">
+        <div class="hom-similar-media">
+          <img src="../assets/image/jewelry_1.jpg" alt="Silver & Green American Diamond Bangles">
+          <button class="hom-similar-wish" onclick="showV3Toast('Saved to wishlist')" title="Add to Wishlist">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </button>
+        </div>
+        <div class="hom-similar-badge-row">
+          <span class="hom-similar-chip ready-ship">⚡ Ready to ship</span>
+          <span class="hom-similar-chip aza-exc">Aza Exclusive</span>
+        </div>
+        <div class="hom-similar-designer">Nazaakat By Samara Singh</div>
+        <div class="hom-similar-name">Silver & Green American Diamond Bangles</div>
+        <div class="hom-similar-pricing">
+          <span class="hom-similar-cur">৳4,200</span>
+          <span class="hom-similar-strike">৳7,000</span>
+          <span class="hom-similar-disc">40% OFF</span>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="hom-similar-card">
+        <div class="hom-similar-media">
+          <img src="../assets/image/jewelry_2.jpg" alt="Rose Gold American Diamond Bangles">
+          <button class="hom-similar-wish" onclick="showV3Toast('Saved to wishlist')" title="Add to Wishlist">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </button>
+        </div>
+        <div class="hom-similar-badge-row">
+          <span class="hom-similar-chip ready-ship">⚡ Ready to ship</span>
+          <span class="hom-similar-chip aza-exc">Aza Exclusive</span>
+        </div>
+        <div class="hom-similar-designer">Nazaakat By Samara Singh</div>
+        <div class="hom-similar-name">Rose Gold American Diamond Bangles</div>
+        <div class="hom-similar-pricing">
+          <span class="hom-similar-cur">৳6,800</span>
+          <span class="hom-similar-strike">৳11,300</span>
+          <span class="hom-similar-disc">40% OFF</span>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="hom-similar-card">
+        <div class="hom-similar-media">
+          <img src="../assets/image/jewelry_3.jpg" alt="Gold Plated Stone Embellished Bangles">
+          <button class="hom-similar-wish" onclick="showV3Toast('Saved to wishlist')" title="Add to Wishlist">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </button>
+        </div>
+        <div class="hom-similar-badge-row">
+          <span class="hom-similar-chip ready-ship">⚡ Ready to ship</span>
+          <span class="hom-similar-chip aza-exc">Aza Exclusive</span>
+        </div>
+        <div class="hom-similar-designer">Nazaakat By Samara Singh</div>
+        <div class="hom-similar-name">Gold Plated Stone Embellished Bangles</div>
+        <div class="hom-similar-pricing">
+          <span class="hom-similar-cur">৳7,700</span>
+          <span class="hom-similar-strike">৳19,250</span>
+          <span class="hom-similar-disc">60% OFF</span>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="hom-similar-card">
+        <div class="hom-similar-media">
+          <img src="../assets/image/jewelry_4.jpg" alt="Gold Plated Cutwork Bangle Set">
+          <button class="hom-similar-wish" onclick="showV3Toast('Saved to wishlist')" title="Add to Wishlist">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </button>
+        </div>
+        <div class="hom-similar-badge-row">
+          <span class="hom-similar-chip ready-ship">⚡ Ready to ship</span>
+          <span class="hom-similar-chip aza-exc">Aza Exclusive</span>
+        </div>
+        <div class="hom-similar-designer">Nazaakat By Samara Singh</div>
+        <div class="hom-similar-name">Gold Plated Cutwork Bangle Set</div>
+        <div class="hom-similar-pricing">
+          <span class="hom-similar-cur">৳8,500</span>
+          <span class="hom-similar-strike">৳21,250</span>
+          <span class="hom-similar-disc">60% OFF</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hom-similar-footer-cta">
+      <div style="font-size:11px; color:#777; margin-bottom:8px; letter-spacing:0.5px;">Showing 8 of 24 styles</div>
+      <button class="btn-view-more-styles" onclick="showV3Toast('Loading more haute jewelry styles...')">View more similar styles ⌃</button>
+    </div>
+  </section>
+
+  <!-- House of Masaba Live Footer -->
+  <footer class="hom-footer">
+    <div class="hom-footer-grid">
+      <div>
+        <img src="../assets/image/logo_gold.png" alt="Arbachin" style="height:38px; object-fit:contain; display:block; margin-bottom:16px;">
+        <h4 class="hom-footer-title">HOUSE OF ARBACHIN LIFESTYLE</h4>
+        <p style="color:#a9bcb3; font-size:12px; line-height:1.7; margin-bottom:12px;">
+          Universal House, Plot No. 80, 89, Marol Co-op Industrial Estate, Andheri East, Mumbai 400059 & Gulshan-2, Dhaka 1212.
+        </p>
+        <p style="font-size:11px; color:#7d968b; margin-bottom:4px;">CIN: U74110MH2014PTC257909</p>
+        <p style="font-size:11px; font-weight:800; color:var(--hom-gold-light);">PHONE: +880 1700-000000 / 77380 07478</p>
+      </div>
+
+      <div>
+        <h4 class="hom-footer-title">POLICIES</h4>
+        <ul class="hom-footer-links">
+          <li><a href="category.html">Privacy Policy</a></li>
+          <li><a href="category.html">Terms & Conditions</a></li>
+          <li><a href="category.html">Delivery & Shipping Info</a></li>
+          <li><a href="category.html">Return & Exchange Policy</a></li>
+          <li><a href="category.html">Security & Payment Terms</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="hom-footer-title">INFORMATION</h4>
+        <ul class="hom-footer-links">
+          <li><a href="category.html">About House of Arbachin</a></li>
+          <li><a href="category.html">Kanna 2026 Collection</a></li>
+          <li><a href="product.html">Samyukta Singhania Jewelry (PDP)</a></li>
+          <li><a href="category.html">Official Mobile App</a></li>
+          <li><a href="category.html">Careers & Press Media</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="hom-footer-title">NEED HELP / SUPPORT</h4>
+        <ul class="hom-footer-links">
+          <li><a href="category.html">📍 Store Locator (Flagships)</a></li>
+          <li><a href="mailto:shoponline@arbachin.com">✉ shoponline@arbachin.com</a></li>
+          <li><a href="https://wa.me/8801700000000" target="_blank">💬 WhatsApp Stylist Concierge</a></li>
+          <li><a href="category.html">⚖ Grievance & Nodal Officer</a></li>
+          <li><a href="category.html">📦 Track Consignment Status</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hom-footer-bottom">
+      <div class="hom-footer-bottom-inner">
+        <div>&copy; 2026 HOUSE OF ARBACHIN. ALL RIGHTS RESERVED.</div>
+        <div style="display:flex; gap:18px;">
+          <a href="../index.html" style="color:var(--hom-gold-light); font-weight:800;">★ MASTER VERSIONS HUB</a>
+          <a href="category.html">COLLECTIONS</a>
+          <a href="product.html">PRODUCT DETAILS</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function toggleAcc(btn) {
+      const item = btn.parentElement;
+      const content = item.querySelector('.aza-pdp-acc-content');
+      const icon = btn.querySelector('span:last-child');
+      const isOpen = content.style.display !== 'none';
+      content.style.display = isOpen ? 'none' : 'block';
+      icon.textContent = isOpen ? '+' : '−';
+    }
+
+    function selectSize(btn) {
+      document.querySelectorAll('.aza-size-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>

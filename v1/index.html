@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arbachin Luxury Festive Couture | Heritage Edition (V1)</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .press-section-box {
+      background: var(--rk-bg-cream);
+      padding: 60px 40px;
+      text-align: center;
+      border-top: 1px solid var(--rk-border);
+      border-bottom: 1px solid var(--rk-border);
+    }
+    .press-quote-text {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-style: italic;
+      color: var(--rk-primary);
+      max-width: 800px;
+      margin: 0 auto 16px;
+    }
+    .press-logo-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .press-logo-item {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      letter-spacing: 3px;
+      color: var(--rk-text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .features-grid-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1440px;
+      margin: 50px auto;
+      padding: 0 40px;
+    }
+    .feature-item-box {
+      border: 1px solid var(--rk-border);
+      padding: 24px;
+      text-align: center;
+      background: #ffffff;
+      border-radius: 4px;
+      transition: var(--transition);
+    }
+    .feature-item-box:hover {
+      border-color: var(--rk-gold);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+    .hotspot-banner-box {
+      position: relative;
+      max-width: 1440px;
+      margin: 60px auto;
+      padding: 0 40px;
+    }
+    .hotspot-banner-inner {
+      position: relative;
+      height: 600px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .hotspot-banner-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hotspot-point {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background: #ffffff;
+      border: 3px solid var(--rk-gold);
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--rk-primary);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      animation: pinGlow 2s infinite;
+    }
+    @keyframes pinGlow {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(197, 155, 39, 0.7); }
+      70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(197, 155, 39, 0); }
+      100% { transform: scale(1); }
+    }
+    .hotspot-card-popup {
+      position: absolute;
+      bottom: 45px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ffffff;
+      padding: 12px 18px;
+      border-radius: 4px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      white-space: nowrap;
+      display: none;
+      z-index: 10;
+      border: 1px solid var(--rk-gold);
+    }
+    .hotspot-point:hover .hotspot-card-popup { display: block; }
+    .craft-heritage-box {
+      background: var(--rk-bg-cream);
+      padding: 90px 40px;
+    }
+    .craft-heritage-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .occasions-grid-wrap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .occasion-tile-card {
+      position: relative;
+      height: 380px;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+    .occasion-tile-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .occasion-tile-card:hover img { transform: scale(1.08); }
+    .occasion-overlay-info {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.75), transparent 60%);
+      display: flex;
+      align-items: flex-end;
+      padding: 24px;
+      color: #fff;
+    }
+    .insta-grid-row {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+    }
+    .insta-pic-item {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      position: relative;
+    }
+    .insta-pic-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .insta-pic-item:hover img { transform: scale(1.1); }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Top Announcement Bar (Ritu Kumar Exact Format) -->
+  <div class="rk-topbar">
+    <div style="display:flex; gap:16px;">
+      <a href="category.html">🚩 STORE LOCATOR</a>
+      <span>|</span>
+      <a href="category.html">📦 TRACK ORDER</a>
+      <span>|</span>
+      <a href="https://wa.me/8801700000000" target="_blank" style="color:var(--rk-gold-light);">💬 VIP CONCIERGE</a>
+    </div>
+    <div style="font-weight:700; letter-spacing:2px;">
+      COMPLIMENTARY WORLDWIDE COURIER ON LUXURY ORDERS OVER ৳5,000 &bull; 48H DISPATCH
+    </div>
+    <div style="display:flex; gap:14px; align-items:center;">
+      <span style="font-weight:700; color:var(--rk-gold-light);">BDT (৳) / USD ($)</span>
+      <span>|</span>
+      <a href="../index.html" style="background:var(--rk-gold); color:#000; padding:3px 8px; border-radius:2px; font-weight:700;">SWITCH VERSION ↗</a>
+    </div>
+  </div>
+
+  <!-- 2. Header (Logo Center, Mega Menu) -->
+  <header class="rk-header-main">
+    <div class="rk-header-top-row">
+      <div class="rk-header-left">
+        <span>DHAKA &bull; CHITTAGONG &bull; SYLHET &bull; KOLKATA</span>
+      </div>
+
+      <div class="rk-brand-logo">
+        <a href="index.html" style="display:flex; flex-direction:column; align-items:center;">
+          <img src="../assets/image/logo.png" alt="Arbachin Logo" style="height:50px; object-fit:contain;">
+        </a>
+      </div>
+
+      <div class="rk-header-right">
+        <button class="rk-icon-btn" onclick="showToast('Search catalog...')">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>SEARCH</span>
+        </button>
+        <a href="category.html" class="rk-icon-btn" title="Wishlist">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <span>WISHLIST</span>
+        </a>
+        <button class="rk-icon-btn" onclick="showToast('Shopping Bag contains ' + cart.length + ' item(s)')">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span>BAG (<span class="cart-count">0</span>)</span>
+          <span class="rk-cart-badge cart-count">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mega Navigation Bar -->
+    <div class="rk-nav-row">
+      <ul class="rk-nav-list">
+        <li class="rk-nav-item">
+          <a href="index.html" class="active">NEW ARRIVALS <span class="rk-badge-new">NEW</span></a>
+        </li>
+        <li class="rk-nav-item">
+          <a href="category.html?cat=suits">SUITS & SETS</a>
+          <div class="rk-mega-menu">
+            <div class="rk-mega-col">
+              <h5>By Style</h5>
+              <ul>
+                <li><a href="category.html?cat=suits">Anarkali Suit Sets</a></li>
+                <li><a href="category.html?cat=suits">Straight Cut Suits</a></li>
+                <li><a href="category.html?cat=suits">Angrakha Sets</a></li>
+                <li><a href="category.html?cat=suits">Sharara & Gharara Sets</a></li>
+              </ul>
+            </div>
+            <div class="rk-mega-col">
+              <h5>By Fabric</h5>
+              <ul>
+                <li><a href="category.html?cat=suits">Pure Chanderi Silk</a></li>
+                <li><a href="category.html?cat=suits">Organza Silk Ensembles</a></li>
+                <li><a href="category.html?cat=suits">Georgette Festive Sets</a></li>
+                <li><a href="category.html?cat=suits">Handloom Cotton Silk</a></li>
+              </ul>
+            </div>
+            <div class="rk-mega-col">
+              <h5>Occasion</h5>
+              <ul>
+                <li><a href="category.html">Festive Eid Collection</a></li>
+                <li><a href="category.html">Mehendi & Sangeet</a></li>
+                <li><a href="category.html">Intimate Weddings</a></li>
+                <li><a href="product.html">Emerald Beige Koyel Suit</a></li>
+              </ul>
+            </div>
+            <div class="rk-mega-featured">
+              <img src="../assets/image/threepiece_1.jpg" alt="Featured Suit">
+              <span style="font-size:11px; font-weight:700; color:var(--rk-primary); display:block;">Koyel Suit Set</span>
+              <a href="product.html" style="font-size:10px; color:var(--rk-gold); font-weight:700;">EXPLORE NOW &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="rk-nav-item">
+          <a href="category.html?cat=sarees">SAREES & DRAPES</a>
+          <div class="rk-mega-menu">
+            <div class="rk-mega-col">
+              <h5>Heritage Weaves</h5>
+              <ul>
+                <li><a href="category.html?cat=sarees">Banarasi Katan Silk</a></li>
+                <li><a href="category.html?cat=sarees">Pure Tussar & Organza</a></li>
+                <li><a href="category.html?cat=sarees">Zari Brocade Sarees</a></li>
+                <li><a href="category.html?cat=sarees">Dhakai Jamdani Heritage</a></li>
+              </ul>
+            </div>
+            <div class="rk-mega-col">
+              <h5>Occasion Edit</h5>
+              <ul>
+                <li><a href="category.html?cat=sarees">Bridal Reception Sarees</a></li>
+                <li><a href="category.html?cat=sarees">Cocktail Tissue Drapes</a></li>
+                <li><a href="category.html?cat=sarees">Daytime Festive Silks</a></li>
+              </ul>
+            </div>
+            <div class="rk-mega-col">
+              <h5>Curations</h5>
+              <ul>
+                <li><a href="category.html">Royal Crimson Edit</a></li>
+                <li><a href="category.html">Midnight Heritage Silks</a></li>
+                <li><a href="category.html">Ready to Ship (24H)</a></li>
+              </ul>
+            </div>
+            <div class="rk-mega-featured">
+              <img src="../assets/image/saree_1.jpg" alt="Featured Saree">
+              <span style="font-size:11px; font-weight:700; color:var(--rk-primary); display:block;">Banarasi Zari Saree</span>
+              <a href="category.html?cat=sarees" style="font-size:10px; color:var(--rk-gold); font-weight:700;">VIEW SAREES &rarr;</a>
+            </div>
+          </div>
+        </li>
+        <li class="rk-nav-item">
+          <a href="category.html?cat=three-piece">PRET & TUNICS</a>
+        </li>
+        <li class="rk-nav-item">
+          <a href="category.html">BRIDAL ATELIER</a>
+        </li>
+        <li class="rk-nav-item">
+          <a href="product.html">KOYEL SUIT (PDP)</a>
+        </li>
+        <li class="rk-nav-item">
+          <a href="category.html" style="color:#b33939;">SALE <span class="rk-badge-sale">UP TO 40%</span></a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 3. Hero Carousel Banner -->
+  <section class="rk-hero-banner">
+    <img src="../assets/image/saree_1.jpg" alt="Royal Festive Collection" class="rk-hero-bg">
+    <div class="rk-hero-content">
+      <div class="rk-hero-box">
+        <div class="rk-hero-eyebrow">ROYAL HERITAGE COUTURE 2026</div>
+        <h1 class="rk-hero-title">Timeless Drapes & <em>Regal Silk Weaves</em></h1>
+        <p class="rk-hero-desc">Experience the opulent mastery of hand-woven Banarasi brocades and antique gold zari embroidery created by master artisans.</p>
+        <div>
+          <a href="category.html?cat=sarees" class="btn-rk-gold">Explore Sarees</a>
+          <a href="product.html" class="btn-rk-white">Featured Suit Set</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Category Story Circles Ribbon (Below Banner) -->
+  <section class="rk-story-ribbon">
+    <a href="category.html" class="rk-story-item">
+      <div class="rk-story-img"><img src="../assets/image/threepiece_1.jpg" alt="Suits"></div>
+      <span class="rk-story-title">Suits & Sets</span>
+    </a>
+    <a href="category.html?cat=sarees" class="rk-story-item">
+      <div class="rk-story-img"><img src="../assets/image/saree_1.jpg" alt="Banarasi"></div>
+      <span class="rk-story-title">Banarasi Silk</span>
+    </a>
+    <a href="category.html?cat=sarees" class="rk-story-item">
+      <div class="rk-story-img"><img src="../assets/image/saree_2.jpg" alt="Katan"></div>
+      <span class="rk-story-title">Katan Sarees</span>
+    </a>
+    <a href="category.html?cat=three-piece" class="rk-story-item">
+      <div class="rk-story-img"><img src="../assets/image/threepiece_2.jpg" alt="Anarkalis"></div>
+      <span class="rk-story-title">Anarkali Pret</span>
+    </a>
+    <a href="category.html" class="rk-story-item">
+      <div class="rk-story-img"><img src="../assets/image/threepiece_3.jpg" alt="Bridal"></div>
+      <span class="rk-story-title">Bridal Luxe</span>
+    </a>
+    <a href="category.html" class="rk-story-item">
+      <div class="rk-story-img"><img src="../assets/image/saree_3.jpg" alt="Runway"></div>
+      <span class="rk-story-title">Runway Edit</span>
+    </a>
+  </section>
+
+  <!-- 5. Curated Campaign Banners (2-Tile Grid) -->
+  <section class="rk-section">
+    <div class="rk-section-header">
+      <div class="rk-section-eyebrow">CURATED EDITORIALS</div>
+      <h2 class="rk-section-title">The Grand Festive Curations</h2>
+      <div class="rk-divider-line"></div>
+    </div>
+
+    <div class="rk-campaign-grid">
+      <div class="rk-campaign-tile">
+        <img src="../assets/image/saree_2.jpg" alt="Pure Silk Sarees">
+        <div class="rk-campaign-overlay">
+          <div class="rk-campaign-tag">HERITAGE WEAVES</div>
+          <h3 class="rk-campaign-title">Banarasi & Katan Silk Sarees</h3>
+          <a href="category.html?cat=sarees" style="color:#fff; font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;">Explore Saree Collection →</a>
+        </div>
+      </div>
+
+      <div class="rk-campaign-tile">
+        <img src="../assets/image/threepiece_2.jpg" alt="Designer Suit Sets">
+        <div class="rk-campaign-overlay">
+          <div class="rk-campaign-tag">SIGNATURE SILHOUETTES</div>
+          <h3 class="rk-campaign-title">Koyel Suits & Anarkali Sets</h3>
+          <a href="category.html?cat=three-piece" style="color:#fff; font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;">Explore Suit Sets →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Bestselling Masterpieces Product Grid -->
+  <section class="rk-section" style="padding-top:0;">
+    <div class="rk-section-header">
+      <div class="rk-section-eyebrow">HIGHLY DESIRED</div>
+      <h2 class="rk-section-title">Bestselling Masterpieces</h2>
+      <div class="rk-divider-line"></div>
+    </div>
+
+    <div class="rk-card-grid">
+      <!-- Item 1 -->
+      <div class="rk-card">
+        <div class="rk-card-media">
+          <span class="rk-card-tag">Bestseller</span>
+          <img src="../assets/image/saree_1.jpg" alt="Burgundy Banarasi">
+          <div class="rk-card-hover-actions">
+            <button class="btn-rk-card-action" onclick="openQuickView('saree-001')">Quick View</button>
+            <button class="btn-rk-card-action" onclick="addToCart('saree-001')">Add to Bag</button>
+          </div>
+        </div>
+        <div class="rk-card-body">
+          <div class="rk-card-category">Sarees</div>
+          <h3 class="rk-card-name"><a href="product.html">Burgundy Banarasi Silk Saree</a></h3>
+          <div class="rk-card-price-bar">
+            <span class="rk-price-cur">৳12,500</span>
+            <span class="rk-price-orig">৳15,000</span>
+            <span class="rk-price-discount">17% OFF</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="rk-card">
+        <div class="rk-card-media">
+          <span class="rk-card-tag">Heritage</span>
+          <img src="../assets/image/saree_2.jpg" alt="Royal Blue Katan">
+          <div class="rk-card-hover-actions">
+            <button class="btn-rk-card-action" onclick="openQuickView('saree-002')">Quick View</button>
+            <button class="btn-rk-card-action" onclick="addToCart('saree-002')">Add to Bag</button>
+          </div>
+        </div>
+        <div class="rk-card-body">
+          <div class="rk-card-category">Sarees</div>
+          <h3 class="rk-card-name"><a href="product.html">Royal Blue Katan Silk Saree</a></h3>
+          <div class="rk-card-price-bar">
+            <span class="rk-price-cur">৳15,000</span>
+            <span class="rk-price-orig">৳18,500</span>
+            <span class="rk-price-discount">19% OFF</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="rk-card">
+        <div class="rk-card-media">
+          <span class="rk-card-tag">Atelier Exclusive</span>
+          <img src="../assets/image/threepiece_1.jpg" alt="Emerald Beige Koyel Suit Set">
+          <div class="rk-card-hover-actions">
+            <button class="btn-rk-card-action" onclick="openQuickView('three-piece-001')">Quick View</button>
+            <button class="btn-rk-card-action" onclick="addToCart('three-piece-001')">Add to Bag</button>
+          </div>
+        </div>
+        <div class="rk-card-body">
+          <div class="rk-card-category">Suits & Sets</div>
+          <h3 class="rk-card-name"><a href="product.html">Emerald Beige Koyel Suit Set</a></h3>
+          <div class="rk-card-price-bar">
+            <span class="rk-price-cur">৳14,500</span>
+            <span class="rk-price-orig">৳17,000</span>
+            <span class="rk-price-discount">15% OFF</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="rk-card">
+        <div class="rk-card-media">
+          <span class="rk-card-tag">Exclusive</span>
+          <img src="../assets/image/threepiece_2.jpg" alt="Navy Anarkali Set">
+          <div class="rk-card-hover-actions">
+            <button class="btn-rk-card-action" onclick="openQuickView('three-piece-002')">Quick View</button>
+            <button class="btn-rk-card-action" onclick="addToCart('three-piece-002')">Add to Bag</button>
+          </div>
+        </div>
+        <div class="rk-card-body">
+          <div class="rk-card-category">Suits & Sets</div>
+          <h3 class="rk-card-name"><a href="product.html">Navy Anarkali Three Piece Set</a></h3>
+          <div class="rk-card-price-bar">
+            <span class="rk-price-cur">৳9,200</span>
+            <span class="rk-price-orig">৳11,800</span>
+            <span class="rk-price-discount">22% OFF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Interactive "Shop The Look" Hotspot Section -->
+  <section class="hotspot-banner-box">
+    <div class="rk-section-header">
+      <div class="rk-section-eyebrow">INTERACTIVE LOOKBOOK</div>
+      <h2 class="rk-section-title">Shop The Grand Royale Look</h2>
+      <div class="rk-divider-line"></div>
+    </div>
+
+    <div class="hotspot-banner-inner">
+      <img src="../assets/image/saree_3.jpg" alt="Shop The Look Editorial">
+      <div class="hotspot-point" style="top:35%; left:45%;">
+        +
+        <div class="hotspot-card-popup">
+          <strong>Emerald Zari Saree</strong><br>
+          ৳13,800 BDT &bull; <a href="product.html" style="color:var(--rk-gold); font-weight:700;">Shop Piece &rarr;</a>
+        </div>
+      </div>
+      <div class="hotspot-point" style="top:60%; left:55%;">
+        +
+        <div class="hotspot-card-popup">
+          <strong>Gold Zari Pallu Border</strong><br>
+          Handcrafted Weave &bull; <a href="category.html" style="color:var(--rk-gold); font-weight:700;">Explore &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. The Craft & Heritage Section -->
+  <section class="craft-heritage-box">
+    <div class="craft-heritage-inner">
+      <div style="position:relative; box-shadow:0 20px 40px rgba(0,0,0,0.12); border-radius:4px; overflow:hidden;">
+        <img src="../assets/image/saree_3.jpg" alt="Master Artisans & Handloom" style="width:100%;">
+      </div>
+      <div>
+        <div class="rk-section-eyebrow">OUR WEAVING ATELIER</div>
+        <h2 style="font-size:38px; line-height:1.25; margin-bottom:20px;">Preserving Centuries of Textile Poetry & Craftsmanship</h2>
+        <p style="color:var(--rk-text-muted); font-size:15px; line-height:1.8; margin-bottom:18px;">
+          Inspired by the illustrious legacy of Indian couturiers, Arbachin honors authentic hand-block printing, handloom Banarasi brocades, and intricate zardozi embroidery.
+        </p>
+        <p style="color:var(--rk-text-muted); font-size:15px; line-height:1.8; margin-bottom:24px;">
+          Each saree and tailored suit set represents over 200 hours of artisanal hand-knotting and wooden loom craftsmanship, creating enduring family heirlooms.
+        </p>
+        <a href="category.html" class="btn-rk-gold">The Atelier Journey</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Shop by Occasion Grid -->
+  <section class="rk-section">
+    <div class="rk-section-header">
+      <div class="rk-section-eyebrow">CELEBRATORY CURATIONS</div>
+      <h2 class="rk-section-title">Shop by Occasion</h2>
+      <div class="rk-divider-line"></div>
+    </div>
+
+    <div class="occasions-grid-wrap">
+      <a href="category.html" class="occasion-tile-card">
+        <img src="../assets/image/saree_1.jpg" alt="Festive Soiree">
+        <div class="occasion-overlay-info"><h3 style="font-family:var(--font-serif); font-size:22px;">Festive Soiree</h3></div>
+      </a>
+      <a href="category.html" class="occasion-tile-card">
+        <img src="../assets/image/saree_2.jpg" alt="Royal Wedding">
+        <div class="occasion-overlay-info"><h3 style="font-family:var(--font-serif); font-size:22px;">Royal Wedding</h3></div>
+      </a>
+      <a href="category.html" class="occasion-tile-card">
+        <img src="../assets/image/threepiece_1.jpg" alt="Mehendi & Sangeet">
+        <div class="occasion-overlay-info"><h3 style="font-family:var(--font-serif); font-size:22px;">Mehendi & Sangeet</h3></div>
+      </a>
+      <a href="category.html" class="occasion-tile-card">
+        <img src="../assets/image/threepiece_3.jpg" alt="Bridal Trousseau">
+        <div class="occasion-overlay-info"><h3 style="font-family:var(--font-serif); font-size:22px;">Bridal Trousseau</h3></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 10. Press & Editorial Praise -->
+  <section class="press-section-box">
+    <div class="rk-section-eyebrow">CRITICAL ACCLAIM</div>
+    <div class="press-quote-text">
+      "Arbachin breathes modern soul into classical South Asian textile traditions, offering handloom couture that transcends fashion cycles."
+    </div>
+    <div class="press-logo-row">
+      <span class="press-logo-item">VOGUE</span>
+      <span class="press-logo-item">HARPER'S BAZAAR</span>
+      <span class="press-logo-item">ELLE</span>
+      <span class="press-logo-item">FEMINA</span>
+      <span class="press-logo-item">ARCHITECTURAL DIGEST</span>
+    </div>
+  </section>
+
+  <!-- 11. Instagram / UGC Grid ("As Seen On You") -->
+  <section class="rk-section">
+    <div class="rk-section-header">
+      <div class="rk-section-eyebrow">@ARBACHIN_COUTURE</div>
+      <h2 class="rk-section-title">As Seen On Our Muses</h2>
+      <div class="rk-divider-line"></div>
+    </div>
+
+    <div class="insta-grid-row">
+      <div class="insta-pic-item"><img src="../assets/image/saree_1.jpg" alt="Muse 1"></div>
+      <div class="insta-pic-item"><img src="../assets/image/threepiece_1.jpg" alt="Muse 2"></div>
+      <div class="insta-pic-item"><img src="../assets/image/saree_2.jpg" alt="Muse 3"></div>
+      <div class="insta-pic-item"><img src="../assets/image/threepiece_2.jpg" alt="Muse 4"></div>
+      <div class="insta-pic-item"><img src="../assets/image/saree_3.jpg" alt="Muse 5"></div>
+      <div class="insta-pic-item"><img src="../assets/image/threepiece_3.jpg" alt="Muse 6"></div>
+    </div>
+  </section>
+
+  <!-- 12. Brand Value Features Strip -->
+  <section class="features-grid-strip">
+    <div class="feature-item-box">
+      <div style="font-size:26px; color:var(--rk-gold); margin-bottom:8px;">✈</div>
+      <h4 style="font-size:13px; font-weight:700; text-transform:uppercase; margin-bottom:4px;">Worldwide Delivery</h4>
+      <p style="font-size:12px; color:var(--rk-text-muted);">Complimentary shipping on orders over ৳5,000 with insured courier.</p>
+    </div>
+    <div class="feature-item-box">
+      <div style="font-size:26px; color:var(--rk-gold); margin-bottom:8px;">✨</div>
+      <h4 style="font-size:13px; font-weight:700; text-transform:uppercase; margin-bottom:4px;">100% Handloom Silk</h4>
+      <p style="font-size:12px; color:var(--rk-text-muted);">Certified authentic Banarasi & Katan hand-woven textiles.</p>
+    </div>
+    <div class="feature-item-box">
+      <div style="font-size:26px; color:var(--rk-gold); margin-bottom:8px;">↺</div>
+      <h4 style="font-size:13px; font-weight:700; text-transform:uppercase; margin-bottom:4px;">7-Day Easy Exchange</h4>
+      <p style="font-size:12px; color:var(--rk-text-muted);">Hassle-free size exchange and dedicated concierge assistance.</p>
+    </div>
+    <div class="feature-item-box">
+      <div style="font-size:26px; color:var(--rk-gold); margin-bottom:8px;">🔒</div>
+      <h4 style="font-size:13px; font-weight:700; text-transform:uppercase; margin-bottom:4px;">Secure Payments</h4>
+      <p style="font-size:12px; color:var(--rk-text-muted);">Credit Cards, bKash, Nagad, Bank Transfer & Cash On Delivery.</p>
+    </div>
+  </section>
+
+  <!-- 13. Exact Ritu Kumar Style Royal Dark Luxury Footer -->
+  <footer class="rk-footer-wrap">
+    <div class="rk-footer-grid">
+      <!-- Col 1: Heritage & Concierge -->
+      <div>
+        <img src="../assets/image/logo_gold.png" alt="Arbachin Logo" style="height:38px; object-fit:contain; display:block; margin-bottom:16px;">
+        <h4 class="rk-footer-title" style="margin-bottom:8px;">THE HOUSE OF ARBACHIN</h4>
+        <p style="color:#b5aba0; font-size:13px; line-height:1.8; margin-bottom:16px;">
+          An ode to royal Bengal & Indian handlooms. Preserving centuries of Banarasi zari jacquards, pure silk weaves, and bespoke bridal craftsmanship.
+        </p>
+        <p style="font-size:12px; font-weight:700; color:var(--rk-gold); margin-bottom:4px;">VIP STYLING: +880 1700-000000</p>
+        <p style="font-size:12px; color:#9c9388;">concierge@arbachin.com</p>
+        <div class="rk-footer-badge-strip">
+          <span class="rk-footer-badge">👑 100% AUTHENTIC SILK</span>
+          <span class="rk-footer-badge">✨ HANDLOOM MARK CERTIFIED</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Shop Categories -->
+      <div>
+        <h4 class="rk-footer-title">ROYAL COLLECTIONS</h4>
+        <ul class="rk-footer-nav-list">
+          <li><a href="category.html?cat=suits">Emerald & Ruby Suit Sets</a></li>
+          <li><a href="category.html?cat=sarees">Banarasi Katan Silk Sarees</a></li>
+          <li><a href="category.html?cat=sarees">Pure Tussar & Organza Drapes</a></li>
+          <li><a href="category.html?cat=three-piece">Festive Three-Piece Ensembles</a></li>
+          <li><a href="category.html">Bridal Trousseau Atelier</a></li>
+          <li><a href="product.html">Emerald Beige Koyel Suit (PDP)</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Client Assistance -->
+      <div>
+        <h4 class="rk-footer-title">CLIENT PRIVÉ CARE</h4>
+        <ul class="rk-footer-nav-list">
+          <li><a href="category.html">📦 Track Live Consignment</a></li>
+          <li><a href="category.html">✈ Worldwide Express Shipping</a></li>
+          <li><a href="category.html">↺ 7-Day Easy Exchange Policy</a></li>
+          <li><a href="category.html">📏 Royal Size & Fit Consultation</a></li>
+          <li><a href="category.html">🧵 Bespoke Bridal Alterations</a></li>
+          <li><a href="category.html">📜 Fabric & Silk Care Guide</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Flagship Boutiques -->
+      <div>
+        <h4 class="rk-footer-title">FLAGSHIP BOUTIQUES</h4>
+        <div style="font-size:12px; line-height:1.7; color:#b5aba0; margin-bottom:14px;">
+          <strong style="color:#ffffff; display:block;">GULSHAN FLAGSHIP ATELIER</strong>
+          Road 11, Block D, Gulshan-2, Dhaka 1212
+        </div>
+        <div style="font-size:12px; line-height:1.7; color:#b5aba0; margin-bottom:14px;">
+          <strong style="color:#ffffff; display:block;">PARK STREET COUTURE SUITE</strong>
+          Park Street, Kolkata 700016
+        </div>
+        <div style="font-size:12px; line-height:1.7; color:#b5aba0;">
+          <strong style="color:#ffffff; display:block;">MAYFAIR CONCIERGE</strong>
+          Old Bond Street, London W1S
+        </div>
+      </div>
+
+      <!-- Col 5: VIP Newsletter & Payments -->
+      <div>
+        <h4 class="rk-footer-title">NEWSLETTER PRIVÉ</h4>
+        <div class="rk-newsletter-box">
+          <p style="font-size:12px; color:#d1c8bd; line-height:1.6; margin-bottom:6px;">
+            Subscribe to receive private preview invitations, seasonal lookbooks & <strong>10% off</strong> your first order.
+          </p>
+          <form class="rk-newsletter-input-wrap" onsubmit="event.preventDefault(); showToast('Welcome to the Arbachin Privé Circle'); this.reset();">
+            <input type="email" class="rk-newsletter-input" placeholder="Enter your email" required>
+            <button type="submit" class="rk-newsletter-btn">JOIN</button>
+          </form>
+          <div class="rk-footer-payment-row">
+            <span class="rk-pay-pill">VISA</span>
+            <span class="rk-pay-pill">MASTERCARD</span>
+            <span class="rk-pay-pill">AMEX</span>
+            <span class="rk-pay-pill">BKASH</span>
+            <span class="rk-pay-pill">NAGAD</span>
+            <span class="rk-pay-pill">COD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="rk-footer-bottom-bar">
+      <div class="rk-footer-bottom-inner">
+        <div>&copy; 2026 ARBACHIN HAUTE COUTURE. ALL RIGHTS RESERVED.</div>
+        <div style="display:flex; gap:20px;">
+          <a href="../index.html" style="color:var(--rk-gold); font-weight:700;">★ MASTER VERSION HUB</a>
+          <a href="category.html" style="color:#bbb;">COLLECTIONS</a>
+          <a href="product.html" style="color:#bbb;">PRODUCT DETAILS</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

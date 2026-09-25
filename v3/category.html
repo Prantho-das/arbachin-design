@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shirts & Runway Collections | House of Arbachin (V3)</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* House of Masaba Live Category Page Exact Styling */
+    .hom-cat-top-header {
+      text-align: center;
+      padding: 36px 20px 24px;
+    }
+    .hom-cat-main-title {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--hom-primary);
+      margin-bottom: 30px;
+    }
+
+    /* Sub-Category Visual Thumbnails Strip (Exact Masaba Layout) */
+    .hom-subcat-ribbon {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin: 0 auto 36px;
+      max-width: 1440px;
+      padding: 0 40px;
+      overflow-x: auto;
+    }
+    .hom-subcat-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 130px;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .hom-subcat-img-box {
+      width: 100%;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      background: #f5f5f5;
+      margin-bottom: 10px;
+      border: 1px solid var(--hom-border);
+      transition: var(--transition);
+    }
+    .hom-subcat-card:hover .hom-subcat-img-box,
+    .hom-subcat-card.active .hom-subcat-img-box {
+      border-color: var(--hom-emerald);
+      box-shadow: 0 6px 18px rgba(15, 74, 56, 0.15);
+    }
+    .hom-subcat-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .hom-subcat-card:hover .hom-subcat-img-box img {
+      transform: scale(1.06);
+    }
+    .hom-subcat-label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--hom-primary);
+      text-align: center;
+    }
+
+    /* Toolbar: Filter & View Toggles & Sort */
+    .hom-cat-toolbar-strip {
+      max-width: 1440px;
+      margin: 0 auto 24px;
+      padding: 14px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--hom-border);
+      border-bottom: 1px solid var(--hom-border);
+    }
+    .hom-toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .btn-hom-filter-trigger {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: none;
+      border: none;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--hom-primary);
+      cursor: pointer;
+    }
+    .btn-hom-filter-trigger:hover {
+      color: var(--hom-emerald);
+    }
+    .hom-view-toggles {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .hom-view-btn {
+      background: none;
+      border: 1px solid var(--hom-border);
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 11px;
+      color: var(--hom-text-muted);
+      transition: var(--transition);
+    }
+    .hom-view-btn.active, .hom-view-btn:hover {
+      border-color: #000;
+      color: #000;
+      background: #f7f7f7;
+    }
+    .hom-toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--hom-text-muted);
+    }
+    .hom-sort-dropdown {
+      border: none;
+      background: none;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: var(--hom-primary);
+      outline: none;
+    }
+
+    /* 4-Column Large High-Impact Product Grid (Exact Masaba Layout) */
+    .hom-main-catalog-grid {
+      max-width: 1440px;
+      margin: 0 auto 80px;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .hom-main-catalog-grid.view-2col {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 36px;
+    }
+    .hom-catalog-card {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .hom-catalog-media {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      background: #f7f7f7;
+      overflow: hidden;
+      margin-bottom: 14px;
+      border-radius: 2px;
+    }
+    .hom-catalog-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .hom-catalog-card:hover .hom-catalog-media img {
+      transform: scale(1.04);
+    }
+    .hom-catalog-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: var(--hom-emerald-dark);
+      color: var(--hom-gold-light);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      z-index: 2;
+      border: 1px solid rgba(197, 155, 39, 0.4);
+    }
+    .hom-catalog-badge.sale {
+      background: #b91c1c;
+      color: #fff;
+      border-color: #b91c1c;
+    }
+    .hom-catalog-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .hom-catalog-designer {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--hom-text-muted);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .hom-catalog-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--hom-primary);
+      margin-bottom: 6px;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+    .hom-catalog-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .btn-catalog-quick-add {
+      width: 100%;
+      background: #ffffff;
+      color: var(--hom-primary);
+      border: 1px solid #000000;
+      padding: 10px 0;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+    }
+    .btn-catalog-quick-add:hover {
+      background: var(--hom-emerald);
+      color: #ffffff;
+      border-color: var(--hom-emerald);
+    }
+
+    /* Slide-out Filter Sidebar Drawer */
+    .hom-filter-drawer {
+      position: fixed;
+      top: 0;
+      left: -380px;
+      width: 360px;
+      height: 100%;
+      background: #ffffff;
+      z-index: 3000;
+      box-shadow: 4px 0 25px rgba(0,0,0,0.15);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      transition: left 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .hom-filter-drawer.open {
+      left: 0;
+    }
+    .hom-drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 2999;
+      display: none;
+    }
+    .hom-drawer-overlay.open {
+      display: block;
+    }
+    .hom-filter-section-title {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin: 18px 0 10px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--hom-border);
+    }
+    .hom-filter-checkbox-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--hom-text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Top Announcement Bar (Live House of Masaba Format) -->
+  <div class="hom-top-bar">
+    <div class="hom-top-links">
+      <a href="category.html">🚩 STORES</a>
+      <span>|</span>
+      <a href="https://wa.me/8801700000000" target="_blank" style="color:var(--hom-gold-light);">💬 STYLIST CONCIERGE</a>
+    </div>
+    <div class="hom-top-center">
+      <span>Free Shipping* &bull; COMPLIMENTARY WORLDWIDE EXPRESS ON ORDERS OVER ৳5,000</span>
+    </div>
+    <div class="hom-top-links">
+      <select id="v3CurrencySelector" class="aza-curr-select" onchange="convertCurrency(this.value)" style="background:#081d16; color:#fff; border:1px solid rgba(197, 155, 39, 0.4); padding:2px 6px; font-size:11px;">
+        <option value="BDT">BDT (৳)</option>
+        <option value="USD">USD ($)</option>
+        <option value="INR">INR (₹)</option>
+        <option value="GBP">GBP (£)</option>
+        <option value="AED">AED (د.إ)</option>
+      </select>
+      <a href="../index.html" style="background:var(--hom-gold); color:#05140f; padding:2px 8px; border-radius:2px; font-weight:800;">SWITCH VERSION ↗</a>
+    </div>
+  </div>
+
+  <!-- 2. Main Header & Navigation (Fixed Top Header) -->
+  <header class="hom-header">
+    <div class="hom-header-inner">
+      <div class="hom-brand">
+        <a href="index.html">
+          <img src="../assets/image/logo.png" alt="Arbachin">
+        </a>
+      </div>
+
+      <nav>
+        <ul class="hom-nav">
+          <li class="hom-nav-item"><a href="index.html">WOMEN</a></li>
+          <li class="hom-nav-item"><a href="category.html" class="active">MEN</a></li>
+          <li class="hom-nav-item"><a href="category.html?cat=sarees">BRIDAL</a></li>
+          <li class="hom-nav-item"><a href="product.html">JEWELLERY</a></li>
+          <li class="hom-nav-item"><a href="category.html" style="color:var(--hom-emerald);">SALE</a></li>
+        </ul>
+      </nav>
+
+      <div class="hom-header-actions">
+        <button class="hom-action-icon" onclick="showV3Toast('Search catalog...')">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>SEARCH</span>
+        </button>
+        <a href="category.html" class="hom-action-icon" title="Wishlist">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <span>WISHLIST</span>
+        </a>
+        <button class="hom-action-icon" onclick="showV3Toast('Your Shopping Bag contains ' + cartV3.length + ' item(s)')">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span>BAG (<span class="hom-cart-count">0</span>)</span>
+          <span class="hom-cart-badge hom-cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Category Heading (Exact Masaba Title Layout) -->
+  <div class="hom-cat-top-header">
+    <h1 class="hom-cat-main-title">SHIRTS & RUNWAY COLLECTIONS</h1>
+  </div>
+
+  <!-- 4. Sub-Category Visual Story Ribbon (Exact Masaba Horizontal Tiles Strip) -->
+  <div class="hom-subcat-ribbon">
+    <!-- Tile 1 -->
+    <a href="category.html" class="hom-subcat-card">
+      <div class="hom-subcat-img-box">
+        <img src="../assets/image/saree_1.jpg" alt="Bandi Sets">
+      </div>
+      <div class="hom-subcat-label">BANDI SETS</div>
+    </a>
+
+    <!-- Tile 2 -->
+    <a href="category.html" class="hom-subcat-card">
+      <div class="hom-subcat-img-box">
+        <img src="../assets/image/threepiece_1.jpg" alt="Kurtas">
+      </div>
+      <div class="hom-subcat-label">KURTAS</div>
+    </a>
+
+    <!-- Tile 3 -->
+    <a href="category.html" class="hom-subcat-card">
+      <div class="hom-subcat-img-box">
+        <img src="../assets/image/threepiece_2.jpg" alt="Raja Koti Sets">
+      </div>
+      <div class="hom-subcat-label">RAJA KOTI SETS</div>
+    </a>
+
+    <!-- Tile 4 -->
+    <a href="category.html" class="hom-subcat-card">
+      <div class="hom-subcat-img-box">
+        <img src="../assets/image/saree_2.jpg" alt="Sherwani Sets">
+      </div>
+      <div class="hom-subcat-label">SHERWANI SETS</div>
+    </a>
+
+    <!-- Tile 5 -->
+    <a href="category.html" class="hom-subcat-card active">
+      <div class="hom-subcat-img-box">
+        <img src="../assets/image/threepiece_3.jpg" alt="Shirts">
+      </div>
+      <div class="hom-subcat-label">SHIRTS</div>
+    </a>
+
+    <!-- Tile 6 -->
+    <a href="category.html" class="hom-subcat-card">
+      <div class="hom-subcat-img-box">
+        <img src="../assets/image/saree_3.jpg" alt="Ready to Ship">
+      </div>
+      <div class="hom-subcat-label">READY TO SHIP</div>
+    </a>
+  </div>
+
+  <!-- 5. Toolbar: Filter, View Toggles (2-col & 4-col), Sort Dropdown -->
+  <div class="hom-cat-toolbar-strip">
+    <div class="hom-toolbar-left">
+      <button class="btn-hom-filter-trigger" onclick="toggleFilterDrawer()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
+        <span>Filter</span>
+      </button>
+
+      <!-- 2-col vs 4-col view toggles -->
+      <div class="hom-view-toggles">
+        <button class="hom-view-btn" title="2-Column View" onclick="setCatalogView(2, this)">||</button>
+        <button class="hom-view-btn active" title="4-Column View" onclick="setCatalogView(4, this)">||||</button>
+      </div>
+    </div>
+
+    <div class="hom-toolbar-right">
+      <span>Sort by:</span>
+      <select class="hom-sort-dropdown" onchange="showV3Toast('Catalog sorted: ' + this.value)">
+        <option>Best Selling</option>
+        <option>Featured</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+        <option>Date: New to Old</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- 6. Main 4-Column Large High-Impact Product Grid (Exact Screenshot Layout) -->
+  <div class="hom-main-catalog-grid" id="catalogGrid">
+    <!-- Item 1: Black & Gold Sherwani/Shirt -->
+    <div class="hom-catalog-card">
+      <div class="hom-catalog-media">
+        <span class="hom-catalog-badge">BESTSELLER</span>
+        <a href="product.html?id=masaba-02">
+          <img src="../assets/image/saree_1.jpg" alt="Black & Gold Motif Shirt">
+        </a>
+      </div>
+      <div class="hom-catalog-info">
+        <div class="hom-catalog-designer">ARBACHIN RUNWAY</div>
+        <h3 class="hom-catalog-title"><a href="product.html?id=masaba-02">Black & Gold Lotus Motif Silk Shirt</a></h3>
+        <div class="hom-catalog-price-row">
+          <span class="hom-cur-price">৳16,500</span>
+          <span class="hom-orig-price">৳19,500</span>
+          <span class="hom-discount">15% OFF</span>
+        </div>
+        <button class="btn-catalog-quick-add" onclick="addToCartV3('masaba-02')">QUICK BUY</button>
+      </div>
+    </div>
+
+    <!-- Item 2: Ivory Gold Embroidered Kurta/Shirt -->
+    <div class="hom-catalog-card">
+      <div class="hom-catalog-media">
+        <span class="hom-catalog-badge">NEW IN</span>
+        <a href="product.html?id=masaba-03">
+          <img src="../assets/image/threepiece_1.jpg" alt="Ivory Rose Gold Silk Shirt">
+        </a>
+      </div>
+      <div class="hom-catalog-info">
+        <div class="hom-catalog-designer">ARBACHIN RUNWAY</div>
+        <h3 class="hom-catalog-title"><a href="product.html?id=masaba-03">Ivory Rose Gold Brocade Shirt</a></h3>
+        <div class="hom-catalog-price-row">
+          <span class="hom-cur-price">৳12,800</span>
+          <span class="hom-orig-price">৳15,500</span>
+          <span class="hom-discount">18% OFF</span>
+        </div>
+        <button class="btn-catalog-quick-add" onclick="addToCartV3('masaba-03')">QUICK BUY</button>
+      </div>
+    </div>
+
+    <!-- Item 3: Green Botanical Foil Printed Shirt -->
+    <div class="hom-catalog-card">
+      <div class="hom-catalog-media">
+        <span class="hom-catalog-badge sale">RESTOCKED</span>
+        <a href="product.html?id=masaba-05">
+          <img src="../assets/image/saree_3.jpg" alt="Emerald Green Botanical Shirt">
+        </a>
+      </div>
+      <div class="hom-catalog-info">
+        <div class="hom-catalog-designer">ARBACHIN RUNWAY</div>
+        <h3 class="hom-catalog-title"><a href="product.html?id=masaba-05">Emerald Botanical Foil Silk Shirt</a></h3>
+        <div class="hom-catalog-price-row">
+          <span class="hom-cur-price">৳13,800</span>
+          <span class="hom-orig-price">৳16,000</span>
+          <span class="hom-discount">14% OFF</span>
+        </div>
+        <button class="btn-catalog-quick-add" onclick="addToCartV3('masaba-05')">QUICK BUY</button>
+      </div>
+    </div>
+
+    <!-- Item 4: Gold Metallic Bullion Zari Kurta/Shirt -->
+    <div class="hom-catalog-card">
+      <div class="hom-catalog-media">
+        <span class="hom-catalog-badge">EXCLUSIVE</span>
+        <a href="product.html?id=masaba-06">
+          <img src="../assets/image/threepiece_3.jpg" alt="Antique Gold Bullion Shirt">
+        </a>
+      </div>
+      <div class="hom-catalog-info">
+        <div class="hom-catalog-designer">ARBACHIN BRIDAL</div>
+        <h3 class="hom-catalog-title"><a href="product.html?id=masaba-06">Antique Gold Bullion Zari Shirt</a></h3>
+        <div class="hom-catalog-price-row">
+          <span class="hom-cur-price">৳18,500</span>
+          <span class="hom-orig-price">৳22,000</span>
+          <span class="hom-discount">16% OFF</span>
+        </div>
+        <button class="btn-catalog-quick-add" onclick="addToCartV3('masaba-06')">QUICK BUY</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide-Out Filter Sidebar Drawer -->
+  <div class="hom-drawer-overlay" id="drawerOverlay" onclick="toggleFilterDrawer()"></div>
+  <aside class="hom-filter-drawer" id="filterDrawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--hom-border);">
+      <h3 style="font-size:14px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase;">REFINE SELECTION</h3>
+      <button style="background:none; border:none; font-size:22px; cursor:pointer;" onclick="toggleFilterDrawer()">&times;</button>
+    </div>
+
+    <div style="overflow-y:auto; flex:1;">
+      <div class="hom-filter-section-title">Category</div>
+      <div class="hom-filter-checkbox-list">
+        <label><input type="checkbox" checked> Shirts & Kurtas (4)</label>
+        <label><input type="checkbox"> Bandi Sets (2)</label>
+        <label><input type="checkbox"> Sherwanis (3)</label>
+        <label><input type="checkbox"> Fine Jewelry (1)</label>
+      </div>
+
+      <div class="hom-filter-section-title">Fabric Type</div>
+      <div class="hom-filter-checkbox-list">
+        <label><input type="checkbox"> Pure Mulberry Silk</label>
+        <label><input type="checkbox"> Raw Silk & Brocade</label>
+        <label><input type="checkbox"> Liquid Crepe Blend</label>
+        <label><input type="checkbox"> Cotton Linen</label>
+      </div>
+
+      <div class="hom-filter-section-title">Price Range</div>
+      <div class="hom-filter-checkbox-list">
+        <label><input type="checkbox"> Under ৳10,000</label>
+        <label><input type="checkbox"> ৳10,000 - ৳15,000</label>
+        <label><input type="checkbox"> ৳15,000 - ৳25,000</label>
+        <label><input type="checkbox"> Above ৳25,000</label>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:10px; margin-top:20px;">
+      <button class="btn-catalog-quick-add" onclick="showV3Toast('Filters cleared'); toggleFilterDrawer();">Clear All</button>
+      <button class="btn-catalog-quick-add" style="background:var(--hom-emerald); color:#fff; border-color:var(--hom-emerald);" onclick="showV3Toast('Filters applied'); toggleFilterDrawer();">Apply (4)</button>
+    </div>
+  </aside>
+
+  <!-- House of Masaba Live Footer -->
+  <footer class="hom-footer">
+    <div class="hom-footer-grid">
+      <div>
+        <img src="../assets/image/logo_gold.png" alt="Arbachin" style="height:38px; object-fit:contain; display:block; margin-bottom:16px;">
+        <h4 class="hom-footer-title">HOUSE OF ARBACHIN LIFESTYLE</h4>
+        <p style="color:#a9bcb3; font-size:12px; line-height:1.7; margin-bottom:12px;">
+          Universal House, Plot No. 80, 89, Marol Co-op Industrial Estate, Andheri East, Mumbai 400059 & Gulshan-2, Dhaka 1212.
+        </p>
+        <p style="font-size:11px; color:#7d968b; margin-bottom:4px;">CIN: U74110MH2014PTC257909</p>
+        <p style="font-size:11px; font-weight:800; color:var(--hom-gold-light);">PHONE: +880 1700-000000 / 77380 07478</p>
+      </div>
+
+      <div>
+        <h4 class="hom-footer-title">POLICIES</h4>
+        <ul class="hom-footer-links">
+          <li><a href="category.html">Privacy Policy</a></li>
+          <li><a href="category.html">Terms & Conditions</a></li>
+          <li><a href="category.html">Delivery & Shipping Info</a></li>
+          <li><a href="category.html">Return & Exchange Policy</a></li>
+          <li><a href="category.html">Security & Payment Terms</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="hom-footer-title">INFORMATION</h4>
+        <ul class="hom-footer-links">
+          <li><a href="category.html">About House of Arbachin</a></li>
+          <li><a href="category.html">Kanna 2026 Collection</a></li>
+          <li><a href="product.html">Samyukta Singhania Jewelry (PDP)</a></li>
+          <li><a href="category.html">Official Mobile App</a></li>
+          <li><a href="category.html">Careers & Press Media</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="hom-footer-title">NEED HELP / SUPPORT</h4>
+        <ul class="hom-footer-links">
+          <li><a href="category.html">📍 Store Locator (Flagships)</a></li>
+          <li><a href="mailto:shoponline@arbachin.com">✉ shoponline@arbachin.com</a></li>
+          <li><a href="https://wa.me/8801700000000" target="_blank">💬 WhatsApp Stylist Concierge</a></li>
+          <li><a href="category.html">⚖ Grievance & Nodal Officer</a></li>
+          <li><a href="category.html">📦 Track Consignment Status</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hom-footer-bottom">
+      <div class="hom-footer-bottom-inner">
+        <div>&copy; 2026 HOUSE OF ARBACHIN. ALL RIGHTS RESERVED.</div>
+        <div style="display:flex; gap:18px;">
+          <a href="../index.html" style="color:var(--hom-gold-light); font-weight:800;">★ MASTER VERSIONS HUB</a>
+          <a href="category.html">COLLECTIONS</a>
+          <a href="product.html">PRODUCT DETAILS</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function toggleFilterDrawer() {
+      const drawer = document.getElementById('filterDrawer');
+      const overlay = document.getElementById('drawerOverlay');
+      drawer.classList.toggle('open');
+      overlay.classList.toggle('open');
+    }
+
+    function setCatalogView(cols, btn) {
+      const grid = document.getElementById('catalogGrid');
+      document.querySelectorAll('.hom-view-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      if (cols === 2) {
+        grid.classList.add('view-2col');
+      } else {
+        grid.classList.remove('view-2col');
+      }
+    }
+  </script>
+</body>
+</html>

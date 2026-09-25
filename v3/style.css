@@ -950,6 +950,17 @@ img { max-width: 100%; height: auto; display: block; }
     margin-bottom: 24px !important;
     width: 100% !important;
   }
+  .hom-footer-bottom {
+    padding: 20px 16px !important;
+    width: 100% !important;
+  }
+  .hom-footer-bottom-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
   .hom-connect-left, .hom-directory-left { padding: 30px 16px; }
   .hom-filter-drawer { width: 300px; }
 }

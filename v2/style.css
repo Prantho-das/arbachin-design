@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 
 :root {
-  --gd-primary: #0f4a38;
-  --gd-primary-dark: #092c21;
-  --gd-primary-light: #16634c;
-  --gd-primary-hover: #0a3528;
+  --gd-primary: #0a3725;
+  --gd-primary-dark: #051d14;
+  --gd-primary-light: #124d35;
+  --gd-primary-hover: #07291c;
   --gd-gold: #c59b27;
-  --gd-gold-light: #f5eedb;
+  --gd-gold-light: #e9e5dc;
   --gd-gold-accent: #dfba53;
-  --gd-bg: #faf7f2;
-  --gd-card-bg: #ffffff;
-  --gd-dark: #081d16;
-  --gd-text: #1a2923;
-  --gd-muted: #5e6f67;
-  --gd-border: #dbe4de;
-  --gd-border-light: #ecf1ee;
+  --gd-bg: #e9e5dc;
+  --gd-card-bg: #f4efe6;
+  --gd-cream-section: #e9e5dc;
+  --gd-dark: #0a3725;
+  --gd-text: #0a3725;
+  --gd-muted: #335446;
+  --gd-border: rgba(10, 55, 37, 0.2);
+  --gd-border-light: rgba(10, 55, 37, 0.12);
   --font-serif: 'Bodoni Moda', 'Playfair Display', Georgia, serif;
   --font-sans: 'Montserrat', sans-serif;
   --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -40,8 +41,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Royal Top Announcement Strip */
 .gd-top-strip {
-  background: #081d16;
-  color: var(--gd-gold-accent);
+  background: #0a3725;
+  color: #e9e5dc;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -50,19 +51,19 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(197, 155, 39, 0.3);
+  border-bottom: 1px solid rgba(233, 229, 220, 0.25);
 }
-.gd-top-strip a { color: #ffffff; }
-.gd-top-strip a:hover { color: var(--gd-gold); }
+.gd-top-strip a { color: #e9e5dc; }
+.gd-top-strip a:hover { color: #ffffff; }
 
 /* Header */
 .gd-header {
   position: sticky;
   top: 0;
-  background: #ffffff;
+  background: #e9e5dc;
   z-index: 1000;
   border-bottom: 1px solid var(--gd-border);
-  box-shadow: 0 4px 15px rgba(20, 7, 10, 0.05);
+  box-shadow: 0 4px 15px rgba(10, 55, 37, 0.08);
 }
 .gd-header-inner {
   max-width: 1440px;
@@ -90,7 +91,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 26px;
   font-weight: 700;
   letter-spacing: 5px;
-  color: #1a080c;
+  color: var(--gd-primary);
   text-transform: uppercase;
 }
 .gd-logo span { color: var(--gd-gold); }
@@ -231,8 +232,9 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Global Desi Story Category Bubbles */
 .gd-story-section {
+  background: #ffffff;
   padding: 24px 40px;
-  max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -335,20 +337,21 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .gd-hero-btn {
   display: inline-block;
-  background: var(--gd-gold);
-  color: #061a13;
+  background: var(--gd-primary);
+  color: #e9e5dc;
   padding: 13px 32px;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
   border-radius: 2px;
+  border: 1px solid var(--gd-gold);
   transition: var(--transition);
   align-self: flex-start;
 }
 .gd-hero-btn:hover {
-  background: #ffffff;
-  color: #000000;
+  background: var(--gd-primary-dark);
+  color: #ffffff;
 }
 .gd-slider-btn {
   position: absolute;
@@ -457,20 +460,22 @@ img { max-width: 100%; height: auto; display: block; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #ffffff;
-  color: #14070a;
+  background: #e9e5dc;
+  color: var(--gd-primary);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  padding: 12px 24px;
+  padding: 12px 26px;
   border-radius: 30px;
+  border: 1px solid var(--gd-primary);
   width: fit-content;
   transition: var(--transition);
 }
 .gd-hero-split-card:hover .gd-hero-split-btn {
   background: var(--gd-primary);
-  color: #ffffff;
+  color: #e9e5dc;
+  border-color: var(--gd-gold);
 }
 
 /* Flash Deals Ticker Bar */
@@ -500,39 +505,46 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Shop by Silhouette Category Pills */
 .gd-silhouette-section {
-  max-width: 1440px;
-  margin: 40px auto;
-  padding: 0 40px;
+  background: transparent;
+  width: 100%;
+  margin: 20px 0 30px;
+  padding: 40px 40px;
   text-align: center;
 }
 .gd-silhouette-grid {
   display: flex;
   justify-content: center;
-  gap: 14px;
+  gap: 12px;
   flex-wrap: wrap;
   margin-top: 20px;
 }
 .gd-silhouette-chip {
-  background: #ffffff;
-  border: 1px solid var(--gd-border);
-  padding: 10px 20px;
+  background: #e9e5dc;
+  border: 1.5px solid var(--gd-primary);
+  padding: 10px 22px;
   border-radius: 30px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--gd-dark);
+  color: var(--gd-primary);
   display: flex;
   align-items: center;
   gap: 8px;
   transition: var(--transition);
   cursor: pointer;
+  box-shadow: 0 2px 8px rgba(10, 55, 37, 0.06);
 }
-.gd-silhouette-chip:hover, .gd-silhouette-chip.active {
+.gd-silhouette-chip:hover {
   background: var(--gd-primary);
-  color: #ffffff;
+  color: #e9e5dc;
+  transform: translateY(-2px);
+}
+.gd-silhouette-chip.active {
+  background: var(--gd-primary);
+  color: #e9e5dc;
   border-color: var(--gd-primary);
-  box-shadow: 0 4px 15px rgba(138, 28, 61, 0.25);
+  box-shadow: 0 4px 15px rgba(10, 55, 37, 0.25);
 }
 
 /* Trending Drops Section */
@@ -562,13 +574,20 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 24px;
 }
 .v2-trending-card {
-  background: #fff;
-  border: 1px solid var(--gd-border);
+  background: #f4efe6;
+  border: 1px solid rgba(10, 55, 37, 0.25);
   padding: 16px;
   border-radius: 6px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 15px rgba(10, 55, 37, 0.04);
   display: flex;
   flex-direction: column;
+  height: 100%;
+  transition: var(--transition);
+}
+.v2-trending-card:hover {
+  border-color: var(--gd-primary);
+  box-shadow: 0 10px 25px rgba(10, 55, 37, 0.12);
+  transform: translateY(-4px);
 }
 .v2-card-img-wrap {
   position: relative;
@@ -592,20 +611,22 @@ img { max-width: 100%; height: auto; display: block; }
   top: 10px;
   left: 10px;
   background: var(--gd-primary);
-  color: #fff;
+  color: #e9e5dc;
   font-size: 10px;
   font-weight: 800;
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: 2px;
+  border: 1px solid rgba(197, 155, 39, 0.3);
   z-index: 2;
 }
 .v2-card-badge.archive {
-  background: #14070a;
-  color: var(--gd-gold-light);
+  background: #051d14;
+  color: var(--gd-gold-accent);
+  border: 1px solid var(--gd-gold-accent);
 }
 .v2-card-badge.handloom {
-  background: #135610;
-  color: #fff;
+  background: var(--gd-primary);
+  color: #e9e5dc;
 }
 .v2-card-cat {
   font-size: 11px;
@@ -620,90 +641,119 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 600;
   line-height: 1.35;
 }
+.v2-card-title a { color: var(--gd-primary); }
+.v2-card-title a:hover { color: var(--gd-gold); }
 .v2-card-price {
-  font-weight: 700;
-  color: var(--gd-dark);
-  font-size: 15px;
+  font-weight: 800;
+  color: var(--gd-primary);
+  font-size: 16px;
 }
 .v2-card-strike {
   font-size: 12px;
-  color: #999;
+  color: #83978e;
   text-decoration: line-through;
   font-weight: 400;
 }
 
 /* Community Love Section */
 .v2-community-section {
-  max-width: 1440px;
-  margin: 60px auto;
-  padding: 0 40px;
+  background: var(--gd-primary);
+  color: #e9e5dc;
+  width: 100%;
+  margin: 60px 0;
+  padding: 70px 40px;
+  border-top: 2px solid var(--gd-gold);
+  border-bottom: 2px solid var(--gd-gold);
+}
+.v2-community-section h2 {
+  color: #e9e5dc !important;
 }
 .v2-community-grid {
+  max-width: 1440px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 .v2-community-card {
-  background: #fff;
-  border: 1px solid var(--gd-border);
-  padding: 24px;
+  background: #051d14;
+  border: 1px solid rgba(233, 229, 220, 0.25);
+  padding: 28px;
   border-radius: 6px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #e9e5dc;
+  transition: var(--transition);
+}
+.v2-community-card p {
+  color: #e9e5dc !important;
+}
+.v2-community-card:hover {
+  border-color: var(--gd-gold);
+  transform: translateY(-3px);
 }
 
 /* Product Card with Quick Size Selector & Instant Buy */
 .gd-card-size-row {
-  display: flex;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
   gap: 6px;
-  margin: 10px 0;
+  margin: 12px 0 14px;
   flex-wrap: wrap;
+  min-height: 32px;
 }
 .gd-size-chip {
-  width: 28px;
+  min-width: 28px;
   height: 28px;
-  border: 1px solid var(--gd-border);
-  border-radius: 50%;
+  padding: 0 8px;
+  border: 1px solid rgba(10, 55, 37, 0.3);
+  border-radius: 14px;
   font-size: 10px;
   font-weight: 700;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
+  background: #e9e5dc;
+  color: var(--gd-primary);
   cursor: pointer;
+  white-space: nowrap;
   transition: var(--transition);
 }
 .gd-size-chip:hover, .gd-size-chip.selected {
   background: var(--gd-primary);
-  color: #fff;
+  color: #e9e5dc;
   border-color: var(--gd-primary);
 }
 .btn-gd-instant-buy {
   width: 100%;
   background: var(--gd-primary);
-  color: #fff;
-  border: none;
-  padding: 10px 0;
+  color: #e9e5dc;
+  border: 1px solid var(--gd-gold);
+  padding: 11px 0;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: auto;
   transition: var(--transition);
 }
 .btn-gd-instant-buy:hover {
-  background: var(--gd-primary-hover);
+  background: var(--gd-primary-dark);
+  color: #ffffff;
 }
 
 /* Sabyasachi Art Archive Full-Width Dark Section */
 .sabya-archive-dark-wrap {
-  background: #14070a;
-  color: #f5eedb;
+  background: var(--gd-primary);
+  color: #e9e5dc;
   padding: 90px 40px;
   margin: 60px 0;
   position: relative;
   overflow: hidden;
+  border-top: 2px solid var(--gd-gold);
+  border-bottom: 2px solid var(--gd-gold);
 }
 .sabya-archive-inner {
   max-width: 1440px;
@@ -714,7 +764,7 @@ img { max-width: 100%; height: auto; display: block; }
   align-items: center;
 }
 .sabya-archive-tag {
-  color: var(--gd-gold);
+  color: var(--gd-gold-accent);
   font-size: 11px;
   letter-spacing: 3px;
   font-weight: 800;
@@ -730,7 +780,7 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 20px;
 }
 .sabya-archive-desc {
-  color: #cbb8b6;
+  color: #d1ded6;
   font-size: 14px;
   line-height: 1.8;
   margin-bottom: 30px;
@@ -743,11 +793,11 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 0 40px;
 }
 .gd-style-studio-card {
-  background: #ffffff;
-  border: 1px solid var(--gd-border);
+  background: #f4efe6;
+  border: 1px solid rgba(10, 55, 37, 0.25);
   border-radius: 8px;
   padding: 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  box-shadow: 0 10px 30px rgba(10, 55, 37, 0.05);
 }
 .gd-combo-grid {
   display: grid;
@@ -768,8 +818,8 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 10px;
 }
 .gd-combo-calc-box {
-  background: #fff8f5;
-  border: 1px dashed var(--gd-primary);
+  background: #e9e5dc;
+  border: 2px dashed var(--gd-primary);
   padding: 30px;
   border-radius: 6px;
   text-align: center;
@@ -778,7 +828,8 @@ img { max-width: 100%; height: auto; display: block; }
 .btn-gd-primary {
   display: inline-block;
   background: var(--gd-primary);
-  color: #fff;
+  color: #e9e5dc;
+  border: 1px solid var(--gd-gold);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -787,7 +838,8 @@ img { max-width: 100%; height: auto; display: block; }
   transition: var(--transition);
 }
 .btn-gd-primary:hover {
-  background: var(--gd-primary-hover);
+  background: var(--gd-primary-dark);
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
@@ -937,8 +989,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Royal Sabyasachi x Arbachin Emerald Footer */
 .gd-footer {
-  background: #061a13;
-  color: #d5ded9;
+  background: #0a3725;
+  color: #e9e5dc;
   padding: 80px 40px 0;
   border-top: 2px solid var(--gd-gold);
 }
@@ -955,7 +1007,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--gd-gold-accent) !important;
+  color: #e9e5dc !important;
   margin-bottom: 20px;
   position: relative;
   padding-bottom: 8px;
@@ -976,7 +1028,7 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 11px;
   font-size: 13px;
 }
-.gd-footer-links a { color: #a9bcb3; }
+.gd-footer-links a { color: #c9c3b8; }
 .gd-footer-links a:hover { color: #ffffff; padding-left: 4px; }
 .gd-footer-badge-strip {
   display: flex;
@@ -985,16 +1037,16 @@ img { max-width: 100%; height: auto; display: block; }
   flex-wrap: wrap;
 }
 .gd-footer-badge {
-  background: #0b291f;
+  background: #051d14;
   border: 1px solid rgba(197, 155, 39, 0.4);
   padding: 5px 9px;
   font-size: 10px;
-  color: var(--gd-gold-accent);
+  color: #e9e5dc;
   border-radius: 2px;
 }
 .gd-newsletter-box {
-  background: #0a251c;
-  border: 1px solid rgba(197, 155, 39, 0.35);
+  background: #051d14;
+  border: 1px solid rgba(233, 229, 220, 0.25);
   padding: 22px;
   border-radius: 4px;
 }
@@ -1004,19 +1056,19 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .gd-newsletter-input {
   flex: 1;
-  background: #061a13;
-  border: 1px solid rgba(197, 155, 39, 0.5);
+  background: #08291c;
+  border: 1px solid rgba(233, 229, 220, 0.35);
   color: #ffffff;
   padding: 10px 12px;
   font-size: 13px;
   outline: none;
 }
 .gd-newsletter-input::placeholder {
-  color: #7d968b;
+  color: #a4b5ad;
 }
 .gd-newsletter-btn {
-  background: var(--gd-gold);
-  color: #061a13;
+  background: #e9e5dc;
+  color: #0a3725;
   font-weight: 700;
   border: none;
   padding: 0 18px;
@@ -1026,10 +1078,10 @@ img { max-width: 100%; height: auto; display: block; }
   cursor: pointer;
   transition: var(--transition);
 }
-.gd-newsletter-btn:hover { background: var(--gd-gold-accent); }
+.gd-newsletter-btn:hover { background: #ffffff; }
 .gd-footer-bottom-bar {
-  background: #030f0b;
-  color: #7d968b;
+  background: #051d14;
+  color: #a4b5ad;
   padding: 24px 40px;
   font-size: 12px;
   border-top: 1px solid #0d3627;

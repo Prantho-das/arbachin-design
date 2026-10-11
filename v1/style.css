@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --rk-primary: #1a1a1a;
+  --rk-primary: #0a3725;
+  --rk-primary-dark: #051f15;
   --rk-gold: #c59b27;
   --rk-gold-light: #dfba53;
-  --rk-bg: #ffffff;
-  --rk-bg-cream: #fbf8f2;
-  --rk-footer-bg: #d5c09b;
-  --rk-footer-dark: #272727;
-  --rk-text: #272727;
-  --rk-text-muted: #666666;
-  --rk-border: #e8e2d8;
-  --rk-sale: #135610;
-  --rk-sale-bg: #e9f7e9;
+  --rk-bg: #e9e5dc;
+  --rk-bg-cream: #e9e5dc;
+  --rk-footer-bg: #0a3725;
+  --rk-footer-dark: #051f15;
+  --rk-text: #0a3725;
+  --rk-text-muted: #335446;
+  --rk-border: rgba(10, 55, 37, 0.2);
+  --rk-sale: #0a3725;
+  --rk-sale-bg: #e2ede7;
   --font-serif: 'Bodoni Moda', Georgia, serif;
   --font-sans: 'Inter', -apple-system, sans-serif;
   --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -42,8 +43,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* 1. Ritu Kumar Top Bar */
 .rk-topbar {
-  background: #0d0d0d;
-  color: #d5c09b;
+  background: #051f15;
+  color: #e9e5dc;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 1.5px;
@@ -52,7 +53,7 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(213, 192, 155, 0.2);
+  border-bottom: 1px solid rgba(233, 229, 220, 0.15);
 }
 .rk-topbar a { color: #ffffff; }
 .rk-topbar a:hover { color: var(--rk-gold-light); }
@@ -61,10 +62,10 @@ img { max-width: 100%; height: auto; display: block; }
 .rk-header-main {
   position: sticky;
   top: 0;
-  background: #ffffff;
+  background: #e9e5dc;
   z-index: 1000;
   border-bottom: 1px solid var(--rk-border);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 20px rgba(10, 55, 37, 0.06);
 }
 .rk-header-top-row {
   max-width: 1440px;
@@ -152,8 +153,9 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Nav & Mega Menu */
 .rk-nav-row {
-  border-top: 1px solid var(--rk-border);
-  background: #fdfcf9;
+  border-top: 1px solid rgba(10, 55, 37, 0.12);
+  border-bottom: 1px solid rgba(10, 55, 37, 0.12);
+  background: #e9e5dc;
 }
 .rk-nav-list {
   max-width: 1440px;
@@ -414,8 +416,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 .btn-rk-gold {
   display: inline-block;
-  background: var(--rk-gold);
-  color: #111;
+  background: var(--rk-primary);
+  color: #e9e5dc;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -426,27 +428,28 @@ img { max-width: 100%; height: auto; display: block; }
   transition: var(--transition);
 }
 .btn-rk-gold:hover {
-  background: transparent;
-  color: #fff;
-  border-color: #fff;
+  background: var(--rk-primary-dark);
+  color: #ffffff;
+  border-color: var(--rk-gold-light);
 }
 .btn-rk-white {
   display: inline-block;
-  background: transparent;
-  color: #fff;
+  background: #e9e5dc;
+  color: var(--rk-primary);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 15px 34px;
-  border: 1px solid #fff;
+  border: 1px solid #e9e5dc;
   margin-left: 14px;
   cursor: pointer;
   transition: var(--transition);
 }
 .btn-rk-white:hover {
-  background: #fff;
-  color: var(--rk-primary);
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
 }
 
 /* Sections */
@@ -535,7 +538,7 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 40px;
 }
 .cat-filter-sidebar {
-  background: #ffffff;
+  background: #f4efe6;
   border: 1px solid var(--rk-border);
   padding: 24px;
   border-radius: 4px;
@@ -551,16 +554,16 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 24px;
 }
 .rk-card {
-  background: #ffffff;
-  border: 1px solid var(--rk-border);
+  background: #f4efe6;
+  border: 1px solid rgba(10, 55, 37, 0.25);
   display: flex;
   flex-direction: column;
   transition: var(--transition);
   position: relative;
 }
 .rk-card:hover {
-  border-color: var(--rk-gold);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  border-color: var(--rk-primary);
+  box-shadow: 0 10px 30px rgba(10, 55, 37, 0.08);
   transform: translateY(-4px);
 }
 .rk-card-media {
@@ -659,8 +662,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Ritu Kumar Luxury Royal Dark Footer */
 .rk-footer-wrap {
-  background: #0f0e0d;
-  color: #d1c8bd;
+  background: #0a3725;
+  color: #e9e5dc;
   padding: 80px 40px 0;
   border-top: 2px solid #c59b27;
 }
@@ -677,7 +680,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--rk-gold);
+  color: #e9e5dc;
   margin-bottom: 22px;
   position: relative;
   padding-bottom: 8px;
@@ -699,7 +702,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 13px;
 }
 .rk-footer-nav-list a {
-  color: #b5aba0;
+  color: #c9c3b8;
 }
 .rk-footer-nav-list a:hover {
   color: #ffffff;
@@ -712,17 +715,17 @@ img { max-width: 100%; height: auto; display: block; }
   flex-wrap: wrap;
 }
 .rk-footer-badge {
-  background: #1a1816;
-  border: 1px solid rgba(197, 155, 39, 0.3);
+  background: #051f15;
+  border: 1px solid rgba(197, 155, 39, 0.4);
   padding: 6px 10px;
   font-size: 11px;
-  color: #d5c09b;
+  color: #e9e5dc;
   border-radius: 3px;
   letter-spacing: 0.5px;
 }
 .rk-newsletter-box {
-  background: #171513;
-  border: 1px solid rgba(197, 155, 39, 0.25);
+  background: #051f15;
+  border: 1px solid rgba(233, 229, 220, 0.25);
   padding: 24px;
   border-radius: 4px;
 }
@@ -732,16 +735,16 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .rk-newsletter-input {
   flex: 1;
-  background: #0f0e0d;
-  border: 1px solid rgba(197, 155, 39, 0.4);
+  background: #08281b;
+  border: 1px solid rgba(233, 229, 220, 0.4);
   color: #ffffff;
   padding: 12px 14px;
   font-size: 13px;
   outline: none;
 }
 .rk-newsletter-btn {
-  background: var(--rk-gold);
-  color: #0f0e0d;
+  background: #e9e5dc;
+  color: #0a3725;
   font-weight: 700;
   border: none;
   padding: 0 20px;
@@ -752,7 +755,7 @@ img { max-width: 100%; height: auto; display: block; }
   transition: var(--transition);
 }
 .rk-newsletter-btn:hover {
-  background: #dfba53;
+  background: #ffffff;
 }
 .rk-footer-payment-row {
   display: flex;

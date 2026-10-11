@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Cinzel:wght@600;700;800&display=swap');
 
 :root {
-  --hom-bg: #ffffff;
-  --hom-bg-alt: #f6f3ee;
+  --hom-bg: #e9e5dc;
+  --hom-bg-alt: #e9e5dc;
   --hom-bg-dark: #05140f;
-  --hom-primary: #061a13;
-  --hom-emerald: #0f4a38;
-  --hom-emerald-dark: #081d16;
+  --hom-primary: #0a3725;
+  --hom-emerald: #0a3725;
+  --hom-emerald-dark: #05140f;
   --hom-gold: #c59b27;
   --hom-gold-light: #dfba53;
-  --hom-text: #111111;
-  --hom-text-muted: #555555;
-  --hom-text-light: #888888;
-  --hom-border: #e6dfd5;
-  --hom-border-dark: #123326;
+  --hom-text: #0a3725;
+  --hom-text-muted: #335446;
+  --hom-text-light: #4f7362;
+  --hom-border: rgba(10, 55, 37, 0.2);
+  --hom-border-dark: #0a3725;
   --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-serif: 'Cinzel', serif;
   --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -46,7 +46,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* 1. Top Announcement Bar */
 .hom-top-bar {
   background: var(--hom-emerald-dark);
-  color: var(--hom-gold-light);
+  color: #e9e5dc;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 2px;
@@ -75,10 +75,10 @@ img { max-width: 100%; height: auto; display: block; }
 .hom-header {
   position: sticky;
   top: 0;
-  background: #ffffff;
+  background: #e9e5dc;
   z-index: 1000;
   border-bottom: 1px solid var(--hom-border);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 10px rgba(10, 55, 37, 0.05);
 }
 .hom-header-inner {
   max-width: 1440px;
@@ -498,10 +498,10 @@ img { max-width: 100%; height: auto; display: block; }
 .hom-discount { font-size: 10px; font-weight: 800; color: var(--hom-emerald); }
 .btn-quick-buy-outline {
   width: 100%;
-  background: #ffffff;
-  color: var(--hom-primary);
-  border: 1px solid #000000;
-  padding: 9px 0;
+  background: var(--hom-emerald);
+  color: #e9e5dc;
+  border: 1px solid var(--hom-gold);
+  padding: 10px 0;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 1.5px;
@@ -511,9 +511,9 @@ img { max-width: 100%; height: auto; display: block; }
   text-align: center;
 }
 .btn-quick-buy-outline:hover {
-  background: var(--hom-emerald);
+  background: #05140f;
   color: #ffffff;
-  border-color: var(--hom-emerald);
+  border-color: #ffffff;
 }
 
 /* 9. House Directory / Flagship Boutiques */
@@ -568,8 +568,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* 10. Enter The World Of Arbachin (Newsletter Strip) */
 .hom-masaba-newsletter-banner {
-  background: #05140f;
-  color: #ffffff;
+  background: #0a3725;
+  color: #e9e5dc;
   padding: 40px 40px;
   margin: 0;
   border-top: 1px solid rgba(197, 155, 39, 0.25);
@@ -588,12 +588,12 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 18px;
   font-weight: 800;
   letter-spacing: 2px;
-  color: #ffffff;
+  color: #e9e5dc;
   margin-bottom: 4px;
 }
 .hom-masaba-newsletter-inner p {
   font-size: 12px;
-  color: #a9bcb3;
+  color: #d1dad5;
 }
 .hom-masaba-subscribe-form {
   display: flex;
@@ -602,16 +602,16 @@ img { max-width: 100%; height: auto; display: block; }
 .hom-masaba-subscribe-form input {
   flex: 1;
   padding: 12px 16px;
-  border: 1px solid rgba(197, 155, 39, 0.4);
-  background: #081d16;
+  border: 1px solid rgba(233, 229, 220, 0.35);
+  background: #05140f;
   color: #ffffff;
   font-size: 12px;
   outline: none;
 }
-.hom-masaba-subscribe-form input::placeholder { color: #7d968b; }
+.hom-masaba-subscribe-form input::placeholder { color: #a4b5ad; }
 .hom-masaba-subscribe-form button {
-  background: var(--hom-gold);
-  color: #05140f;
+  background: #e9e5dc;
+  color: #0a3725;
   border: none;
   padding: 0 20px;
   font-size: 11px;
@@ -622,13 +622,13 @@ img { max-width: 100%; height: auto; display: block; }
   transition: var(--transition);
 }
 .hom-masaba-subscribe-form button:hover {
-  background: var(--hom-gold-light);
+  background: #ffffff;
 }
 
 /* 11. Minimalist Emerald Footer */
 .hom-footer {
-  background: #04100c;
-  color: #d5ded9;
+  background: #0a3725;
+  color: #e9e5dc;
   padding: 60px 40px 0;
 }
 .hom-footer-grid {
@@ -643,7 +643,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--hom-gold-light);
+  color: #e9e5dc;
   margin-bottom: 16px;
 }
 .hom-footer-links {
@@ -653,11 +653,11 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 10px;
   font-size: 12px;
 }
-.hom-footer-links a { color: #a9bcb3; }
+.hom-footer-links a { color: #c9c3b8; }
 .hom-footer-links a:hover { color: #ffffff; padding-left: 4px; }
 .hom-footer-bottom {
-  background: #020806;
-  color: #7d968b;
+  background: #05140f;
+  color: #a4b5ad;
   padding: 20px 40px;
   font-size: 11px;
   border-top: 1px solid #081d16;

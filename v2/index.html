@@ -15,16 +15,21 @@
       padding: 0 40px;
     }
     .v2-feature-card {
-      background: #fff;
-      border: 1px solid var(--gd-border);
+      background: #f4efe6;
+      border: 1px solid rgba(10, 55, 37, 0.25);
       padding: 24px;
       text-align: center;
-      border-radius: 4px;
+      border-radius: 6px;
       transition: var(--transition);
+      box-shadow: 0 4px 15px rgba(10, 55, 37, 0.04);
+    }
+    .v2-feature-card h4 {
+      color: var(--gd-primary);
     }
     .v2-feature-card:hover {
       border-color: var(--gd-primary);
-      box-shadow: 0 8px 24px rgba(15, 74, 56, 0.12);
+      box-shadow: 0 8px 24px rgba(10, 55, 37, 0.15);
+      transform: translateY(-3px);
     }
     .v2-lookbook-banner {
       position: relative;
@@ -38,7 +43,7 @@
       border-radius: 6px;
       overflow: hidden;
       border: 1px solid rgba(197, 155, 39, 0.3);
-      box-shadow: 0 12px 35px rgba(8, 29, 22, 0.15);
+      box-shadow: 0 12px 35px rgba(10, 55, 37, 0.15);
     }
     .v2-lookbook-wrap img {
       width: 100%;
@@ -49,7 +54,7 @@
     .v2-lookbook-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(90deg, rgba(6, 26, 19, 0.96) 0%, rgba(6, 26, 19, 0.85) 45%, rgba(6, 26, 19, 0.1) 85%);
+      background: linear-gradient(90deg, rgba(10, 55, 37, 0.96) 0%, rgba(10, 55, 37, 0.82) 45%, rgba(10, 55, 37, 0.1) 85%);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -438,8 +443,8 @@
           Every thread tells a story of centuries-old handloom heritage. From intricate kadwa zari weaving to pure mulberry silk processing, our master artisans create wearable heirlooms designed to transcend generations.
         </p>
         <div style="display:flex; gap:16px; flex-wrap:wrap;">
-          <a href="category.html" class="btn-gd-primary" style="background:var(--gd-gold); color:#14070a;">DISCOVER THE ARCHIVE &rarr;</a>
-          <a href="category.html" class="btn-gd-primary" style="background:transparent; border:1px solid #fff;">BOOK ATELIER APPOINTMENT</a>
+          <a href="category.html" class="btn-gd-primary" style="background:#e9e5dc; color:#0a3725; border:1px solid #c59b27;">DISCOVER THE ARCHIVE &rarr;</a>
+          <a href="category.html" class="btn-gd-primary" style="background:transparent; color:#e9e5dc; border:1px solid #c59b27;">BOOK ATELIER APPOINTMENT</a>
         </div>
       </div>
       <div>
@@ -628,7 +633,7 @@
           Effortless fusion pieces designed for vibrant sangeets, festive poojas, and contemporary evening cocktail parties.
         </p>
         <div>
-          <a href="category.html" class="btn-gd-primary">View Full Lookbook</a>
+          <a href="category.html" class="btn-gd-primary" style="background:#e9e5dc; color:#0a3725; border:1px solid #c59b27;">View Full Lookbook</a>
         </div>
       </div>
     </div>
